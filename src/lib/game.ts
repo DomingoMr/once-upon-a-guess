@@ -30,16 +30,22 @@ export function createTileComparisons(guess: DisneyCharacter, secret: DisneyChar
       character: guess,
     },
     {
-      key: 'gender',
-      label: 'Gender',
-      value: guess.gender,
-      state: stateForMatch(guess.gender === secret.gender),
+      key: 'movie',
+      label: 'Movie',
+      value: guess.movie,
+      state: stateForMatch(guess.movie === secret.movie),
     },
     {
       key: 'role',
       label: 'Role',
       value: guess.role,
       state: stateForMatch(guess.role === secret.role),
+    },
+    {
+      key: 'gender',
+      label: 'Gender',
+      value: guess.gender,
+      state: stateForMatch(guess.gender === secret.gender),
     },
     {
       key: 'species',
@@ -52,12 +58,6 @@ export function createTileComparisons(guess: DisneyCharacter, secret: DisneyChar
       label: 'Magic',
       value: guess.powers ? 'Magic' : 'No magic',
       state: stateForMatch(guess.powers === secret.powers),
-    },
-    {
-      key: 'movie',
-      label: 'Movie',
-      value: guess.movie,
-      state: stateForMatch(guess.movie === secret.movie),
     },
     {
       key: 'year',

@@ -8,16 +8,18 @@ type GuessBoardProps = {
   secret: DisneyCharacter;
 };
 
-const columns = ['Character', 'Gender', 'Role', 'Species', 'Magic', 'Movie', 'Year'];
+const columns = ['Character', 'Movie', 'Role', 'Gender', 'Species', 'Magic', 'Year'];
 
 export function GuessBoard({ guesses, secret }: GuessBoardProps) {
   return (
     <section className="board-wrap" aria-live="polite">
-      <div className="board-columns" aria-hidden="true">
-        {columns.map((label) => (
-          <span key={label}>{label}</span>
-        ))}
-      </div>
+      {guesses.length > 0 && (
+        <div className="board-columns" aria-hidden="true">
+          {columns.map((label) => (
+            <span key={label}>{label}</span>
+          ))}
+        </div>
+      )}
 
       <AnimatePresence initial={false}>
         {guesses.map((guess, guessIndex) => {
