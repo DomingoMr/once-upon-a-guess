@@ -1,0 +1,2288 @@
+{
+    "scope": {
+        "franchise": "Disney",
+        "included": "Walt Disney Animation Studios",
+        "excluded": [
+            "Pixar",
+            "Marvel",
+            "Star Wars"
+        ],
+        "note": "Dataset inicial orientado a juego tipo Loldle. Incluye personajes principales y secundarios relevantes."
+    },
+    "movies": [
+        {
+            "title": "Snow White and the Seven Dwarfs",
+            "year": 1937,
+            "characters": [
+                {
+                    "nombre": "Snow White",
+                    "pelicula": "Snow White and the Seven Dwarfs",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1937,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "The Evil Queen",
+                    "pelicula": "Snow White and the Seven Dwarfs",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 1937,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "The Prince",
+                    "pelicula": "Snow White and the Seven Dwarfs",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1937,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Doc",
+                    "pelicula": "Snow White and the Seven Dwarfs",
+                    "rol": "Secundario",
+                    "especie": "Enano",
+                    "poderes": "No",
+                    "año": 1937,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Grumpy",
+                    "pelicula": "Snow White and the Seven Dwarfs",
+                    "rol": "Secundario",
+                    "especie": "Enano",
+                    "poderes": "No",
+                    "año": 1937,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Dopey",
+                    "pelicula": "Snow White and the Seven Dwarfs",
+                    "rol": "Secundario",
+                    "especie": "Enano",
+                    "poderes": "No",
+                    "año": 1937,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Pinocchio",
+            "year": 1940,
+            "characters": [
+                {
+                    "nombre": "Pinocchio",
+                    "pelicula": "Pinocchio",
+                    "rol": "Protagonista",
+                    "especie": "Marioneta",
+                    "poderes": "No",
+                    "año": 1940,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Jiminy Cricket",
+                    "pelicula": "Pinocchio",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1940,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Geppetto",
+                    "pelicula": "Pinocchio",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1940,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Blue Fairy",
+                    "pelicula": "Pinocchio",
+                    "rol": "Secundario",
+                    "especie": "Hada",
+                    "poderes": "Sí",
+                    "año": 1940,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Honest John",
+                    "pelicula": "Pinocchio",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1940,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Dumbo",
+            "year": 1941,
+            "characters": [
+                {
+                    "nombre": "Dumbo",
+                    "pelicula": "Dumbo",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "Sí",
+                    "año": 1941,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Timothy Q. Mouse",
+                    "pelicula": "Dumbo",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1941,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Mrs. Jumbo",
+                    "pelicula": "Dumbo",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1941,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Bambi",
+            "year": 1942,
+            "characters": [
+                {
+                    "nombre": "Bambi",
+                    "pelicula": "Bambi",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1942,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Thumper",
+                    "pelicula": "Bambi",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1942,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Flower",
+                    "pelicula": "Bambi",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1942,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Faline",
+                    "pelicula": "Bambi",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1942,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Cinderella",
+            "year": 1950,
+            "characters": [
+                {
+                    "nombre": "Cinderella",
+                    "pelicula": "Cinderella",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1950,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Fairy Godmother",
+                    "pelicula": "Cinderella",
+                    "rol": "Secundario",
+                    "especie": "Hada",
+                    "poderes": "Sí",
+                    "año": 1950,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Lady Tremaine",
+                    "pelicula": "Cinderella",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1950,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Prince Charming",
+                    "pelicula": "Cinderella",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1950,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Anastasia Tremaine",
+                    "pelicula": "Cinderella",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1950,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Drizella Tremaine",
+                    "pelicula": "Cinderella",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1950,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Alice in Wonderland",
+            "year": 1951,
+            "characters": [
+                {
+                    "nombre": "Alice",
+                    "pelicula": "Alice in Wonderland",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1951,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Mad Hatter",
+                    "pelicula": "Alice in Wonderland",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1951,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "White Rabbit",
+                    "pelicula": "Alice in Wonderland",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1951,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Cheshire Cat",
+                    "pelicula": "Alice in Wonderland",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "Sí",
+                    "año": 1951,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Queen of Hearts",
+                    "pelicula": "Alice in Wonderland",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1951,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Peter Pan",
+            "year": 1953,
+            "characters": [
+                {
+                    "nombre": "Peter Pan",
+                    "pelicula": "Peter Pan",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 1953,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Wendy Darling",
+                    "pelicula": "Peter Pan",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1953,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Tinker Bell",
+                    "pelicula": "Peter Pan",
+                    "rol": "Secundario",
+                    "especie": "Hada",
+                    "poderes": "Sí",
+                    "año": 1953,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Captain Hook",
+                    "pelicula": "Peter Pan",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1953,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Mr. Smee",
+                    "pelicula": "Peter Pan",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1953,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Lady and the Tramp",
+            "year": 1955,
+            "characters": [
+                {
+                    "nombre": "Lady",
+                    "pelicula": "Lady and the Tramp",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1955,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Tramp",
+                    "pelicula": "Lady and the Tramp",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1955,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Jock",
+                    "pelicula": "Lady and the Tramp",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1955,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Trusty",
+                    "pelicula": "Lady and the Tramp",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1955,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Sleeping Beauty",
+            "year": 1959,
+            "characters": [
+                {
+                    "nombre": "Aurora",
+                    "pelicula": "Sleeping Beauty",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1959,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Maleficent",
+                    "pelicula": "Sleeping Beauty",
+                    "rol": "Villano",
+                    "especie": "Ser Mágico",
+                    "poderes": "Sí",
+                    "año": 1959,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Prince Phillip",
+                    "pelicula": "Sleeping Beauty",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1959,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Flora",
+                    "pelicula": "Sleeping Beauty",
+                    "rol": "Secundario",
+                    "especie": "Hada",
+                    "poderes": "Sí",
+                    "año": 1959,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Fauna",
+                    "pelicula": "Sleeping Beauty",
+                    "rol": "Secundario",
+                    "especie": "Hada",
+                    "poderes": "Sí",
+                    "año": 1959,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Merryweather",
+                    "pelicula": "Sleeping Beauty",
+                    "rol": "Secundario",
+                    "especie": "Hada",
+                    "poderes": "Sí",
+                    "año": 1959,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "One Hundred and One Dalmatians",
+            "year": 1961,
+            "characters": [
+                {
+                    "nombre": "Pongo",
+                    "pelicula": "One Hundred and One Dalmatians",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1961,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Perdita",
+                    "pelicula": "One Hundred and One Dalmatians",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1961,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Cruella de Vil",
+                    "pelicula": "One Hundred and One Dalmatians",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1961,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Roger",
+                    "pelicula": "One Hundred and One Dalmatians",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1961,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Anita",
+                    "pelicula": "One Hundred and One Dalmatians",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1961,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "The Sword in the Stone",
+            "year": 1963,
+            "characters": [
+                {
+                    "nombre": "Arthur",
+                    "pelicula": "The Sword in the Stone",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1963,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Merlin",
+                    "pelicula": "The Sword in the Stone",
+                    "rol": "Secundario",
+                    "especie": "Mago",
+                    "poderes": "Sí",
+                    "año": 1963,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Madam Mim",
+                    "pelicula": "The Sword in the Stone",
+                    "rol": "Villano",
+                    "especie": "Bruja",
+                    "poderes": "Sí",
+                    "año": 1963,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "The Jungle Book",
+            "year": 1967,
+            "characters": [
+                {
+                    "nombre": "Mowgli",
+                    "pelicula": "The Jungle Book",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1967,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Baloo",
+                    "pelicula": "The Jungle Book",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1967,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Bagheera",
+                    "pelicula": "The Jungle Book",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1967,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Shere Khan",
+                    "pelicula": "The Jungle Book",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1967,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Kaa",
+                    "pelicula": "The Jungle Book",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1967,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "King Louie",
+                    "pelicula": "The Jungle Book",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1967,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "The Aristocats",
+            "year": 1970,
+            "characters": [
+                {
+                    "nombre": "Duchess",
+                    "pelicula": "The Aristocats",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1970,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Thomas O'Malley",
+                    "pelicula": "The Aristocats",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1970,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Marie",
+                    "pelicula": "The Aristocats",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1970,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Berlioz",
+                    "pelicula": "The Aristocats",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1970,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Toulouse",
+                    "pelicula": "The Aristocats",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1970,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Edgar",
+                    "pelicula": "The Aristocats",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1970,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Robin Hood",
+            "year": 1973,
+            "characters": [
+                {
+                    "nombre": "Robin Hood",
+                    "pelicula": "Robin Hood",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1973,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Little John",
+                    "pelicula": "Robin Hood",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1973,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Maid Marian",
+                    "pelicula": "Robin Hood",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1973,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Prince John",
+                    "pelicula": "Robin Hood",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1973,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Sheriff of Nottingham",
+                    "pelicula": "Robin Hood",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1973,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "The Many Adventures of Winnie the Pooh",
+            "year": 1977,
+            "characters": [
+                {
+                    "nombre": "Winnie the Pooh",
+                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "rol": "Protagonista",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Piglet",
+                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Tigger",
+                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Eeyore",
+                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Rabbit",
+                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Christopher Robin",
+                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "The Rescuers",
+            "year": 1977,
+            "characters": [
+                {
+                    "nombre": "Bernard",
+                    "pelicula": "The Rescuers",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Miss Bianca",
+                    "pelicula": "The Rescuers",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Penny",
+                    "pelicula": "The Rescuers",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Madame Medusa",
+                    "pelicula": "The Rescuers",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1977,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "The Fox and the Hound",
+            "year": 1981,
+            "characters": [
+                {
+                    "nombre": "Tod",
+                    "pelicula": "The Fox and the Hound",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1981,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Copper",
+                    "pelicula": "The Fox and the Hound",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1981,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Chief",
+                    "pelicula": "The Fox and the Hound",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1981,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "The Little Mermaid",
+            "year": 1989,
+            "characters": [
+                {
+                    "nombre": "Ariel",
+                    "pelicula": "The Little Mermaid",
+                    "rol": "Protagonista",
+                    "especie": "Sirena",
+                    "poderes": "No",
+                    "año": 1989,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Prince Eric",
+                    "pelicula": "The Little Mermaid",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1989,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Ursula",
+                    "pelicula": "The Little Mermaid",
+                    "rol": "Villano",
+                    "especie": "Bruja Marina",
+                    "poderes": "Sí",
+                    "año": 1989,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Flounder",
+                    "pelicula": "The Little Mermaid",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1989,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Sebastian",
+                    "pelicula": "The Little Mermaid",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1989,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "King Triton",
+                    "pelicula": "The Little Mermaid",
+                    "rol": "Secundario",
+                    "especie": "Tritón",
+                    "poderes": "Sí",
+                    "año": 1989,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Beauty and the Beast",
+            "year": 1991,
+            "characters": [
+                {
+                    "nombre": "Belle",
+                    "pelicula": "Beauty and the Beast",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1991,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Beast",
+                    "pelicula": "Beauty and the Beast",
+                    "rol": "Protagonista",
+                    "especie": "Bestia",
+                    "poderes": "No",
+                    "año": 1991,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Gaston",
+                    "pelicula": "Beauty and the Beast",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1991,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Lumiere",
+                    "pelicula": "Beauty and the Beast",
+                    "rol": "Secundario",
+                    "especie": "Objeto Animado",
+                    "poderes": "Sí",
+                    "año": 1991,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Cogsworth",
+                    "pelicula": "Beauty and the Beast",
+                    "rol": "Secundario",
+                    "especie": "Objeto Animado",
+                    "poderes": "Sí",
+                    "año": 1991,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Mrs. Potts",
+                    "pelicula": "Beauty and the Beast",
+                    "rol": "Secundario",
+                    "especie": "Objeto Animado",
+                    "poderes": "Sí",
+                    "año": 1991,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Aladdin",
+            "year": 1992,
+            "characters": [
+                {
+                    "nombre": "Aladdin",
+                    "pelicula": "Aladdin",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1992,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Jasmine",
+                    "pelicula": "Aladdin",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1992,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Genie",
+                    "pelicula": "Aladdin",
+                    "rol": "Secundario",
+                    "especie": "Genio",
+                    "poderes": "Sí",
+                    "año": 1992,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Jafar",
+                    "pelicula": "Aladdin",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 1992,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Iago",
+                    "pelicula": "Aladdin",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1992,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Abu",
+                    "pelicula": "Aladdin",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1992,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "The Lion King",
+            "year": 1994,
+            "characters": [
+                {
+                    "nombre": "Simba",
+                    "pelicula": "The Lion King",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1994,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Nala",
+                    "pelicula": "The Lion King",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1994,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Mufasa",
+                    "pelicula": "The Lion King",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1994,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Scar",
+                    "pelicula": "The Lion King",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1994,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Timon",
+                    "pelicula": "The Lion King",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1994,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pumbaa",
+                    "pelicula": "The Lion King",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1994,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Rafiki",
+                    "pelicula": "The Lion King",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "Sí",
+                    "año": 1994,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Pocahontas",
+            "year": 1995,
+            "characters": [
+                {
+                    "nombre": "Pocahontas",
+                    "pelicula": "Pocahontas",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1995,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "John Smith",
+                    "pelicula": "Pocahontas",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1995,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Governor Ratcliffe",
+                    "pelicula": "Pocahontas",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1995,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Meeko",
+                    "pelicula": "Pocahontas",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1995,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Flit",
+                    "pelicula": "Pocahontas",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1995,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Grandmother Willow",
+                    "pelicula": "Pocahontas",
+                    "rol": "Secundario",
+                    "especie": "Árbol Mágico",
+                    "poderes": "Sí",
+                    "año": 1995,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "The Hunchback of Notre Dame",
+            "year": 1996,
+            "characters": [
+                {
+                    "nombre": "Quasimodo",
+                    "pelicula": "The Hunchback of Notre Dame",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1996,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Esmeralda",
+                    "pelicula": "The Hunchback of Notre Dame",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1996,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Judge Claude Frollo",
+                    "pelicula": "The Hunchback of Notre Dame",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1996,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Phoebus",
+                    "pelicula": "The Hunchback of Notre Dame",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1996,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Hercules",
+            "year": 1997,
+            "characters": [
+                {
+                    "nombre": "Hercules",
+                    "pelicula": "Hercules",
+                    "rol": "Protagonista",
+                    "especie": "Semidiós",
+                    "poderes": "Sí",
+                    "año": 1997,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Megara",
+                    "pelicula": "Hercules",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1997,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Hades",
+                    "pelicula": "Hercules",
+                    "rol": "Villano",
+                    "especie": "Dios",
+                    "poderes": "Sí",
+                    "año": 1997,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Phil",
+                    "pelicula": "Hercules",
+                    "rol": "Secundario",
+                    "especie": "Sátiro",
+                    "poderes": "No",
+                    "año": 1997,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pegasus",
+                    "pelicula": "Hercules",
+                    "rol": "Secundario",
+                    "especie": "Criatura Mitológica",
+                    "poderes": "Sí",
+                    "año": 1997,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Mulan",
+            "year": 1998,
+            "characters": [
+                {
+                    "nombre": "Mulan",
+                    "pelicula": "Mulan",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1998,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Li Shang",
+                    "pelicula": "Mulan",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1998,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Mushu",
+                    "pelicula": "Mulan",
+                    "rol": "Secundario",
+                    "especie": "Dragón",
+                    "poderes": "Sí",
+                    "año": 1998,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Shan Yu",
+                    "pelicula": "Mulan",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1998,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Tarzan",
+            "year": 1999,
+            "characters": [
+                {
+                    "nombre": "Tarzan",
+                    "pelicula": "Tarzan",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1999,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Jane Porter",
+                    "pelicula": "Tarzan",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1999,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Kala",
+                    "pelicula": "Tarzan",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1999,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Kerchak",
+                    "pelicula": "Tarzan",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1999,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Clayton",
+                    "pelicula": "Tarzan",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 1999,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "The Emperor's New Groove",
+            "year": 2000,
+            "characters": [
+                {
+                    "nombre": "Kuzco",
+                    "pelicula": "The Emperor's New Groove",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2000,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pacha",
+                    "pelicula": "The Emperor's New Groove",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2000,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Yzma",
+                    "pelicula": "The Emperor's New Groove",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2000,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Kronk",
+                    "pelicula": "The Emperor's New Groove",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2000,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Atlantis: The Lost Empire",
+            "year": 2001,
+            "characters": [
+                {
+                    "nombre": "Milo Thatch",
+                    "pelicula": "Atlantis: The Lost Empire",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2001,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Kida",
+                    "pelicula": "Atlantis: The Lost Empire",
+                    "rol": "Protagonista",
+                    "especie": "Atlante",
+                    "poderes": "Sí",
+                    "año": 2001,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Commander Rourke",
+                    "pelicula": "Atlantis: The Lost Empire",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2001,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Helga Sinclair",
+                    "pelicula": "Atlantis: The Lost Empire",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2001,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Lilo & Stitch",
+            "year": 2002,
+            "characters": [
+                {
+                    "nombre": "Lilo",
+                    "pelicula": "Lilo & Stitch",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Stitch",
+                    "pelicula": "Lilo & Stitch",
+                    "rol": "Protagonista",
+                    "especie": "Experimento Alienígena",
+                    "poderes": "Sí",
+                    "año": 2002,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Nani",
+                    "pelicula": "Lilo & Stitch",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Jumba Jookiba",
+                    "pelicula": "Lilo & Stitch",
+                    "rol": "Secundario",
+                    "especie": "Alienígena",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pleakley",
+                    "pelicula": "Lilo & Stitch",
+                    "rol": "Secundario",
+                    "especie": "Alienígena",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Captain Gantu",
+                    "pelicula": "Lilo & Stitch",
+                    "rol": "Villano",
+                    "especie": "Alienígena",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Treasure Planet",
+            "year": 2002,
+            "characters": [
+                {
+                    "nombre": "Jim Hawkins",
+                    "pelicula": "Treasure Planet",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "John Silver",
+                    "pelicula": "Treasure Planet",
+                    "rol": "Villano",
+                    "especie": "Cyborg",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Captain Amelia",
+                    "pelicula": "Treasure Planet",
+                    "rol": "Secundario",
+                    "especie": "Alienígena",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "B.E.N.",
+                    "pelicula": "Treasure Planet",
+                    "rol": "Secundario",
+                    "especie": "Robot",
+                    "poderes": "No",
+                    "año": 2002,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Chicken Little",
+            "year": 2005,
+            "characters": [
+                {
+                    "nombre": "Chicken Little",
+                    "pelicula": "Chicken Little",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2005,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Abby Mallard",
+                    "pelicula": "Chicken Little",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2005,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Runt of the Litter",
+                    "pelicula": "Chicken Little",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2005,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Fish Out of Water",
+                    "pelicula": "Chicken Little",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2005,
+                    "género": "Neutro"
+                }
+            ]
+        },
+        {
+            "title": "Meet the Robinsons",
+            "year": 2007,
+            "characters": [
+                {
+                    "nombre": "Lewis",
+                    "pelicula": "Meet the Robinsons",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2007,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Wilbur Robinson",
+                    "pelicula": "Meet the Robinsons",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2007,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Bowler Hat Guy",
+                    "pelicula": "Meet the Robinsons",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2007,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "DOR-15",
+                    "pelicula": "Meet the Robinsons",
+                    "rol": "Villano",
+                    "especie": "Robot",
+                    "poderes": "No",
+                    "año": 2007,
+                    "género": "Neutro"
+                }
+            ]
+        },
+        {
+            "title": "Bolt",
+            "year": 2008,
+            "characters": [
+                {
+                    "nombre": "Bolt",
+                    "pelicula": "Bolt",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2008,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Mittens",
+                    "pelicula": "Bolt",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2008,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Rhino",
+                    "pelicula": "Bolt",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2008,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Penny",
+                    "pelicula": "Bolt",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2008,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "The Princess and the Frog",
+            "year": 2009,
+            "characters": [
+                {
+                    "nombre": "Tiana",
+                    "pelicula": "The Princess and the Frog",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2009,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Prince Naveen",
+                    "pelicula": "The Princess and the Frog",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2009,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Dr. Facilier",
+                    "pelicula": "The Princess and the Frog",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2009,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Louis",
+                    "pelicula": "The Princess and the Frog",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2009,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Ray",
+                    "pelicula": "The Princess and the Frog",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2009,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Tangled",
+            "year": 2010,
+            "characters": [
+                {
+                    "nombre": "Rapunzel",
+                    "pelicula": "Tangled",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2010,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Flynn Rider",
+                    "pelicula": "Tangled",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2010,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Mother Gothel",
+                    "pelicula": "Tangled",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2010,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Pascal",
+                    "pelicula": "Tangled",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2010,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Maximus",
+                    "pelicula": "Tangled",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2010,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Winnie the Pooh",
+            "year": 2011,
+            "characters": [
+                {
+                    "nombre": "Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
+                    "rol": "Protagonista",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 2011,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Tigger",
+                    "pelicula": "Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 2011,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Piglet",
+                    "pelicula": "Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 2011,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Eeyore",
+                    "pelicula": "Winnie the Pooh",
+                    "rol": "Secundario",
+                    "especie": "Peluche",
+                    "poderes": "No",
+                    "año": 2011,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Wreck-It Ralph",
+            "year": 2012,
+            "characters": [
+                {
+                    "nombre": "Ralph",
+                    "pelicula": "Wreck-It Ralph",
+                    "rol": "Protagonista",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "No",
+                    "año": 2012,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Vanellope von Schweetz",
+                    "pelicula": "Wreck-It Ralph",
+                    "rol": "Protagonista",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "Sí",
+                    "año": 2012,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Fix-It Felix Jr.",
+                    "pelicula": "Wreck-It Ralph",
+                    "rol": "Secundario",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "Sí",
+                    "año": 2012,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "King Candy",
+                    "pelicula": "Wreck-It Ralph",
+                    "rol": "Villano",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "Sí",
+                    "año": 2012,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Sergeant Calhoun",
+                    "pelicula": "Wreck-It Ralph",
+                    "rol": "Secundario",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "No",
+                    "año": 2012,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Frozen",
+            "year": 2013,
+            "characters": [
+                {
+                    "nombre": "Anna",
+                    "pelicula": "Frozen",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2013,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Elsa",
+                    "pelicula": "Frozen",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2013,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Kristoff",
+                    "pelicula": "Frozen",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2013,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Olaf",
+                    "pelicula": "Frozen",
+                    "rol": "Secundario",
+                    "especie": "Muñeco de Nieve Vivo",
+                    "poderes": "Sí",
+                    "año": 2013,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Hans",
+                    "pelicula": "Frozen",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2013,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Sven",
+                    "pelicula": "Frozen",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2013,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Zootopia",
+            "year": 2016,
+            "characters": [
+                {
+                    "nombre": "Judy Hopps",
+                    "pelicula": "Zootopia",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Nick Wilde",
+                    "pelicula": "Zootopia",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Assistant Mayor Bellwether",
+                    "pelicula": "Zootopia",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Chief Bogo",
+                    "pelicula": "Zootopia",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Flash",
+                    "pelicula": "Zootopia",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Moana",
+            "year": 2016,
+            "characters": [
+                {
+                    "nombre": "Moana",
+                    "pelicula": "Moana",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Maui",
+                    "pelicula": "Moana",
+                    "rol": "Protagonista",
+                    "especie": "Semidiós",
+                    "poderes": "Sí",
+                    "año": 2016,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Te Ka",
+                    "pelicula": "Moana",
+                    "rol": "Villano",
+                    "especie": "Ser Elemental",
+                    "poderes": "Sí",
+                    "año": 2016,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Heihei",
+                    "pelicula": "Moana",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pua",
+                    "pelicula": "Moana",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 2016,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Gramma Tala",
+                    "pelicula": "Moana",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2016,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Ralph Breaks the Internet",
+            "year": 2018,
+            "characters": [
+                {
+                    "nombre": "Ralph",
+                    "pelicula": "Ralph Breaks the Internet",
+                    "rol": "Protagonista",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "No",
+                    "año": 2018,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Vanellope von Schweetz",
+                    "pelicula": "Ralph Breaks the Internet",
+                    "rol": "Protagonista",
+                    "especie": "Personaje de Videojuego",
+                    "poderes": "Sí",
+                    "año": 2018,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Yesss",
+                    "pelicula": "Ralph Breaks the Internet",
+                    "rol": "Secundario",
+                    "especie": "Avatar Digital",
+                    "poderes": "No",
+                    "año": 2018,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Frozen II",
+            "year": 2019,
+            "characters": [
+                {
+                    "nombre": "Anna",
+                    "pelicula": "Frozen II",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2019,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Elsa",
+                    "pelicula": "Frozen II",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2019,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Kristoff",
+                    "pelicula": "Frozen II",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2019,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Olaf",
+                    "pelicula": "Frozen II",
+                    "rol": "Secundario",
+                    "especie": "Muñeco de Nieve Vivo",
+                    "poderes": "Sí",
+                    "año": 2019,
+                    "género": "Masculino"
+                }
+            ]
+        },
+        {
+            "title": "Raya and the Last Dragon",
+            "year": 2021,
+            "characters": [
+                {
+                    "nombre": "Raya",
+                    "pelicula": "Raya and the Last Dragon",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2021,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Sisu",
+                    "pelicula": "Raya and the Last Dragon",
+                    "rol": "Protagonista",
+                    "especie": "Dragón",
+                    "poderes": "Sí",
+                    "año": 2021,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Namaari",
+                    "pelicula": "Raya and the Last Dragon",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2021,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Druun",
+                    "pelicula": "Raya and the Last Dragon",
+                    "rol": "Villano",
+                    "especie": "Entidad Oscura",
+                    "poderes": "Sí",
+                    "año": 2021,
+                    "género": "Neutro"
+                }
+            ]
+        },
+        {
+            "title": "Encanto",
+            "year": 2021,
+            "characters": [
+                {
+                    "nombre": "Mirabel Madrigal",
+                    "pelicula": "Encanto",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2021,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Bruno Madrigal",
+                    "pelicula": "Encanto",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2021,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Isabela Madrigal",
+                    "pelicula": "Encanto",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2021,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Luisa Madrigal",
+                    "pelicula": "Encanto",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2021,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Abuela Alma",
+                    "pelicula": "Encanto",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2021,
+                    "género": "Femenino"
+                }
+            ]
+        },
+        {
+            "title": "Strange World",
+            "year": 2022,
+            "characters": [
+                {
+                    "nombre": "Searcher Clade",
+                    "pelicula": "Strange World",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2022,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Jaeger Clade",
+                    "pelicula": "Strange World",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2022,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Ethan Clade",
+                    "pelicula": "Strange World",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2022,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Splat",
+                    "pelicula": "Strange World",
+                    "rol": "Secundario",
+                    "especie": "Criatura",
+                    "poderes": "No",
+                    "año": 2022,
+                    "género": "Neutro"
+                }
+            ]
+        },
+        {
+            "title": "Wish",
+            "year": 2023,
+            "characters": [
+                {
+                    "nombre": "Asha",
+                    "pelicula": "Wish",
+                    "rol": "Protagonista",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2023,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "King Magnifico",
+                    "pelicula": "Wish",
+                    "rol": "Villano",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 2023,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Valentino",
+                    "pelicula": "Wish",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "Sí",
+                    "año": 2023,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Star",
+                    "pelicula": "Wish",
+                    "rol": "Secundario",
+                    "especie": "Ser Cósmico",
+                    "poderes": "Sí",
+                    "año": 2023,
+                    "género": "Neutro"
+                },
+                {
+                    "nombre": "Queen Amaya",
+                    "pelicula": "Wish",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "No",
+                    "año": 2023,
+                    "género": "Femenino"
+                }
+            ]
+        }
+    ]
+}
