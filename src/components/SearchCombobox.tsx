@@ -14,6 +14,7 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
   const [query, setQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
   const [open, setOpen] = useState(false);
+  const [searchBy, setSearchBy] = useState<'character' | 'movie'>('character');
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const suggestions = useMemo(() => {
@@ -25,8 +26,14 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
     }
 
     return pool
-      .filter((character) => character.name.toLowerCase().startsWith(normalized));
-  }, [characters, guessedIds, query]);
+      .filter((character) => {
+        if (searchBy === 'character') {
+          return character.name.toLowerCase().startsWith(normalized);
+        } else {
+          return character.movie.toLowerCase().includes(normalized);
+        }
+      });
+  }, [characters, guessedIds, query, searchBy]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -54,9 +61,9 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
     <div className="search-box" ref={containerRef}>
       <div className="search-box__field">
         <input
-          aria-label="Search a character"
+          aria-label={searchBy === 'character' ? "Search a character" : "Search a movie"}
           className="search-box__input"
-          placeholder="Search a character"
+          placeholder={searchBy === 'character' ? "Search a character" : "Search a movie"}
           value={query}
           autoComplete="off"
           disabled={disabled}
@@ -97,6 +104,24 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
         >
           ➜
         </button>
+      </div>
+
+      <div className="search-mode-wrap">
+        <label className="search-mode-toggle">
+          <span className="search-mode-label">Search by Movie</span>
+          <div className="switch">
+            <input 
+              type="checkbox" 
+              checked={searchBy === 'movie'}
+              onChange={(e) => {
+                setSearchBy(e.target.checked ? 'movie' : 'character');
+                setQuery('');
+                setOpen(false);
+              }} 
+            />
+            <span className="slider round"></span>
+          </div>
+        </label>
       </div>
 
       <AnimatePresence>
