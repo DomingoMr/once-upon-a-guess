@@ -21,15 +21,11 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
     const pool = characters.filter((character) => !guessedIds.has(character.id));
 
     if (!normalized) {
-      return pool.slice(0, 7);
+      return [];
     }
 
     return pool
-      .filter((character) => {
-        const haystack = `${character.name} ${character.movie} ${character.species}`.toLowerCase();
-        return haystack.includes(normalized);
-      })
-      .slice(0, 7);
+      .filter((character) => character.name.toLowerCase().startsWith(normalized));
   }, [characters, guessedIds, query]);
 
   useEffect(() => {

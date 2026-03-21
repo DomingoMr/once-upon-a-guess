@@ -236,6 +236,8 @@ button {
   top: calc(100% + 10px);
   left: 0;
   right: 0;
+  max-height: 320px;
+  overflow-y: auto;
   display: grid;
   gap: 2px;
   padding: 10px;
@@ -244,6 +246,8 @@ button {
   background: linear-gradient(180deg, rgba(8, 19, 36, 0.96), rgba(6, 15, 31, 0.97));
   box-shadow: 0 20px 40px rgba(1, 8, 19, 0.5);
   z-index: 5;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(141, 210, 255, 0.35) transparent;
 }
 
 .search-option {
@@ -320,6 +324,7 @@ button {
   width: 100%;
   overflow-x: auto;
   padding-bottom: 6px;
+  will-change: transform;
 }
 
 .board-columns,
@@ -359,7 +364,6 @@ button {
   justify-content: center;
   text-align: center;
   box-shadow: 0 10px 22px rgba(3, 9, 20, 0.34);
-  backdrop-filter: blur(8px);
 }
 
 .guess-tile.is-exact {
