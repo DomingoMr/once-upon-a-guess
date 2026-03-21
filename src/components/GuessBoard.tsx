@@ -40,9 +40,9 @@ export function GuessBoard({ guesses, secret }: GuessBoardProps) {
                   initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 0.35,
-                    ease: [0.2, 0.9, 0.2, 1],
-                    delay: tileIndex * 0.07 + guessIndex * 0.03,
+                    duration: 1.2,
+                    ease: [0.16, 6, 1, 0.8],
+                    delay: tileIndex * 0.5 + guessIndex * 0.1,
                   }}
                 >
                   {tile.key === 'character' && tile.character ? (

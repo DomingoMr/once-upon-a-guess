@@ -454,9 +454,100 @@ button {
   }
 }
 
+/* Hint System */
+.game-hint-wrap {
+  grid-column: 3;
+  justify-self: end;
+  align-self: start;
+}
+
+.hint-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hint-sphere-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+.hint-sphere {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #93cfff, #2d8cff 60%, #1e5fb4 100%);
+  box-shadow: 
+    0 0 20px rgba(45, 140, 255, 0.4),
+    inset -2px -2px 6px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.hint-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--blue-200);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hint-reveal {
+  background: linear-gradient(135deg, rgba(45, 140, 255, 0.15), rgba(30, 95, 180, 0.25));
+  border: 1px solid rgba(147, 207, 255, 0.3);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  color: var(--white);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  max-width: min(350px, 85vw);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.4;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 0;
+  width: max-content;
+}
+
+.hint-reveal strong {
+  color: var(--blue-300);
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  .game-hint-wrap {
+    order: -1;
+    justify-self: flex-end;
+  }
+}
+
 @media (max-width: 640px) {
   .page-shell {
     align-items: start;
+  }
+
+  .hint-reveal {
+    left: auto;
+    right: 0;
+    translate: 0 0;
   }
 
   .game-stage {

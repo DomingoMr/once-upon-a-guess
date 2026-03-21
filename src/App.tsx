@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import rawDataset from './data/disney-characters.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
@@ -44,6 +45,7 @@ export default function App() {
   const secret = useMemo(() => getDailyCharacter(characters), [characters]);
   const [guesses, setGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters));
   const [status, setStatus] = useState('');
+  const [hintRevealed, setHintRevealed] = useState(false);
 
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
   const hasWon = guesses.some((g) => g.id === secret.id);
@@ -100,7 +102,46 @@ export default function App() {
               <img src="/logo.png" alt="Once Upon a Guess" className="game-logo" />
             </div>
           </div>
-          <div />
+          <div className="game-hint-wrap">
+            <AnimatePresence>
+              {guesses.length >= 4 && !hasWon && (
+                <motion.div
+                  className="hint-container"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                >
+                  <motion.button
+                    className="hint-sphere-btn"
+                    onClick={() => setHintRevealed(true)}
+                    animate={{
+                      y: [0, -8, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <div className="hint-sphere" />
+                    <span className="hint-label">Hint!</span>
+                  </motion.button>
+                  
+                  <AnimatePresence>
+                    {hintRevealed && (
+                      <motion.div 
+                        className="hint-reveal"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                      >
+                        Movie: <strong>{secret.movie}</strong>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </header>
 
         <section className="game-panel">
