@@ -18,8 +18,7 @@ export function CharacterAvatar({ character, size = 'md' }: CharacterAvatarProps
         .toUpperCase(),
     [character.name],
   );
-
-  const src = `/characters/${encodeURIComponent(character.imageFile)}`;
+  const src = `/characters/${character.imageFile}`;
 
   if (missing) {
     return <span className={`character-avatar character-avatar--${size} is-fallback`}>{initials}</span>;

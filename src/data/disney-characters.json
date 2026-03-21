@@ -135,7 +135,7 @@
                     "género": "Masculino"
                 },
                 {
-                    "nombre": "Timothy Q. Mouse",
+                    "nombre": "Timothy Q Mouse",
                     "pelicula": "Dumbo",
                     "rol": "Secundario",
                     "especie": "Animal",
@@ -144,7 +144,7 @@
                     "género": "Masculino"
                 },
                 {
-                    "nombre": "Mrs. Jumbo",
+                    "nombre": "Mrs Jumbo",
                     "pelicula": "Dumbo",
                     "rol": "Secundario",
                     "especie": "Animal",
@@ -348,7 +348,7 @@
                     "género": "Masculino"
                 },
                 {
-                    "nombre": "Mr. Smee",
+                    "nombre": "Mr Smee",
                     "pelicula": "Peter Pan",
                     "rol": "Secundario",
                     "especie": "Humano",
@@ -716,12 +716,12 @@
             ]
         },
         {
-            "title": "The Many Adventures of Winnie the Pooh",
+            "title": "Winnie the Pooh",
             "year": 1977,
             "characters": [
                 {
                     "nombre": "Winnie the Pooh",
-                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
                     "rol": "Protagonista",
                     "especie": "Peluche",
                     "poderes": "No",
@@ -730,7 +730,7 @@
                 },
                 {
                     "nombre": "Piglet",
-                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
                     "rol": "Secundario",
                     "especie": "Peluche",
                     "poderes": "No",
@@ -739,7 +739,7 @@
                 },
                 {
                     "nombre": "Tigger",
-                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
                     "rol": "Secundario",
                     "especie": "Peluche",
                     "poderes": "No",
@@ -748,7 +748,7 @@
                 },
                 {
                     "nombre": "Eeyore",
-                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
                     "rol": "Secundario",
                     "especie": "Peluche",
                     "poderes": "No",
@@ -757,7 +757,7 @@
                 },
                 {
                     "nombre": "Rabbit",
-                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
                     "rol": "Secundario",
                     "especie": "Peluche",
                     "poderes": "No",
@@ -766,7 +766,7 @@
                 },
                 {
                     "nombre": "Christopher Robin",
-                    "pelicula": "The Many Adventures of Winnie the Pooh",
+                    "pelicula": "Winnie the Pooh",
                     "rol": "Secundario",
                     "especie": "Humano",
                     "poderes": "No",
@@ -960,7 +960,7 @@
                     "género": "Masculino"
                 },
                 {
-                    "nombre": "Mrs. Potts",
+                    "nombre": "Mrs Potts",
                     "pelicula": "Beauty and the Beast",
                     "rol": "Secundario",
                     "especie": "Objeto Animado",
@@ -1388,12 +1388,12 @@
             ]
         },
         {
-            "title": "Atlantis: The Lost Empire",
+            "title": "Atlantis The Lost Empire",
             "year": 2001,
             "characters": [
                 {
                     "nombre": "Milo Thatch",
-                    "pelicula": "Atlantis: The Lost Empire",
+                    "pelicula": "Atlantis The Lost Empire",
                     "rol": "Protagonista",
                     "especie": "Humano",
                     "poderes": "No",
@@ -1402,7 +1402,7 @@
                 },
                 {
                     "nombre": "Kida",
-                    "pelicula": "Atlantis: The Lost Empire",
+                    "pelicula": "Atlantis The Lost Empire",
                     "rol": "Protagonista",
                     "especie": "Atlante",
                     "poderes": "Sí",
@@ -1411,7 +1411,7 @@
                 },
                 {
                     "nombre": "Commander Rourke",
-                    "pelicula": "Atlantis: The Lost Empire",
+                    "pelicula": "Atlantis The Lost Empire",
                     "rol": "Villano",
                     "especie": "Humano",
                     "poderes": "No",
@@ -1420,7 +1420,7 @@
                 },
                 {
                     "nombre": "Helga Sinclair",
-                    "pelicula": "Atlantis: The Lost Empire",
+                    "pelicula": "Atlantis The Lost Empire",
                     "rol": "Secundario",
                     "especie": "Humano",
                     "poderes": "No",
@@ -1521,7 +1521,7 @@
                     "género": "Femenino"
                 },
                 {
-                    "nombre": "B.E.N.",
+                    "nombre": "BEN",
                     "pelicula": "Treasure Planet",
                     "rol": "Secundario",
                     "especie": "Robot",
@@ -1680,7 +1680,7 @@
                     "género": "Masculino"
                 },
                 {
-                    "nombre": "Dr. Facilier",
+                    "nombre": "Dr Facilier",
                     "pelicula": "The Princess and the Frog",
                     "rol": "Villano",
                     "especie": "Humano",
@@ -1760,48 +1760,6 @@
             ]
         },
         {
-            "title": "Winnie the Pooh",
-            "year": 2011,
-            "characters": [
-                {
-                    "nombre": "Winnie the Pooh",
-                    "pelicula": "Winnie the Pooh",
-                    "rol": "Protagonista",
-                    "especie": "Peluche",
-                    "poderes": "No",
-                    "año": 2011,
-                    "género": "Masculino"
-                },
-                {
-                    "nombre": "Tigger",
-                    "pelicula": "Winnie the Pooh",
-                    "rol": "Secundario",
-                    "especie": "Peluche",
-                    "poderes": "No",
-                    "año": 2011,
-                    "género": "Masculino"
-                },
-                {
-                    "nombre": "Piglet",
-                    "pelicula": "Winnie the Pooh",
-                    "rol": "Secundario",
-                    "especie": "Peluche",
-                    "poderes": "No",
-                    "año": 2011,
-                    "género": "Masculino"
-                },
-                {
-                    "nombre": "Eeyore",
-                    "pelicula": "Winnie the Pooh",
-                    "rol": "Secundario",
-                    "especie": "Peluche",
-                    "poderes": "No",
-                    "año": 2011,
-                    "género": "Masculino"
-                }
-            ]
-        },
-        {
             "title": "Wreck-It Ralph",
             "year": 2012,
             "characters": [
@@ -1824,7 +1782,7 @@
                     "género": "Femenino"
                 },
                 {
-                    "nombre": "Fix-It Felix Jr.",
+                    "nombre": "Fix-It Felix Jr",
                     "pelicula": "Wreck-It Ralph",
                     "rol": "Secundario",
                     "especie": "Personaje de Videojuego",
@@ -2020,81 +1978,6 @@
                     "poderes": "Sí",
                     "año": 2016,
                     "género": "Femenino"
-                }
-            ]
-        },
-        {
-            "title": "Ralph Breaks the Internet",
-            "year": 2018,
-            "characters": [
-                {
-                    "nombre": "Ralph",
-                    "pelicula": "Ralph Breaks the Internet",
-                    "rol": "Protagonista",
-                    "especie": "Personaje de Videojuego",
-                    "poderes": "No",
-                    "año": 2018,
-                    "género": "Masculino"
-                },
-                {
-                    "nombre": "Vanellope von Schweetz",
-                    "pelicula": "Ralph Breaks the Internet",
-                    "rol": "Protagonista",
-                    "especie": "Personaje de Videojuego",
-                    "poderes": "Sí",
-                    "año": 2018,
-                    "género": "Femenino"
-                },
-                {
-                    "nombre": "Yesss",
-                    "pelicula": "Ralph Breaks the Internet",
-                    "rol": "Secundario",
-                    "especie": "Avatar Digital",
-                    "poderes": "No",
-                    "año": 2018,
-                    "género": "Femenino"
-                }
-            ]
-        },
-        {
-            "title": "Frozen II",
-            "year": 2019,
-            "characters": [
-                {
-                    "nombre": "Anna",
-                    "pelicula": "Frozen II",
-                    "rol": "Protagonista",
-                    "especie": "Humano",
-                    "poderes": "No",
-                    "año": 2019,
-                    "género": "Femenino"
-                },
-                {
-                    "nombre": "Elsa",
-                    "pelicula": "Frozen II",
-                    "rol": "Protagonista",
-                    "especie": "Humano",
-                    "poderes": "Sí",
-                    "año": 2019,
-                    "género": "Femenino"
-                },
-                {
-                    "nombre": "Kristoff",
-                    "pelicula": "Frozen II",
-                    "rol": "Secundario",
-                    "especie": "Humano",
-                    "poderes": "No",
-                    "año": 2019,
-                    "género": "Masculino"
-                },
-                {
-                    "nombre": "Olaf",
-                    "pelicula": "Frozen II",
-                    "rol": "Secundario",
-                    "especie": "Muñeco de Nieve Vivo",
-                    "poderes": "Sí",
-                    "año": 2019,
-                    "género": "Masculino"
                 }
             ]
         },

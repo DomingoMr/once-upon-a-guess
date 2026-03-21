@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/components/characteravatar.tsx","./src/components/guessboard.tsx","./src/components/searchcombobox.tsx","./src/lib/game.ts","./src/lib/normalize.ts"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/components/characteravatar.tsx","./src/components/checkcharacters.tsx","./src/components/guessboard.tsx","./src/components/searchcombobox.tsx","./src/lib/game.ts","./src/lib/normalize.ts"],"version":"5.9.3"}

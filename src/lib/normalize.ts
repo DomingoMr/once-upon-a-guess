@@ -56,6 +56,14 @@ function slugify(value: string) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 }
+function toFileName(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_|_$/g, '');
+}
 
 export function normalizeCharacters(dataset: RawDataset): DisneyCharacter[] {
   return dataset.movies.flatMap((movie) =>
@@ -68,7 +76,7 @@ export function normalizeCharacters(dataset: RawDataset): DisneyCharacter[] {
       powers: character.poderes === 'Sí',
       year: character.año,
       gender: genderMap[character['género']] ?? 'Neutral',
-      imageFile: `${character.nombre}.png`,
+      imageFile: `${toFileName(character.pelicula)}/${toFileName(character.nombre)}.png`,
     })),
   );
 }
