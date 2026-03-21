@@ -142,8 +142,10 @@ button {
   /* Tamaño del logo */
   max-width: 100%;
   height: auto;
-  margin: -150px -120px;
-  margin-bottom: -200px;
+  /* margin: -150px -120px;
+  margin-bottom: -200px;*/
+  margin: -20% -120px;
+  margin-bottom: -28%;
   filter: drop-shadow(0 0 15px rgba(179, 222, 255, 0.45)) drop-shadow(0 6px 24px rgba(2, 8, 19, 0.65));
 }
 
