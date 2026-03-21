@@ -96,7 +96,9 @@ export default function App() {
           </button>
           <div className="game-title-wrap">
             <span className="game-mode">Classic · {formatDate()}</span>
-            <h1 className="game-title">Once Upon a Guess</h1>
+            <div className="game-title">
+              <img src="/logo.png" alt="Once Upon a Guess" className="game-logo" />
+            </div>
           </div>
           <div />
         </header>
