@@ -2,81 +2,88 @@ import { useEffect, useMemo, useState } from 'react';
 import rawDataset from './data/disney-characters.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
-import { chooseRandomCharacter } from './lib/game';
+import { getDailyCharacter } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, RawDataset } from './types';
 
-const STORAGE_KEY = 'once-upon-a-guess-classic-v2';
+const STORAGE_KEY = 'ouag-daily-state-v4';
 
-type StoredState = {
-  secretId?: string;
-  guessIds?: string[];
+function todayKey(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function formatDate(): string {
+  return new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+}
+
+type DailyStoredState = {
+  date: string;
+  guessIds: string[];
 };
 
-function loadStoredState(characters: DisneyCharacter[]) {
-  if (typeof window === 'undefined') return null;
-
-  const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return null;
-
+function loadStoredGuesses(characters: DisneyCharacter[]): DisneyCharacter[] {
+  if (typeof window === 'undefined') return [];
   try {
-    const parsed = JSON.parse(raw) as StoredState;
-    const secret = characters.find((character) => character.id === parsed.secretId);
-    if (!secret) return null;
-
-    const guesses = (parsed.guessIds ?? [])
-      .map((id) => characters.find((character) => character.id === id))
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw) as DailyStoredState;
+    if (parsed.date !== todayKey()) return [];
+    return (parsed.guessIds ?? [])
+      .map((id) => characters.find((c) => c.id === id))
       .filter(Boolean) as DisneyCharacter[];
-
-    return { secret, guesses };
   } catch {
-    return null;
+    return [];
   }
 }
 
 export default function App() {
   const dataset = rawDataset as RawDataset;
   const characters = useMemo(() => normalizeCharacters(dataset), [dataset]);
-  const initialStored = useMemo(() => loadStoredState(characters), [characters]);
 
-  const [secret, setSecret] = useState<DisneyCharacter>(initialStored?.secret ?? chooseRandomCharacter(characters));
-  const [guesses, setGuesses] = useState<DisneyCharacter[]>(initialStored?.guesses ?? []);
+  const secret = useMemo(() => getDailyCharacter(characters), [characters]);
+  const [guesses, setGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters));
   const [status, setStatus] = useState('');
 
-  const guessedIds = useMemo(() => new Set(guesses.map((guess) => guess.id)), [guesses]);
-  const hasWon = guesses.some((guess) => guess.id === secret.id);
+  const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
+  const hasWon = guesses.some((g) => g.id === secret.id);
 
   useEffect(() => {
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
-        secretId: secret.id,
-        guessIds: guesses.map((guess) => guess.id),
+        date: todayKey(),
+        guessIds: guesses.map((g) => g.id),
       }),
     );
-  }, [secret, guesses]);
+  }, [guesses]);
+
+  // Restore win status on load if already won
+  useEffect(() => {
+    if (hasWon && !status) {
+      setStatus(`You found ${secret.name} in ${guesses.length} guesses.`);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function handleGuess(character: DisneyCharacter) {
-    if (hasWon || guessedIds.has(character.id)) {
-      return;
-    }
+    if (hasWon || guessedIds.has(character.id)) return;
 
     const nextGuesses = [...guesses, character];
     setGuesses(nextGuesses);
 
     if (character.id === secret.id) {
       setStatus(`You found ${secret.name} in ${nextGuesses.length} guess${nextGuesses.length === 1 ? '' : 'es'}.`);
-      return;
+    } else {
+      setStatus('');
     }
-
-    setStatus('');
   }
 
-  function handleNewGame() {
-    const nextSecret = chooseRandomCharacter(characters, secret.id);
-    setSecret(nextSecret);
-    setGuesses([]);
-    setStatus('');
+  function handleResetTest() {
+    // Clear daily state and sequence for testing
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem('ouag-daily-sequence');
+    window.location.reload();
   }
 
   return (
@@ -84,14 +91,14 @@ export default function App() {
       <div className="page-overlay" aria-hidden="true" />
       <main className="game-stage">
         <header className="game-topbar">
-          <div />
+          <button className="new-game-button" type="button" onClick={handleResetTest}>
+            Reset
+          </button>
           <div className="game-title-wrap">
-            <span className="game-mode">Classic</span>
+            <span className="game-mode">Classic · {formatDate()}</span>
             <h1 className="game-title">Once Upon a Guess</h1>
           </div>
-          <button className="new-game-button" type="button" onClick={handleNewGame}>
-            New game
-          </button>
+          <div />
         </header>
 
         <section className="game-panel">
