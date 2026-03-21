@@ -381,6 +381,22 @@ button {
   color: var(--white);
 }
 
+/* Feature tiles (Movie, Role, Gender, Species, Magic, Year) — green / amber / red */
+.guess-tile:not(.guess-tile--character).is-exact {
+  background: linear-gradient(180deg, rgba(52, 199, 108, 0.95), rgba(25, 135, 68, 0.95));
+  color: #031a0d;
+}
+
+.guess-tile:not(.guess-tile--character).is-near {
+  background: linear-gradient(180deg, rgba(255, 185, 30, 0.95), rgba(190, 128, 0, 0.95));
+  color: #1c1000;
+}
+
+.guess-tile:not(.guess-tile--character).is-miss {
+  background: linear-gradient(180deg, rgba(215, 55, 65, 0.95), rgba(152, 25, 38, 0.95));
+  color: var(--white);
+}
+
 .guess-tile__value,
 .guess-tile__character-name {
   font-size: 0.96rem;
