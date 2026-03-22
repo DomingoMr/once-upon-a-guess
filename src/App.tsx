@@ -40,7 +40,26 @@ function loadStoredGuesses(characters: DisneyCharacter[]): DisneyCharacter[] {
 }
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'classic'>('home');
+  const [view, setView] = useState<'home' | 'classic'>(() => {
+    return typeof window !== 'undefined' && window.location.hash === '#classic' ? 'classic' : 'home';
+  });
+
+  useEffect(() => {
+    const onHashChange = () => {
+      setView(window.location.hash === '#classic' ? 'classic' : 'home');
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const navigateTo = (newView: 'home' | 'classic') => {
+    if (newView === 'classic') {
+      window.location.hash = 'classic';
+    } else {
+      window.history.pushState(null, '', window.location.pathname);
+    }
+    setView(newView);
+  };
 
   const dataset = rawDataset as RawDataset;
   const characters = useMemo(() => normalizeCharacters(dataset), [dataset]);
@@ -89,12 +108,12 @@ export default function App() {
       <div className="page-overlay" aria-hidden="true" />
 
       {view === 'home' ? (
-        <Home onSelectMode={(mode) => setView(mode)} />
+        <Home onSelectMode={(mode) => navigateTo('classic')} />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <button className="new-game-button" type="button" onClick={() => setView('home')}>
+            <div className="game-back-wrap" style={{ display: 'flex', gap: '8px' }}>
+              <button className="new-game-button" type="button" onClick={() => navigateTo('home')}>
                 &larr; Home
               </button>
             </div>

@@ -34,6 +34,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -300,7 +305,7 @@ img.game-logo {
     0 0 34px rgba(82, 171, 255, 0.16),
     var(--shadow);
   outline: none;
-  font-size: 1.06rem;
+  font-size: 16px; /* Prevents auto-zoom on iOS */
 }
 
 .search-box__input::placeholder {
@@ -453,7 +458,21 @@ img.character-avatar {
 .board-wrap {
   width: 100%;
   overflow-x: auto;
-  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  padding-bottom: 16px;
+}
+
+.board-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+.board-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+.board-wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .board-columns,
@@ -481,6 +500,8 @@ img.character-avatar {
 .guess-row {
   margin-bottom: 10px;
   position: relative;
+  /* Minimum width identical to headers */
+  min-width: 680px;
 }
 
 /* Magical Winner Row */
@@ -870,4 +891,55 @@ img.character-avatar {
   font-weight: 500;
   color: rgba(220, 240, 255, 0.75);
   margin-top: 2px;
+}
+
+/* =========================================
+   📱 RESPONSIVE MEDIA QUERIES (320px - 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* Prevent giant logos from overflowing horizontally */
+  .home-logo, .game-logo {
+    width: 140%;
+    margin: -5% -15%;
+  }
+  .home-logo { margin-bottom: -15%; }
+  .game-logo { margin-bottom: -20%; }
+  
+  .game-title-wrap {
+    margin-top: 10px;
+  }
+  
+  .game-stage, .home-stage {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+  }
+
+  /* Safe touch targets minimal sizes */
+  button, .search-submit, .search-option {
+    min-height: 48px;
+  }
+  /* Hide home button on mobile, let them use native Back button */
+  .game-back-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-subtitle {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  /* Shrink search bar for small screens */
+  .search-box__input {
+    height: 56px;
+    padding-left: 16px;
+  }
+  .search-box__submit {
+    height: 44px;
+    width: 44px;
+    font-size: 1.2rem;
+  }
 }
