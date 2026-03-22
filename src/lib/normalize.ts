@@ -1,8 +1,8 @@
 import type { DisneyCharacter, Gender, RawDataset, Role } from '../types';
 
 const roleMap: Record<string, Role> = {
-  Protagonista: 'Lead',
-  Secundario: 'Supporting',
+  Protagonista: 'Hero',
+  Secundario: 'Ally',
   Villano: 'Villain',
 };
 
@@ -71,7 +71,7 @@ export function normalizeCharacters(dataset: RawDataset): DisneyCharacter[] {
       id: `${slugify(character.nombre)}-${character.año}-${slugify(character.pelicula)}`,
       name: character.nombre,
       movie: character.pelicula,
-      role: roleMap[character.rol] ?? 'Supporting',
+      role: roleMap[character.rol] ?? 'Ally',
       species: speciesMap[character.especie] ?? character.especie,
       powers: character.poderes === 'Sí',
       year: character.año,

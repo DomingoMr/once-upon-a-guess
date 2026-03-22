@@ -1,5 +1,5 @@
 export type Gender = 'Female' | 'Male' | 'Neutral';
-export type Role = 'Lead' | 'Supporting' | 'Villain';
+export type Role = 'Hero' | 'Ally' | 'Villain';
 export type TileState = 'exact' | 'near' | 'miss';
 
 export type RawCharacter = {
