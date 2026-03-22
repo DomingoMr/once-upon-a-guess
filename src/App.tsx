@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import rawDataset from './data/disney-characters.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
-import { CheckCharacters } from './components/CheckCharacters';
 import { getDailyCharacter } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, RawDataset } from './types';
@@ -47,7 +46,6 @@ export default function App() {
   const [guesses, setGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters));
   const [status, setStatus] = useState('');
   const [hintRevealed, setHintRevealed] = useState(false);
-  const [showCheck, setShowCheck] = useState(false);
 
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
   const hasWon = guesses.some((g) => g.id === secret.id);
@@ -90,10 +88,6 @@ export default function App() {
     window.location.reload();
   }
 
-  if (showCheck) {
-    return <CheckCharacters characters={characters} onBack={() => setShowCheck(false)} />;
-  }
-
   return (
     <div className="page-shell">
       <div className="page-overlay" aria-hidden="true" />
@@ -102,9 +96,6 @@ export default function App() {
           <div style={{ display: 'flex', gap: '8px' }}>
             <button className="new-game-button" type="button" onClick={handleResetTest}>
               Reset
-            </button>
-            <button className="new-game-button" type="button" onClick={() => setShowCheck(true)}>
-              Check Characters
             </button>
           </div>
           <div className="game-title-wrap">

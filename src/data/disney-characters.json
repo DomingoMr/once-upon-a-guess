@@ -2166,6 +2166,138 @@
                     "género": "Femenino"
                 }
             ]
+        },
+        {
+            "title": "Mickey and Friends",
+            "year": 1928,
+            "characters": [
+                {
+                    "nombre": "Mickey Mouse",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1928,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Minnie Mouse",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1928,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Donald Duck",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1934,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Daisy Duck",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1940,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Goofy",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Protagonista",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1932,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pluto",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1930,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Pete",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Villano",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1925,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Clarabelle Cow",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1928,
+                    "género": "Femenino"
+                },
+                {
+                    "nombre": "Horace Horsecollar",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1929,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Yen Sid",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Humano",
+                    "poderes": "Sí",
+                    "año": 1940,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Scrooge McDuck",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1947,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Huey",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1938,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Dewey",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1938,
+                    "género": "Masculino"
+                },
+                {
+                    "nombre": "Louie",
+                    "pelicula": "Mickey and Friends",
+                    "rol": "Secundario",
+                    "especie": "Animal",
+                    "poderes": "No",
+                    "año": 1938,
+                    "género": "Masculino"
+                }
+            ]
         }
     ]
 }
