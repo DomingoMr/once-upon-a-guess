@@ -101,7 +101,7 @@ export default function App() {
             <div className="game-title-wrap">
             <span className="game-mode">Classic · {formatDate()}</span>
             <div className="game-title">
-              <img src="/logo.png" alt="Once Upon a Guess" className="game-logo" />
+              <img src="/logo.png" alt="Disnedle - Guess the daily Disney character" className="game-logo" />
             </div>
           </div>
           <div className="game-hint-wrap">
