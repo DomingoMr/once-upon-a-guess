@@ -22,12 +22,13 @@ export function GuessBoard({ guesses, secret }: GuessBoardProps) {
       )}
 
       <AnimatePresence initial={false}>
-        {guesses.map((guess, guessIndex) => {
+        {[...guesses].reverse().map((guess, guessIndex) => {
           const tiles = createTileComparisons(guess, secret);
           const isWinningRow = guess.id === secret.id;
 
           return (
             <motion.div
+              layout="position"
               key={guess.id}
               className={`guess-row ${isWinningRow ? 'is-winner' : ''}`}
               initial={{ opacity: 0, y: 22 }}
