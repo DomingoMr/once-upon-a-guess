@@ -426,12 +426,28 @@ img.character-avatar {
 }
 
 .win-banner {
-  padding: 12px 18px;
-  border-radius: 14px;
-  border: 1px solid rgba(186, 232, 255, 0.32);
-  background: linear-gradient(180deg, rgba(19, 43, 76, 0.8), rgba(9, 21, 41, 0.82));
-  color: var(--blue-100);
-  box-shadow: var(--shadow);
+  padding: 16px 26px;
+  border-radius: 16px;
+  border: 2px solid #ffd700;
+  background: linear-gradient(135deg, rgba(20, 50, 90, 0.95), rgba(10, 25, 45, 0.98));
+  color: #fffacd;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(255, 215, 0, 0.35), inset 0 0 20px rgba(255, 215, 0, 0.15);
+  animation: banner-float 3s ease-in-out infinite, banner-glow 2s alternate infinite;
+  text-shadow: 0 2px 8px rgba(255, 215, 0, 0.6);
+  letter-spacing: 0.02em;
+}
+
+@keyframes banner-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes banner-glow {
+  from { box-shadow: 0 12px 24px rgba(255, 215, 0, 0.25), inset 0 0 15px rgba(255, 215, 0, 0.1); }
+  to { box-shadow: 0 12px 48px rgba(255, 215, 0, 0.5), inset 0 0 30px rgba(255, 215, 0, 0.25); }
 }
 
 .board-wrap {
@@ -464,6 +480,40 @@ img.character-avatar {
 
 .guess-row {
   margin-bottom: 10px;
+  position: relative;
+}
+
+/* Magical Winner Row */
+.guess-row.is-winner {
+  z-index: 10;
+}
+
+.guess-row.is-winner .guess-tile {
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), inset 0 0 15px rgba(255, 215, 0, 0.3);
+  animation: winner-pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes winner-pulse {
+  from {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), inset 0 0 10px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.6);
+  }
+  to {
+    box-shadow: 0 0 35px rgba(255, 223, 0, 0.9), inset 0 0 25px rgba(255, 215, 0, 0.6);
+    border-color: #fffacd;
+  }
+}
+
+.magic-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffacd;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 20;
 }
 
 .guess-tile {

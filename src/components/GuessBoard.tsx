@@ -24,11 +24,12 @@ export function GuessBoard({ guesses, secret }: GuessBoardProps) {
       <AnimatePresence initial={false}>
         {guesses.map((guess, guessIndex) => {
           const tiles = createTileComparisons(guess, secret);
+          const isWinningRow = guess.id === secret.id;
 
           return (
             <motion.div
               key={guess.id}
-              className="guess-row"
+              className={`guess-row ${isWinningRow ? 'is-winner' : ''}`}
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -59,6 +60,43 @@ export function GuessBoard({ guesses, secret }: GuessBoardProps) {
                   )}
                 </motion.article>
               ))}
+
+              {isWinningRow && (
+                <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 20 }}>
+                  {[...Array(12)].map((_, i) => {
+                    const randomX = (Math.random() - 0.5) * 1000;
+                    const randomY = (Math.random() - 0.5) * 120;
+                    const randomDelay = Math.random() * 2;
+                    const duration = 1.5 + Math.random() * 1.5;
+                    const sizes = ['1.2rem', '1.6rem', '2rem', '2.5rem'];
+                    const size = sizes[Math.floor(Math.random() * sizes.length)];
+
+                    return (
+                      <motion.div
+                        key={i}
+                        className="magic-star"
+                        style={{ fontSize: size }}
+                        initial={{ opacity: 0, scale: 0.5, x: 0, y: 0 }}
+                        animate={{
+                          opacity: [0, 1, 0.8, 0],
+                          scale: [0.5, 1.2, 0.8, 0],
+                          x: randomX,
+                          y: randomY,
+                          rotate: 180,
+                        }}
+                        transition={{
+                          duration,
+                          repeat: Infinity,
+                          delay: randomDelay,
+                          ease: "easeInOut"
+                        }}
+                      >
+                        ✨
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              )}
             </motion.div>
           );
         })}

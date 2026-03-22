@@ -67,7 +67,14 @@ export function Home({ onSelectMode }: HomeProps) {
           id="card" 
           name="Card" 
           subtitle="Wait and see!" 
-          icon="🃏" 
+          icon={<img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />} 
+          active={false} 
+        />
+        <ModeButton 
+          id="song" 
+          name="Song" 
+          subtitle="Guess the song!" 
+          icon="🎵" 
           active={false} 
         />
       </section>

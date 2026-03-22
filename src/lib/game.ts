@@ -1,56 +1,25 @@
 import type { ComparisonTile, DisneyCharacter, TileState } from '../types';
 
-const EPOCH = new Date('2025-01-01T00:00:00').getTime();
+const EPOCH_UTC = Date.UTC(2025, 0, 1);
 const MS_PER_DAY = 86_400_000;
-const SEQ_KEY = 'ouag-daily-sequence';
 
-function getDayIndex(): number {
-  return Math.floor((Date.now() - EPOCH) / MS_PER_DAY);
+function getLocalDayIndex(): number {
+  const d = new Date();
+  // Get milliseconds for the exact start (midnight) of the user's current local day
+  const localMidnightUtc = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+  return Math.floor((localMidnightUtc - EPOCH_UTC) / MS_PER_DAY);
 }
-
-function shuffled<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-type DailySequence = { seq: string[]; pos: number; lastDay: number };
 
 export function getDailyCharacter(characters: DisneyCharacter[]): DisneyCharacter {
-  const dayIndex = getDayIndex();
-  let state: DailySequence | null = null;
-
-  try {
-    const raw = localStorage.getItem(SEQ_KEY);
-    if (raw) state = JSON.parse(raw) as DailySequence;
-  } catch { /* ignore */ }
-
-  // Build a fresh sequence if none exists or if character count changed
-  if (!state || state.seq.length !== characters.length) {
-    state = { seq: shuffled(characters.map((c) => c.id)), pos: 0, lastDay: dayIndex };
-  }
-
-  // If the day has advanced, we move to the next position in the sequence
-  if (dayIndex > state.lastDay) {
-    const elapsed = dayIndex - state.lastDay;
-    state.pos = (state.pos + elapsed) % state.seq.length;
-    state.lastDay = dayIndex;
-
-    // Reshuffle if we've cycled back to the beginning to keep it fresh
-    if (state.pos < elapsed) {
-      state.seq = shuffled(characters.map((c) => c.id));
-    }
-  }
-
-  try {
-    localStorage.setItem(SEQ_KEY, JSON.stringify(state));
-  } catch { /* ignore */ }
-
-  const todayId = state.seq[state.pos % state.seq.length];
-  return characters.find((c) => c.id === todayId) ?? characters[0];
+  const dayIndex = getLocalDayIndex();
+  
+  // Use a pseudo-random deterministic selection based on the day.
+  // This large prime ensures we jump around the array randomly but consistently.
+  const primeStep = 1000003; 
+  let seed = (dayIndex * primeStep) % characters.length;
+  if (seed < 0) seed += characters.length;
+  
+  return characters[seed];
 }
 
 function stateForMatch(isExact: boolean): TileState {

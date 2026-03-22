@@ -66,9 +66,9 @@ export default function App() {
   // Restore win status on load if already won
   useEffect(() => {
     if (hasWon && !status) {
-      setStatus(`You found ${secret.name} in ${guesses.length} guesses.`);
+      setStatus(`You found ${secret.name} in ${guesses.length} guesses!`);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleGuess(character: DisneyCharacter) {
@@ -99,58 +99,58 @@ export default function App() {
               </button>
             </div>
             <div className="game-title-wrap">
-            <span className="game-mode">Classic · {formatDate()}</span>
-            <div className="game-title">
-              <img src="/logo.png" alt="Disnedle - Guess the daily Disney character" className="game-logo" />
+              <span className="game-mode">Classic · {formatDate()}</span>
+              <div className="game-title">
+                <img src="/logo.png" alt="Disnedle - Guess the daily Disney character" className="game-logo" />
+              </div>
             </div>
-          </div>
-          <div className="game-hint-wrap">
-            <AnimatePresence>
-              {guesses.length >= 4 && !hasWon && (
-                <motion.div
-                  className="hint-container"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                >
-                  <motion.button
-                    className="hint-sphere-btn"
-                    onClick={() => setHintRevealed(true)}
-                    animate={{
-                      y: [0, -8, 0],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
+            <div className="game-hint-wrap">
+              <AnimatePresence>
+                {guesses.length >= 4 && !hasWon && (
+                  <motion.div
+                    className="hint-container"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
                   >
-                    <div className="hint-sphere" />
-                    <span className="hint-label">Hint!</span>
-                  </motion.button>
-                  
-                  <AnimatePresence>
-                    {hintRevealed && (
-                      <motion.div 
-                        className="hint-reveal"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                      >
-                        Movie: <strong>{secret.movie}</strong>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </header>
+                    <motion.button
+                      className="hint-sphere-btn"
+                      onClick={() => setHintRevealed(true)}
+                      animate={{
+                        y: [0, -8, 0],
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <div className="hint-sphere" />
+                      <span className="hint-label">Hint!</span>
+                    </motion.button>
 
-        <section className="game-panel">
-          <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
-          {status ? <div className="win-banner">{status}</div> : null}
-          <GuessBoard guesses={guesses} secret={secret} />
-        </section>
+                    <AnimatePresence>
+                      {hintRevealed && (
+                        <motion.div
+                          className="hint-reveal"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                        >
+                          Movie: <strong>{secret.movie}</strong>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </header>
+
+          <section className="game-panel">
+            <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
+            {status ? <div className="win-banner">{status}</div> : null}
+            <GuessBoard guesses={guesses} secret={secret} />
+          </section>
         </main>
       )}
     </div>
