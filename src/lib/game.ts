@@ -22,6 +22,21 @@ export function getDailyCharacter(characters: DisneyCharacter[]): DisneyCharacte
   return characters[seed];
 }
 
+export function getDailyEmojiCharacter(characters: DisneyCharacter[]): DisneyCharacter {
+  const dayIndex = getLocalDayIndex();
+  
+  // Filter only characters that have enough emojis to play the game
+  const validCharacters = characters.filter(c => c.emojis && c.emojis.length >= 5);
+  if (validCharacters.length === 0) return characters[0]; // Fallback if none exist
+
+  // Use a different prime and a different day offset so it's guaranteed different from classic
+  const primeStep = 1000033; 
+  let seed = ((dayIndex + 365) * primeStep) % validCharacters.length;
+  if (seed < 0) seed += validCharacters.length;
+  
+  return validCharacters[seed];
+}
+
 function stateForMatch(isExact: boolean): TileState {
   return isExact ? 'exact' : 'miss';
 }

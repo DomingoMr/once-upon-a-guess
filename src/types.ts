@@ -10,6 +10,7 @@ export type RawCharacter = {
   poderes: 'Sí' | 'No' | string;
   año: number;
   género: string;
+  emojis?: string[];
 };
 
 export type RawMovie = {
@@ -33,6 +34,7 @@ export type DisneyCharacter = {
   year: number;
   gender: Gender;
   imageFile: string;
+  emojis: string[];
 };
 
 export type ComparisonTile = {

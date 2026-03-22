@@ -29,7 +29,7 @@ function ModeButton({ name, subtitle, icon, active, onClick }: ModeButtonProps) 
 }
 
 type HomeProps = {
-  onSelectMode: (mode: 'classic') => void;
+  onSelectMode: (mode: 'classic' | 'emoji') => void;
 };
 
 export function Home({ onSelectMode }: HomeProps) {
@@ -54,7 +54,8 @@ export function Home({ onSelectMode }: HomeProps) {
           name="Emoji" 
           subtitle="Guess with a set of emojis" 
           icon="😃" 
-          active={false} 
+          active={true} 
+          onClick={() => onSelectMode('emoji')}
         />
         <ModeButton 
           id="silhouette" 

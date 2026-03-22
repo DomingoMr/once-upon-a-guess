@@ -4,11 +4,13 @@ import rawDataset from './data/disney-characters.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
 import { Home } from './components/Home';
-import { getDailyCharacter } from './lib/game';
+import { EmojiDisplay } from './components/EmojiDisplay';
+import { getDailyCharacter, getDailyEmojiCharacter } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, RawDataset } from './types';
 
-const STORAGE_KEY = 'ouag-daily-state-v4';
+const CLASSIC_STORAGE_KEY = 'ouag-daily-state-v4';
+const EMOJI_STORAGE_KEY = 'ouag-emoji-state-v1';
 
 function todayKey(): string {
   const d = new Date();
@@ -24,10 +26,10 @@ type DailyStoredState = {
   guessIds: string[];
 };
 
-function loadStoredGuesses(characters: DisneyCharacter[]): DisneyCharacter[] {
+function loadStoredGuesses(characters: DisneyCharacter[], storageKey: string): DisneyCharacter[] {
   if (typeof window === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(storageKey);
     if (!raw) return [];
     const parsed = JSON.parse(raw) as DailyStoredState;
     if (parsed.date !== todayKey()) return [];
@@ -40,23 +42,27 @@ function loadStoredGuesses(characters: DisneyCharacter[]): DisneyCharacter[] {
 }
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'classic'>(() => {
-    return typeof window !== 'undefined' && window.location.hash === '#classic' ? 'classic' : 'home';
+  const [view, setView] = useState<'home' | 'classic' | 'emoji'>(() => {
+    if (typeof window === 'undefined') return 'home';
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'classic' || hash === 'emoji') return hash;
+    return 'home';
   });
 
   useEffect(() => {
     const onHashChange = () => {
-      setView(window.location.hash === '#classic' ? 'classic' : 'home');
+      const hash = window.location.hash.replace('#', '');
+      setView((hash === 'classic' || hash === 'emoji') ? (hash as 'classic'|'emoji') : 'home');
     };
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  const navigateTo = (newView: 'home' | 'classic') => {
-    if (newView === 'classic') {
-      window.location.hash = 'classic';
-    } else {
+  const navigateTo = (newView: 'home' | 'classic' | 'emoji') => {
+    if (newView === 'home') {
       window.history.pushState(null, '', window.location.pathname);
+    } else {
+      window.location.hash = newView;
     }
     setView(newView);
   };
@@ -64,43 +70,53 @@ export default function App() {
   const dataset = rawDataset as RawDataset;
   const characters = useMemo(() => normalizeCharacters(dataset), [dataset]);
 
-  const secret = useMemo(() => getDailyCharacter(characters), [characters]);
-  const [guesses, setGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters));
+  const classicSecret = useMemo(() => getDailyCharacter(characters), [characters]);
+  const emojiSecret = useMemo(() => getDailyEmojiCharacter(characters), [characters]);
+
+  const [classicGuesses, setClassicGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, CLASSIC_STORAGE_KEY));
+  const [emojiGuesses, setEmojiGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, EMOJI_STORAGE_KEY));
+
+  const isEmojiMode = view === 'emoji';
+  const secret = isEmojiMode ? emojiSecret : classicSecret;
+  const guesses = isEmojiMode ? emojiGuesses : classicGuesses;
+  const setGuesses = isEmojiMode ? setEmojiGuesses : setClassicGuesses;
+
   const [status, setStatus] = useState('');
   const [hintRevealed, setHintRevealed] = useState(false);
 
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
   const hasWon = guesses.some((g) => g.id === secret.id);
 
+  // Sync Classic Guesses to Storage
   useEffect(() => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({
-        date: todayKey(),
-        guessIds: guesses.map((g) => g.id),
-      }),
-    );
-  }, [guesses]);
+    localStorage.setItem(CLASSIC_STORAGE_KEY, JSON.stringify({
+      date: todayKey(),
+      guessIds: classicGuesses.map((g) => g.id),
+    }));
+  }, [classicGuesses]);
 
-  // Restore win status on load if already won
+  // Sync Emoji Guesses to Storage
   useEffect(() => {
-    if (hasWon && !status) {
-      setStatus(`You found ${secret.name} in ${guesses.length} guesses!`);
+    localStorage.setItem(EMOJI_STORAGE_KEY, JSON.stringify({
+      date: todayKey(),
+      guessIds: emojiGuesses.map((g) => g.id),
+    }));
+  }, [emojiGuesses]);
+
+  // Restore win status on load or mode switch
+  useEffect(() => {
+    if (hasWon) {
+      setStatus(`You found ${secret.name} in ${guesses.length} guess${guesses.length === 1 ? '' : 'es'}!`);
+    } else {
+      setStatus('');
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [hasWon, secret.name, guesses.length, view]);
 
   function handleGuess(character: DisneyCharacter) {
     if (hasWon || guessedIds.has(character.id)) return;
 
     const nextGuesses = [...guesses, character];
     setGuesses(nextGuesses);
-
-    if (character.id === secret.id) {
-      setStatus(`You found ${secret.name} in ${nextGuesses.length} guess${nextGuesses.length === 1 ? '' : 'es'}.`);
-    } else {
-      setStatus('');
-    }
   }
 
   return (
@@ -108,7 +124,7 @@ export default function App() {
       <div className="page-overlay" aria-hidden="true" />
 
       {view === 'home' ? (
-        <Home onSelectMode={(mode) => navigateTo('classic')} />
+        <Home onSelectMode={(mode) => navigateTo(mode)} />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
@@ -118,7 +134,7 @@ export default function App() {
               </button>
             </div>
             <div className="game-title-wrap">
-              <span className="game-mode">Classic · {formatDate()}</span>
+              <span className="game-mode">{isEmojiMode ? 'Emoji' : 'Classic'} · {formatDate()}</span>
               <div className="game-title">
                 <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="game-logo" />
               </div>
@@ -127,13 +143,16 @@ export default function App() {
           </header>
 
           <section className="game-panel">
+            {isEmojiMode && (
+              <EmojiDisplay secret={secret} guesses={guesses} hasWon={hasWon} />
+            )}
             <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
             {status ? <div className="win-banner">{status}</div> : null}
             <GuessBoard guesses={guesses} secret={secret} />
           </section>
 
           <AnimatePresence>
-            {guesses.length >= 4 && !hasWon && !hintRevealed && (
+            {guesses.length >= (isEmojiMode ? 5 : 4) && !hasWon && !hintRevealed && (
               <motion.div
                 className="hint-fab-container"
                 initial={{ opacity: 0, scale: 0, rotate: -90 }}

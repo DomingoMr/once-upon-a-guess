@@ -7,7 +7,7 @@
             "Marvel",
             "Star Wars"
         ],
-        "note": "Dataset inicial orientado a juego tipo Loldle. Incluye personajes principales y secundarios relevantes."
+        "note": "Dataset actualizado para juego tipo Loldle. Incluye la modalidad 'Emojis'."
     },
     "movies": [
         {
@@ -21,7 +21,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1937,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🍎",
+                        "👸🏻",
+                        "🐦",
+                        "🥧",
+                        "🪞"
+                    ]
                 },
                 {
                     "nombre": "The Evil Queen",
@@ -30,7 +37,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 1937,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👑",
+                        "🪞",
+                        "🍎",
+                        "🧙‍♀️",
+                        "☠️"
+                    ]
                 },
                 {
                     "nombre": "The Prince",
@@ -39,7 +53,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1937,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤴",
+                        "🐎",
+                        "🗡️",
+                        "🏰",
+                        "❤️"
+                    ]
                 },
                 {
                     "nombre": "Doc",
@@ -48,7 +69,14 @@
                     "especie": "Enano",
                     "poderes": "No",
                     "año": 1937,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👓",
+                        "⛏️",
+                        "💎",
+                        "🧔‍♂️",
+                        "🩺"
+                    ]
                 },
                 {
                     "nombre": "Grumpy",
@@ -57,7 +85,14 @@
                     "especie": "Enano",
                     "poderes": "No",
                     "año": 1937,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "😠",
+                        "⛏️",
+                        "💎",
+                        "🧔‍♂️",
+                        "🙅‍♂️"
+                    ]
                 },
                 {
                     "nombre": "Dopey",
@@ -66,7 +101,14 @@
                     "especie": "Enano",
                     "poderes": "No",
                     "año": 1937,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤫",
+                        "💎",
+                        "⛏️",
+                        "🧔‍♂️",
+                        "🧼"
+                    ]
                 }
             ]
         },
@@ -81,7 +123,14 @@
                     "especie": "Marioneta",
                     "poderes": "No",
                     "año": 1940,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🪵",
+                        "🤥",
+                        "👦",
+                        "🐋",
+                        "🎒"
+                    ]
                 },
                 {
                     "nombre": "Jiminy Cricket",
@@ -90,7 +139,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1940,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦗",
+                        "🎩",
+                        "☂️",
+                        "🎖️",
+                        "🗣️"
+                    ]
                 },
                 {
                     "nombre": "Geppetto",
@@ -99,7 +155,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1940,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👴",
+                        "🪚",
+                        "🕰️",
+                        "🐈",
+                        "🐠"
+                    ]
                 },
                 {
                     "nombre": "Blue Fairy",
@@ -108,7 +171,14 @@
                     "especie": "Hada",
                     "poderes": "Sí",
                     "año": 1940,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧚‍♀️",
+                        "✨",
+                        "🦋",
+                        "🪄",
+                        "👗"
+                    ]
                 },
                 {
                     "nombre": "Honest John",
@@ -117,7 +187,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1940,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦊",
+                        "🎩",
+                        "🦯",
+                        "🤥",
+                        "💰"
+                    ]
                 }
             ]
         },
@@ -132,7 +209,14 @@
                     "especie": "Animal",
                     "poderes": "Sí",
                     "año": 1941,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐘",
+                        "🎪",
+                        "🪶",
+                        "👂",
+                        "🥜"
+                    ]
                 },
                 {
                     "nombre": "Timothy Q Mouse",
@@ -141,7 +225,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1941,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐭",
+                        "🥜",
+                        "🎩",
+                        "🎪",
+                        "🗣️"
+                    ]
                 },
                 {
                     "nombre": "Mrs Jumbo",
@@ -150,7 +241,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1941,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐘",
+                        "🚂",
+                        "👩‍👦",
+                        "⛓️",
+                        "❤️"
+                    ]
                 }
             ]
         },
@@ -165,7 +263,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1942,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦌",
+                        "🦋",
+                        "❄️",
+                        "🌳",
+                        "👑"
+                    ]
                 },
                 {
                     "nombre": "Thumper",
@@ -174,7 +279,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1942,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐇",
+                        "🐾",
+                        "🌸",
+                        "🥬",
+                        "😆"
+                    ]
                 },
                 {
                     "nombre": "Flower",
@@ -183,7 +295,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1942,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦨",
+                        "🌸",
+                        "🥱",
+                        "🖤",
+                        "🤍"
+                    ]
                 },
                 {
                     "nombre": "Faline",
@@ -192,7 +311,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1942,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🦌",
+                        "🎀",
+                        "💋",
+                        "🌳",
+                        "👧"
+                    ]
                 }
             ]
         },
@@ -207,7 +333,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1950,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🥿",
+                        "🎃",
+                        "👗",
+                        "🧹",
+                        "🐭"
+                    ]
                 },
                 {
                     "nombre": "Fairy Godmother",
@@ -216,7 +349,14 @@
                     "especie": "Hada",
                     "poderes": "Sí",
                     "año": 1950,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧚‍♀️",
+                        "🪄",
+                        "✨",
+                        "🎃",
+                        "🕰️"
+                    ]
                 },
                 {
                     "nombre": "Lady Tremaine",
@@ -225,7 +365,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1950,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩‍🦳",
+                        "🐈",
+                        "😠",
+                        "🗝️",
+                        "🫖"
+                    ]
                 },
                 {
                     "nombre": "Prince Charming",
@@ -234,7 +381,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1950,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤴",
+                        "🥿",
+                        "🏰",
+                        "🕺",
+                        "💍"
+                    ]
                 },
                 {
                     "nombre": "Anastasia Tremaine",
@@ -243,7 +397,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1950,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👗",
+                        "😠",
+                        "🎶",
+                        "🪈",
+                        "💔"
+                    ]
                 },
                 {
                     "nombre": "Drizella Tremaine",
@@ -252,7 +413,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1950,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👗",
+                        "😠",
+                        "🎶",
+                        "🪈",
+                        "🤎"
+                    ]
                 }
             ]
         },
@@ -267,7 +435,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1951,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👱‍♀️",
+                        "👗",
+                        "🐇",
+                        "🫖",
+                        "🍄"
+                    ]
                 },
                 {
                     "nombre": "Mad Hatter",
@@ -276,7 +451,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1951,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🎩",
+                        "🫖",
+                        "☕",
+                        "🎂",
+                        "🤪"
+                    ]
                 },
                 {
                     "nombre": "White Rabbit",
@@ -285,7 +467,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1951,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐇",
+                        "🕰️",
+                        "📯",
+                        "👓",
+                        "🏃"
+                    ]
                 },
                 {
                     "nombre": "Cheshire Cat",
@@ -294,7 +483,14 @@
                     "especie": "Animal",
                     "poderes": "Sí",
                     "año": 1951,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐈",
+                        "😼",
+                        "🟣",
+                        "🫥",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "Queen of Hearts",
@@ -303,7 +499,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1951,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "❤️",
+                        "👑",
+                        "🦩",
+                        "🌹",
+                        "🪓"
+                    ]
                 }
             ]
         },
@@ -318,7 +521,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 1953,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦",
+                        "🗡️",
+                        "✨",
+                        "🐊",
+                        "🧚"
+                    ]
                 },
                 {
                     "nombre": "Wendy Darling",
@@ -327,7 +537,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1953,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👧",
+                        "🧸",
+                        "🪡",
+                        "🧚",
+                        "🏴‍☠️"
+                    ]
                 },
                 {
                     "nombre": "Tinker Bell",
@@ -336,7 +553,14 @@
                     "especie": "Hada",
                     "poderes": "Sí",
                     "año": 1953,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧚‍♀️",
+                        "✨",
+                        "🛠️",
+                        "😠",
+                        "🛎️"
+                    ]
                 },
                 {
                     "nombre": "Captain Hook",
@@ -345,7 +569,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1953,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🏴‍☠️",
+                        "🪝",
+                        "🐊",
+                        "⚔️",
+                        "🕰️"
+                    ]
                 },
                 {
                     "nombre": "Mr Smee",
@@ -354,7 +585,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1953,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🏴‍☠️",
+                        "👓",
+                        "👕",
+                        "🚣",
+                        "🪒"
+                    ]
                 }
             ]
         },
@@ -369,7 +607,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1955,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐶",
+                        "🍝",
+                        "🐕",
+                        "🎀",
+                        "🏠"
+                    ]
                 },
                 {
                     "nombre": "Tramp",
@@ -378,7 +623,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1955,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐕",
+                        "🍝",
+                        "🦴",
+                        "🛤️",
+                        "🌙"
+                    ]
                 },
                 {
                     "nombre": "Jock",
@@ -387,7 +639,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1955,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐕",
+                        "🦴",
+                        "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+                        "🪥",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Trusty",
@@ -396,7 +655,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1955,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐕",
+                        "🩸",
+                        "👃",
+                        "🤕",
+                        "👴"
+                    ]
                 }
             ]
         },
@@ -411,7 +677,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1959,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏼",
+                        "🌹",
+                        "🛌",
+                        "🦉",
+                        "👗"
+                    ]
                 },
                 {
                     "nombre": "Maleficent",
@@ -420,7 +693,14 @@
                     "especie": "Ser Mágico",
                     "poderes": "Sí",
                     "año": 1959,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐉",
+                        "🐦‍⬛",
+                        "🪄",
+                        "💚",
+                        "🏰"
+                    ]
                 },
                 {
                     "nombre": "Prince Phillip",
@@ -429,7 +709,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1959,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤴",
+                        "🗡️",
+                        "🛡️",
+                        "🐉",
+                        "🐎"
+                    ]
                 },
                 {
                     "nombre": "Flora",
@@ -438,7 +725,14 @@
                     "especie": "Hada",
                     "poderes": "Sí",
                     "año": 1959,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧚‍♀️",
+                        "🪄",
+                        "❤️",
+                        "👗",
+                        "🎂"
+                    ]
                 },
                 {
                     "nombre": "Fauna",
@@ -447,7 +741,14 @@
                     "especie": "Hada",
                     "poderes": "Sí",
                     "año": 1959,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧚‍♀️",
+                        "🪄",
+                        "💚",
+                        "🎂",
+                        "🪡"
+                    ]
                 },
                 {
                     "nombre": "Merryweather",
@@ -456,7 +757,14 @@
                     "especie": "Hada",
                     "poderes": "Sí",
                     "año": 1959,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧚‍♀️",
+                        "🪄",
+                        "💙",
+                        "🧹",
+                        "😠"
+                    ]
                 }
             ]
         },
@@ -471,7 +779,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1961,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐶",
+                        "🐾",
+                        "🔴",
+                        "📺",
+                        "👨"
+                    ]
                 },
                 {
                     "nombre": "Perdita",
@@ -480,7 +795,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1961,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐶",
+                        "🐾",
+                        "🔵",
+                        "🍼",
+                        "👩"
+                    ]
                 },
                 {
                     "nombre": "Cruella de Vil",
@@ -489,7 +811,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1961,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩🏻‍🦳",
+                        "🚬",
+                        "🚗",
+                        "🧥",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Roger",
@@ -498,7 +827,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1961,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨",
+                        "🎹",
+                        "🎼",
+                        "🐶",
+                        "🚬"
+                    ]
                 },
                 {
                     "nombre": "Anita",
@@ -507,7 +843,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1961,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩",
+                        "☕",
+                        "👗",
+                        "🐶",
+                        "📚"
+                    ]
                 }
             ]
         },
@@ -522,7 +865,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1963,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦",
+                        "🗡️",
+                        "🪨",
+                        "🦉",
+                        "🐿️"
+                    ]
                 },
                 {
                     "nombre": "Merlin",
@@ -531,7 +881,14 @@
                     "especie": "Mago",
                     "poderes": "Sí",
                     "año": 1963,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🧙‍♂️",
+                        "🦉",
+                        "🪄",
+                        "📚",
+                        "🧳"
+                    ]
                 },
                 {
                     "nombre": "Madam Mim",
@@ -540,7 +897,14 @@
                     "especie": "Bruja",
                     "poderes": "Sí",
                     "año": 1963,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧙‍♀️",
+                        "🐉",
+                        "🐷",
+                        "🪄",
+                        "🟣"
+                    ]
                 }
             ]
         },
@@ -555,7 +919,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1967,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦🏽",
+                        "🌴",
+                        "🐍",
+                        "🐻",
+                        "🐅"
+                    ]
                 },
                 {
                     "nombre": "Baloo",
@@ -564,7 +935,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1967,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐻",
+                        "🥥",
+                        "🎶",
+                        "🌴",
+                        "🐜"
+                    ]
                 },
                 {
                     "nombre": "Bagheera",
@@ -573,7 +951,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1967,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐆",
+                        "🌴",
+                        "👁️",
+                        "🐾",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "Shere Khan",
@@ -582,7 +967,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1967,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐅",
+                        "🔥",
+                        "🐾",
+                        "😠",
+                        "🌴"
+                    ]
                 },
                 {
                     "nombre": "Kaa",
@@ -591,7 +983,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1967,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐍",
+                        "🌀",
+                        "👁️",
+                        "🌴",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "King Louie",
@@ -600,7 +999,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1967,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦧",
+                        "👑",
+                        "🍌",
+                        "🎶",
+                        "🔥"
+                    ]
                 }
             ]
         },
@@ -615,7 +1021,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1970,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐈",
+                        "💎",
+                        "🎵",
+                        "🗼",
+                        "🎀"
+                    ]
                 },
                 {
                     "nombre": "Thomas O'Malley",
@@ -624,7 +1037,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1970,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐈",
+                        "🎵",
+                        "🎷",
+                        "🐾",
+                        "🧡"
+                    ]
                 },
                 {
                     "nombre": "Marie",
@@ -633,7 +1053,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1970,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐈",
+                        "🎀",
+                        "🎵",
+                        "🐾",
+                        "🤍"
+                    ]
                 },
                 {
                     "nombre": "Berlioz",
@@ -642,7 +1069,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1970,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐈",
+                        "🎹",
+                        "🎀",
+                        "🐾",
+                        "🖤"
+                    ]
                 },
                 {
                     "nombre": "Toulouse",
@@ -651,7 +1085,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1970,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐈",
+                        "🎨",
+                        "🎀",
+                        "🐾",
+                        "🧡"
+                    ]
                 },
                 {
                     "nombre": "Edgar",
@@ -660,7 +1101,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1970,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨",
+                        "🏍️",
+                        "🥛",
+                        "🛏️",
+                        "🌂"
+                    ]
                 }
             ]
         },
@@ -675,7 +1123,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1973,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦊",
+                        "🏹",
+                        "💰",
+                        "🎯",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "Little John",
@@ -684,7 +1139,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1973,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐻",
+                        "🏹",
+                        "💰",
+                        "👕",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "Maid Marian",
@@ -693,7 +1155,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1973,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🦊",
+                        "🌸",
+                        "🏸",
+                        "👑",
+                        "💖"
+                    ]
                 },
                 {
                     "nombre": "Prince John",
@@ -702,7 +1171,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1973,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦁",
+                        "👑",
+                        "💰",
+                        "👍",
+                        "🐍"
+                    ]
                 },
                 {
                     "nombre": "Sheriff of Nottingham",
@@ -711,7 +1187,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1973,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐺",
+                        "💰",
+                        "🏹",
+                        "⚖️",
+                        "😠"
+                    ]
                 }
             ]
         },
@@ -726,7 +1209,14 @@
                     "especie": "Peluche",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐻",
+                        "🍯",
+                        "🎈",
+                        "👕",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "Piglet",
@@ -735,7 +1225,14 @@
                     "especie": "Peluche",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐷",
+                        "🧣",
+                        "🧹",
+                        "💨",
+                        "🌳"
+                    ]
                 },
                 {
                     "nombre": "Tigger",
@@ -744,7 +1241,14 @@
                     "especie": "Peluche",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐯",
+                        "🦘",
+                        "🌀",
+                        "🌳",
+                        "😄"
+                    ]
                 },
                 {
                     "nombre": "Eeyore",
@@ -753,7 +1257,14 @@
                     "especie": "Peluche",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🫏",
+                        "🎀",
+                        "🌧️",
+                        "🏠",
+                        "😔"
+                    ]
                 },
                 {
                     "nombre": "Rabbit",
@@ -762,7 +1273,14 @@
                     "especie": "Peluche",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐰",
+                        "🥕",
+                        "🥬",
+                        "😠",
+                        "🏡"
+                    ]
                 },
                 {
                     "nombre": "Christopher Robin",
@@ -771,7 +1289,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦",
+                        "🎈",
+                        "🥁",
+                        "🧸",
+                        "🌳"
+                    ]
                 }
             ]
         },
@@ -786,7 +1311,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐭",
+                        "🧹",
+                        "🧢",
+                        "💎",
+                        "⛵"
+                    ]
                 },
                 {
                     "nombre": "Miss Bianca",
@@ -795,7 +1327,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐭",
+                        "👒",
+                        "🧣",
+                        "💎",
+                        "⛵"
+                    ]
                 },
                 {
                     "nombre": "Penny",
@@ -804,7 +1343,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👧",
+                        "🧸",
+                        "💎",
+                        "☠️",
+                        "🐊"
+                    ]
                 },
                 {
                     "nombre": "Madame Medusa",
@@ -813,7 +1359,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1977,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩‍🦰",
+                        "🐊",
+                        "💎",
+                        "🚗",
+                        "🔫"
+                    ]
                 }
             ]
         },
@@ -828,7 +1381,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1981,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦊",
+                        "🦋",
+                        "🌳",
+                        "🐕",
+                        "🛢️"
+                    ]
                 },
                 {
                     "nombre": "Copper",
@@ -837,7 +1397,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1981,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐕",
+                        "👃",
+                        "🐾",
+                        "🦊",
+                        "🛢️"
+                    ]
                 },
                 {
                     "nombre": "Chief",
@@ -846,7 +1413,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1981,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐕",
+                        "🛢️",
+                        "🦴",
+                        "🚂",
+                        "🤕"
+                    ]
                 }
             ]
         },
@@ -861,7 +1435,14 @@
                     "especie": "Sirena",
                     "poderes": "No",
                     "año": 1989,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🧜‍♀️",
+                        "🍴",
+                        "🦀",
+                        "🐠",
+                        "🗣️"
+                    ]
                 },
                 {
                     "nombre": "Prince Eric",
@@ -870,7 +1451,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1989,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤴🏻",
+                        "🚢",
+                        "🐕",
+                        "🌊",
+                        "🎶"
+                    ]
                 },
                 {
                     "nombre": "Ursula",
@@ -879,7 +1467,14 @@
                     "especie": "Bruja Marina",
                     "poderes": "Sí",
                     "año": 1989,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐙",
+                        "🐚",
+                        "💄",
+                        "📜",
+                        "🌊"
+                    ]
                 },
                 {
                     "nombre": "Flounder",
@@ -888,7 +1483,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1989,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐠",
+                        "🌊",
+                        "🧜‍♀️",
+                        "💛",
+                        "💙"
+                    ]
                 },
                 {
                     "nombre": "Sebastian",
@@ -897,7 +1499,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1989,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦀",
+                        "🎼",
+                        "🎶",
+                        "🐚",
+                        "🌊"
+                    ]
                 },
                 {
                     "nombre": "King Triton",
@@ -906,7 +1515,14 @@
                     "especie": "Tritón",
                     "poderes": "Sí",
                     "año": 1989,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🧜‍♂️",
+                        "🔱",
+                        "👑",
+                        "🌊",
+                        "😠"
+                    ]
                 }
             ]
         },
@@ -921,7 +1537,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1991,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏻",
+                        "📚",
+                        "🌹",
+                        "💛",
+                        "🐴"
+                    ]
                 },
                 {
                     "nombre": "Beast",
@@ -930,7 +1553,14 @@
                     "especie": "Bestia",
                     "poderes": "No",
                     "año": 1991,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦁",
+                        "🌹",
+                        "🪞",
+                        "🏰",
+                        "📖"
+                    ]
                 },
                 {
                     "nombre": "Gaston",
@@ -939,7 +1569,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1991,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "💪",
+                        "🏹",
+                        "🥚",
+                        "🐗",
+                        "🪞"
+                    ]
                 },
                 {
                     "nombre": "Lumiere",
@@ -948,7 +1585,14 @@
                     "especie": "Objeto Animado",
                     "poderes": "Sí",
                     "año": 1991,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🕯️",
+                        "🍽️",
+                        "🇫🇷",
+                        "🔥",
+                        "🕺"
+                    ]
                 },
                 {
                     "nombre": "Cogsworth",
@@ -957,7 +1601,14 @@
                     "especie": "Objeto Animado",
                     "poderes": "Sí",
                     "año": 1991,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🕰️",
+                        "⚙️",
+                        "😠",
+                        "🏰",
+                        "🪓"
+                    ]
                 },
                 {
                     "nombre": "Mrs Potts",
@@ -966,7 +1617,14 @@
                     "especie": "Objeto Animado",
                     "poderes": "Sí",
                     "año": 1991,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🫖",
+                        "☕",
+                        "👦",
+                        "🏰",
+                        "🎶"
+                    ]
                 }
             ]
         },
@@ -981,7 +1639,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1992,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👳🏽‍♂️",
+                        "🐒",
+                        "🥖",
+                        "🕌",
+                        "🧞‍♂️"
+                    ]
                 },
                 {
                     "nombre": "Jasmine",
@@ -990,7 +1655,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1992,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏽",
+                        "🐅",
+                        "🕌",
+                        "🕊️",
+                        "🍏"
+                    ]
                 },
                 {
                     "nombre": "Genie",
@@ -999,7 +1671,14 @@
                     "especie": "Genio",
                     "poderes": "Sí",
                     "año": 1992,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🧞‍♂️",
+                        "✨",
+                        "🪔",
+                        "🔵",
+                        "⛓️"
+                    ]
                 },
                 {
                     "nombre": "Jafar",
@@ -1008,7 +1687,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 1992,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👳‍♂️",
+                        "🐍",
+                        "🦜",
+                        "🪔",
+                        "🔴"
+                    ]
                 },
                 {
                     "nombre": "Iago",
@@ -1017,7 +1703,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1992,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦜",
+                        "🍘",
+                        "🔴",
+                        "😠",
+                        "👑"
+                    ]
                 },
                 {
                     "nombre": "Abu",
@@ -1026,7 +1719,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1992,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐒",
+                        "🥖",
+                        "💎",
+                        "🐘",
+                        "👳🏽‍♂️"
+                    ]
                 }
             ]
         },
@@ -1041,7 +1741,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1994,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦁",
+                        "👑",
+                        "🐛",
+                        "🌅",
+                        "🐾"
+                    ]
                 },
                 {
                     "nombre": "Nala",
@@ -1050,7 +1757,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1994,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🦁",
+                        "💖",
+                        "💧",
+                        "🌅",
+                        "🐾"
+                    ]
                 },
                 {
                     "nombre": "Mufasa",
@@ -1059,7 +1773,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1994,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦁",
+                        "👑",
+                        "🌟",
+                        "🌅",
+                        "🐾"
+                    ]
                 },
                 {
                     "nombre": "Scar",
@@ -1068,7 +1789,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1994,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦁",
+                        "🖤",
+                        "🟢",
+                        "🦴",
+                        "👑"
+                    ]
                 },
                 {
                     "nombre": "Timon",
@@ -1077,7 +1805,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1994,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦦",
+                        "🐛",
+                        "🌴",
+                        "🎶",
+                        "💃"
+                    ]
                 },
                 {
                     "nombre": "Pumbaa",
@@ -1086,7 +1821,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1994,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐗",
+                        "💨",
+                        "🐛",
+                        "🌴",
+                        "🎶"
+                    ]
                 },
                 {
                     "nombre": "Rafiki",
@@ -1095,7 +1837,14 @@
                     "especie": "Animal",
                     "poderes": "Sí",
                     "año": 1994,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦍",
+                        "🥥",
+                        "🦯",
+                        "🎨",
+                        "🦁"
+                    ]
                 }
             ]
         },
@@ -1110,7 +1859,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1995,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏽",
+                        "🍃",
+                        "🛶",
+                        "🦝",
+                        "🧭"
+                    ]
                 },
                 {
                     "nombre": "John Smith",
@@ -1119,7 +1875,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1995,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👱‍♂️",
+                        "🧭",
+                        "🔫",
+                        "🛶",
+                        "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+                    ]
                 },
                 {
                     "nombre": "Governor Ratcliffe",
@@ -1128,7 +1891,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1995,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨‍🦳",
+                        "💰",
+                        "🐶",
+                        "⛏️",
+                        "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+                    ]
                 },
                 {
                     "nombre": "Meeko",
@@ -1137,7 +1907,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1995,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦝",
+                        "🍒",
+                        "🍪",
+                        "🐶",
+                        "🐾"
+                    ]
                 },
                 {
                     "nombre": "Flit",
@@ -1146,7 +1923,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1995,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐦",
+                        "💙",
+                        "🌸",
+                        "🐶",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Grandmother Willow",
@@ -1155,7 +1939,14 @@
                     "especie": "Árbol Mágico",
                     "poderes": "Sí",
                     "año": 1995,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🌳",
+                        "👵",
+                        "🍃",
+                        "🗣️",
+                        "🌊"
+                    ]
                 }
             ]
         },
@@ -1170,7 +1961,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1996,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🧌",
+                        "🔔",
+                        "🕍",
+                        "🪵",
+                        "🕊️"
+                    ]
                 },
                 {
                     "nombre": "Esmeralda",
@@ -1179,7 +1977,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1996,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "💃",
+                        "🐐",
+                        "🔮",
+                        "🪙",
+                        "🔥"
+                    ]
                 },
                 {
                     "nombre": "Judge Claude Frollo",
@@ -1188,7 +1993,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1996,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨‍⚖️",
+                        "🔥",
+                        "🗡️",
+                        "🕍",
+                        "🐎"
+                    ]
                 },
                 {
                     "nombre": "Phoebus",
@@ -1197,7 +2009,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1996,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👱‍♂️",
+                        "🗡️",
+                        "🐎",
+                        "🛡️",
+                        "☀️"
+                    ]
                 }
             ]
         },
@@ -1212,7 +2031,14 @@
                     "especie": "Semidiós",
                     "poderes": "Sí",
                     "año": 1997,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "💪",
+                        "⚡",
+                        "🗡️",
+                        "🏺",
+                        "🐎"
+                    ]
                 },
                 {
                     "nombre": "Megara",
@@ -1221,7 +2047,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1997,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩🏽",
+                        "🏺",
+                        "💜",
+                        "🌸",
+                        "🏛️"
+                    ]
                 },
                 {
                     "nombre": "Hades",
@@ -1230,7 +2063,14 @@
                     "especie": "Dios",
                     "poderes": "Sí",
                     "año": 1997,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🔥",
+                        "💀",
+                        "🔵",
+                        "🏺",
+                        "🏛️"
+                    ]
                 },
                 {
                     "nombre": "Phil",
@@ -1239,7 +2079,14 @@
                     "especie": "Sátiro",
                     "poderes": "No",
                     "año": 1997,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐐",
+                        "🏺",
+                        "🎺",
+                        "🗡️",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Pegasus",
@@ -1248,7 +2095,14 @@
                     "especie": "Criatura Mitológica",
                     "poderes": "Sí",
                     "año": 1997,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐎",
+                        "🪽",
+                        "☁️",
+                        "🦅",
+                        "⚡"
+                    ]
                 }
             ]
         },
@@ -1263,7 +2117,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1998,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👘",
+                        "🗡️",
+                        "🐉",
+                        "🌸",
+                        "🐎"
+                    ]
                 },
                 {
                     "nombre": "Li Shang",
@@ -1272,7 +2133,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1998,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏽",
+                        "🗡️",
+                        "💪",
+                        "🥋",
+                        "🐎"
+                    ]
                 },
                 {
                     "nombre": "Mushu",
@@ -1281,7 +2149,14 @@
                     "especie": "Dragón",
                     "poderes": "Sí",
                     "año": 1998,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐉",
+                        "🔥",
+                        "🦗",
+                        "🛎️",
+                        "🔴"
+                    ]
                 },
                 {
                     "nombre": "Shan Yu",
@@ -1290,7 +2165,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1998,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦅",
+                        "🗡️",
+                        "🏔️",
+                        "😠",
+                        "🐎"
+                    ]
                 }
             ]
         },
@@ -1305,7 +2187,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1999,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦍",
+                        "🌿",
+                        "🐆",
+                        "🐒",
+                        "🌴"
+                    ]
                 },
                 {
                     "nombre": "Jane Porter",
@@ -1314,7 +2203,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1999,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩🏻",
+                        "☂️",
+                        "🎨",
+                        "👗",
+                        "🦍"
+                    ]
                 },
                 {
                     "nombre": "Kala",
@@ -1323,7 +2219,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1999,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🦍",
+                        "👶",
+                        "❤️",
+                        "🌴",
+                        "🐆"
+                    ]
                 },
                 {
                     "nombre": "Kerchak",
@@ -1332,7 +2235,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1999,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦍",
+                        "😠",
+                        "🌴",
+                        "🐆",
+                        "🔫"
+                    ]
                 },
                 {
                     "nombre": "Clayton",
@@ -1341,7 +2251,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 1999,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏻",
+                        "🔫",
+                        "🦍",
+                        "🌿",
+                        "⛺"
+                    ]
                 }
             ]
         },
@@ -1356,7 +2273,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2000,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦙",
+                        "👑",
+                        "🏰",
+                        "🧪",
+                        "💃"
+                    ]
                 },
                 {
                     "nombre": "Pacha",
@@ -1365,7 +2289,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2000,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏽",
+                        "🦙",
+                        "🛖",
+                        "🟢",
+                        "🛒"
+                    ]
                 },
                 {
                     "nombre": "Yzma",
@@ -1374,7 +2305,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2000,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👵",
+                        "🧪",
+                        "🐈",
+                        "🟣",
+                        "🔪"
+                    ]
                 },
                 {
                     "nombre": "Kronk",
@@ -1383,7 +2321,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2000,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏻",
+                        "🐿️",
+                        "🍳",
+                        "⛺",
+                        "💪"
+                    ]
                 }
             ]
         },
@@ -1398,7 +2343,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2001,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👓",
+                        "📚",
+                        "🗺️",
+                        "🥖",
+                        "🌊"
+                    ]
                 },
                 {
                     "nombre": "Kida",
@@ -1407,7 +2359,14 @@
                     "especie": "Atlante",
                     "poderes": "Sí",
                     "año": 2001,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏼",
+                        "💎",
+                        "🌊",
+                        "🗡️",
+                        "💙"
+                    ]
                 },
                 {
                     "nombre": "Commander Rourke",
@@ -1416,7 +2375,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2001,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏻",
+                        "🔫",
+                        "💰",
+                        "🎈",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Helga Sinclair",
@@ -1425,7 +2391,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2001,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👱‍♀️",
+                        "🔫",
+                        "🧨",
+                        "⛺",
+                        "😠"
+                    ]
                 }
             ]
         },
@@ -1440,7 +2413,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👧🏽",
+                        "🌺",
+                        "📸",
+                        "👗",
+                        "🌊"
+                    ]
                 },
                 {
                     "nombre": "Stitch",
@@ -1449,7 +2429,14 @@
                     "especie": "Experimento Alienígena",
                     "poderes": "Sí",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👽",
+                        "🎸",
+                        "🌊",
+                        "🌺",
+                        "🐶"
+                    ]
                 },
                 {
                     "nombre": "Nani",
@@ -1458,7 +2445,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👩🏽",
+                        "🏄‍♀️",
+                        "🌺",
+                        "🏠",
+                        "🌊"
+                    ]
                 },
                 {
                     "nombre": "Jumba Jookiba",
@@ -1467,7 +2461,14 @@
                     "especie": "Alienígena",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👽",
+                        "🔬",
+                        "🔫",
+                        "👁️",
+                        "🧪"
+                    ]
                 },
                 {
                     "nombre": "Pleakley",
@@ -1476,7 +2477,14 @@
                     "especie": "Alienígena",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👽",
+                        "👗",
+                        "👁️",
+                        "🦟",
+                        "🌍"
+                    ]
                 },
                 {
                     "nombre": "Captain Gantu",
@@ -1485,7 +2493,14 @@
                     "especie": "Alienígena",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦈",
+                        "👽",
+                        "🔫",
+                        "🌌",
+                        "😠"
+                    ]
                 }
             ]
         },
@@ -1500,7 +2515,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦",
+                        "🛹",
+                        "🗺️",
+                        "🌌",
+                        "⛵"
+                    ]
                 },
                 {
                     "nombre": "John Silver",
@@ -1509,7 +2531,14 @@
                     "especie": "Cyborg",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦾",
+                        "🌌",
+                        "🍳",
+                        "👁️",
+                        "⛵"
+                    ]
                 },
                 {
                     "nombre": "Captain Amelia",
@@ -1518,7 +2547,14 @@
                     "especie": "Alienígena",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐈",
+                        "🔫",
+                        "⛵",
+                        "🌌",
+                        "🗺️"
+                    ]
                 },
                 {
                     "nombre": "BEN",
@@ -1527,7 +2563,14 @@
                     "especie": "Robot",
                     "poderes": "No",
                     "año": 2002,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤖",
+                        "🧠",
+                        "🌌",
+                        "⛵",
+                        "⚡"
+                    ]
                 }
             ]
         },
@@ -1542,7 +2585,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2005,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐔",
+                        "👓",
+                        "⚾",
+                        "👽",
+                        "🔔"
+                    ]
                 },
                 {
                     "nombre": "Abby Mallard",
@@ -1551,7 +2601,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2005,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🦆",
+                        "🎀",
+                        "📖",
+                        "🦷",
+                        "👽"
+                    ]
                 },
                 {
                     "nombre": "Runt of the Litter",
@@ -1560,7 +2617,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2005,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐷",
+                        "🎤",
+                        "🎧",
+                        "👽",
+                        "🥤"
+                    ]
                 },
                 {
                     "nombre": "Fish Out of Water",
@@ -1569,7 +2633,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2005,
-                    "género": "Neutro"
+                    "género": "Neutro",
+                    "emojis": [
+                        "🐟",
+                        "🤿",
+                        "💧",
+                        "👽",
+                        "🏢"
+                    ]
                 }
             ]
         },
@@ -1584,7 +2655,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2007,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦",
+                        "👓",
+                        "🧠",
+                        "🕰️",
+                        "💡"
+                    ]
                 },
                 {
                     "nombre": "Wilbur Robinson",
@@ -1593,7 +2671,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2007,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦",
+                        "🕰️",
+                        "🚀",
+                        "⚡",
+                        "🕶️"
+                    ]
                 },
                 {
                     "nombre": "Bowler Hat Guy",
@@ -1602,7 +2687,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2007,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏻",
+                        "🎩",
+                        "🦖",
+                        "🕰️",
+                        "🦄"
+                    ]
                 },
                 {
                     "nombre": "DOR-15",
@@ -1611,7 +2703,14 @@
                     "especie": "Robot",
                     "poderes": "No",
                     "año": 2007,
-                    "género": "Neutro"
+                    "género": "Neutro",
+                    "emojis": [
+                        "🎩",
+                        "🔴",
+                        "🤖",
+                        "🕰️",
+                        "🧠"
+                    ]
                 }
             ]
         },
@@ -1626,7 +2725,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2008,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐶",
+                        "⚡",
+                        "🥕",
+                        "🎥",
+                        "🕊️"
+                    ]
                 },
                 {
                     "nombre": "Mittens",
@@ -1635,7 +2741,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2008,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐈",
+                        "🏏",
+                        "🗑️",
+                        "🕊️",
+                        "🌭"
+                    ]
                 },
                 {
                     "nombre": "Rhino",
@@ -1644,7 +2757,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2008,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐹",
+                        "⚽",
+                        "📺",
+                        "⚡",
+                        "🐶"
+                    ]
                 },
                 {
                     "nombre": "Penny",
@@ -1653,7 +2773,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2008,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👧",
+                        "🛵",
+                        "📸",
+                        "🐶",
+                        "🎥"
+                    ]
                 }
             ]
         },
@@ -1668,7 +2795,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2009,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐸",
+                        "👑",
+                        "🍳",
+                        "🎺",
+                        "⭐"
+                    ]
                 },
                 {
                     "nombre": "Prince Naveen",
@@ -1677,7 +2811,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2009,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐸",
+                        "🎸",
+                        "👑",
+                        "🎶",
+                        "💰"
+                    ]
                 },
                 {
                     "nombre": "Dr Facilier",
@@ -1686,7 +2827,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2009,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🎩",
+                        "🃏",
+                        "💀",
+                        "🟣",
+                        "🐸"
+                    ]
                 },
                 {
                     "nombre": "Louis",
@@ -1695,7 +2843,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2009,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐊",
+                        "🎺",
+                        "🎶",
+                        "🚢",
+                        "🌿"
+                    ]
                 },
                 {
                     "nombre": "Ray",
@@ -1704,7 +2859,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2009,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🪲",
+                        "⭐",
+                        "💡",
+                        "🎺",
+                        "💖"
+                    ]
                 }
             ]
         },
@@ -1719,7 +2881,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2010,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👱‍♀️",
+                        "🍳",
+                        "🎨",
+                        "🦎",
+                        "☀️"
+                    ]
                 },
                 {
                     "nombre": "Flynn Rider",
@@ -1728,7 +2897,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2010,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏻",
+                        "🍳",
+                        "👑",
+                        "🗡️",
+                        "💰"
+                    ]
                 },
                 {
                     "nombre": "Mother Gothel",
@@ -1737,7 +2913,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2010,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👵",
+                        "🌻",
+                        "🗡️",
+                        "🪞",
+                        "🎭"
+                    ]
                 },
                 {
                     "nombre": "Pascal",
@@ -1746,7 +2929,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2010,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦎",
+                        "🎨",
+                        "☀️",
+                        "🍳",
+                        "👗"
+                    ]
                 },
                 {
                     "nombre": "Maximus",
@@ -1755,7 +2945,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2010,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐎",
+                        "🗡️",
+                        "🍎",
+                        "☀️",
+                        "🍳"
+                    ]
                 }
             ]
         },
@@ -1770,7 +2967,14 @@
                     "especie": "Personaje de Videojuego",
                     "poderes": "No",
                     "año": 2012,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🧱",
+                        "👊",
+                        "🍒",
+                        "🏢",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Vanellope von Schweetz",
@@ -1779,7 +2983,14 @@
                     "especie": "Personaje de Videojuego",
                     "poderes": "Sí",
                     "año": 2012,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🏎️",
+                        "🍬",
+                        "🍭",
+                        "👑",
+                        "👧"
+                    ]
                 },
                 {
                     "nombre": "Fix-It Felix Jr",
@@ -1788,7 +2999,14 @@
                     "especie": "Personaje de Videojuego",
                     "poderes": "Sí",
                     "año": 2012,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🔨",
+                        "🧢",
+                        "🏅",
+                        "🏢",
+                        "🍰"
+                    ]
                 },
                 {
                     "nombre": "King Candy",
@@ -1797,7 +3015,14 @@
                     "especie": "Personaje de Videojuego",
                     "poderes": "Sí",
                     "año": 2012,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👑",
+                        "🍬",
+                        "🏎️",
+                        "🐛",
+                        "🍭"
+                    ]
                 },
                 {
                     "nombre": "Sergeant Calhoun",
@@ -1806,7 +3031,14 @@
                     "especie": "Personaje de Videojuego",
                     "poderes": "No",
                     "año": 2012,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🔫",
+                        "🐛",
+                        "🛸",
+                        "👰",
+                        "🏅"
+                    ]
                 }
             ]
         },
@@ -1821,7 +3053,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2013,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👧",
+                        "☃️",
+                        "🌻",
+                        "🍫",
+                        "🚪"
+                    ]
                 },
                 {
                     "nombre": "Elsa",
@@ -1830,7 +3069,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2013,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏼",
+                        "❄️",
+                        "🏔️",
+                        "🧤",
+                        "🪄"
+                    ]
                 },
                 {
                     "nombre": "Kristoff",
@@ -1839,7 +3085,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2013,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👱‍♂️",
+                        "🛷",
+                        "🧊",
+                        "🦌",
+                        "🎸"
+                    ]
                 },
                 {
                     "nombre": "Olaf",
@@ -1848,7 +3101,14 @@
                     "especie": "Muñeco de Nieve Vivo",
                     "poderes": "Sí",
                     "año": 2013,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "☃️",
+                        "🥕",
+                        "☀️",
+                        "🫂",
+                        "🌸"
+                    ]
                 },
                 {
                     "nombre": "Hans",
@@ -1857,7 +3117,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2013,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤴",
+                        "🗡️",
+                        "❄️",
+                        "🐴",
+                        "💔"
+                    ]
                 },
                 {
                     "nombre": "Sven",
@@ -1866,7 +3133,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2013,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦌",
+                        "🥕",
+                        "🛷",
+                        "❄️",
+                        "🎸"
+                    ]
                 }
             ]
         },
@@ -1881,7 +3155,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐰",
+                        "🚓",
+                        "🥕",
+                        "🍩",
+                        "🦊"
+                    ]
                 },
                 {
                     "nombre": "Nick Wilde",
@@ -1890,7 +3171,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦊",
+                        "👔",
+                        "🚓",
+                        "🫐",
+                        "🐰"
+                    ]
                 },
                 {
                     "nombre": "Assistant Mayor Bellwether",
@@ -1899,7 +3187,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐑",
+                        "👓",
+                        "🧪",
+                        "🫐",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Chief Bogo",
@@ -1908,7 +3203,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐃",
+                        "🚓",
+                        "📱",
+                        "🍩",
+                        "😠"
+                    ]
                 },
                 {
                     "nombre": "Flash",
@@ -1917,7 +3219,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦥",
+                        "☕",
+                        "🏎️",
+                        "🏢",
+                        "👔"
+                    ]
                 }
             ]
         },
@@ -1932,7 +3241,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🛶",
+                        "🌊",
+                        "🐚",
+                        "🌺",
+                        "🐷"
+                    ]
                 },
                 {
                     "nombre": "Maui",
@@ -1941,7 +3257,14 @@
                     "especie": "Semidiós",
                     "poderes": "Sí",
                     "año": 2016,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🪝",
+                        "💪",
+                        "🦅",
+                        "⛵",
+                        "🦈"
+                    ]
                 },
                 {
                     "nombre": "Te Ka",
@@ -1950,7 +3273,14 @@
                     "especie": "Ser Elemental",
                     "poderes": "Sí",
                     "año": 2016,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🌋",
+                        "🔥",
+                        "🌀",
+                        "💚",
+                        "🌺"
+                    ]
                 },
                 {
                     "nombre": "Heihei",
@@ -1959,7 +3289,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐓",
+                        "🥥",
+                        "🛶",
+                        "🌊",
+                        "🪨"
+                    ]
                 },
                 {
                     "nombre": "Pua",
@@ -1968,7 +3305,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 2016,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐷",
+                        "🌺",
+                        "🛶",
+                        "🌊",
+                        "🥥"
+                    ]
                 },
                 {
                     "nombre": "Gramma Tala",
@@ -1977,7 +3321,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2016,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👵",
+                        "🌊",
+                        "🩵",
+                        "💃",
+                        "🌺"
+                    ]
                 }
             ]
         },
@@ -1992,7 +3343,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👘",
+                        "🗡️",
+                        "🐉",
+                        "💧",
+                        "🏜️"
+                    ]
                 },
                 {
                     "nombre": "Sisu",
@@ -2001,7 +3359,14 @@
                     "especie": "Dragón",
                     "poderes": "Sí",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐉",
+                        "💧",
+                        "💎",
+                        "🏊‍♀️",
+                        "✨"
+                    ]
                 },
                 {
                     "nombre": "Namaari",
@@ -2010,7 +3375,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🥷",
+                        "🗡️",
+                        "🐈",
+                        "🐉",
+                        "💇‍♀️"
+                    ]
                 },
                 {
                     "nombre": "Druun",
@@ -2019,7 +3391,14 @@
                     "especie": "Entidad Oscura",
                     "poderes": "Sí",
                     "año": 2021,
-                    "género": "Neutro"
+                    "género": "Neutro",
+                    "emojis": [
+                        "🟣",
+                        "💨",
+                        "🪨",
+                        "💀",
+                        "🏜️"
+                    ]
                 }
             ]
         },
@@ -2034,7 +3413,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👓",
+                        "🦋",
+                        "👗",
+                        "🕯️",
+                        "🏠"
+                    ]
                 },
                 {
                     "nombre": "Bruno Madrigal",
@@ -2043,7 +3429,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2021,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "⏳",
+                        "🐀",
+                        "🟩",
+                        "🚪",
+                        "👁️"
+                    ]
                 },
                 {
                     "nombre": "Isabela Madrigal",
@@ -2052,7 +3445,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🌸",
+                        "🌵",
+                        "👗",
+                        "🌺",
+                        "🎨"
+                    ]
                 },
                 {
                     "nombre": "Luisa Madrigal",
@@ -2061,7 +3461,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "💪",
+                        "🏋️‍♀️",
+                        "🫏",
+                        "🪨",
+                        "🦄"
+                    ]
                 },
                 {
                     "nombre": "Abuela Alma",
@@ -2070,7 +3477,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2021,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🕯️",
+                        "👵",
+                        "🦋",
+                        "🏠",
+                        "🖤"
+                    ]
                 }
             ]
         },
@@ -2085,7 +3499,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2022,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👨🏻‍🌾",
+                        "🌱",
+                        "🔦",
+                        "🗺️",
+                        "⚡"
+                    ]
                 },
                 {
                     "nombre": "Jaeger Clade",
@@ -2094,7 +3515,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2022,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👴",
+                        "🔦",
+                        "🏕️",
+                        "🗺️",
+                        "🪓"
+                    ]
                 },
                 {
                     "nombre": "Ethan Clade",
@@ -2103,7 +3531,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2022,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "👦🏾",
+                        "🎴",
+                        "🌱",
+                        "🗺️",
+                        "🐶"
+                    ]
                 },
                 {
                     "nombre": "Splat",
@@ -2112,7 +3547,14 @@
                     "especie": "Criatura",
                     "poderes": "No",
                     "año": 2022,
-                    "género": "Neutro"
+                    "género": "Neutro",
+                    "emojis": [
+                        "🔵",
+                        "🦠",
+                        "🦵",
+                        "🗺️",
+                        "⚡"
+                    ]
                 }
             ]
         },
@@ -2127,7 +3569,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2023,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👧🏽",
+                        "⭐",
+                        "🐐",
+                        "🪄",
+                        "🏰"
+                    ]
                 },
                 {
                     "nombre": "King Magnifico",
@@ -2136,7 +3585,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 2023,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🤴",
+                        "🪞",
+                        "🪄",
+                        "🟢",
+                        "🏰"
+                    ]
                 },
                 {
                     "nombre": "Valentino",
@@ -2145,7 +3601,14 @@
                     "especie": "Animal",
                     "poderes": "Sí",
                     "año": 2023,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐐",
+                        "🧶",
+                        "⭐",
+                        "🗣️",
+                        "👑"
+                    ]
                 },
                 {
                     "nombre": "Star",
@@ -2154,7 +3617,14 @@
                     "especie": "Ser Cósmico",
                     "poderes": "Sí",
                     "año": 2023,
-                    "género": "Neutro"
+                    "género": "Neutro",
+                    "emojis": [
+                        "⭐",
+                        "✨",
+                        "💛",
+                        "🧶",
+                        "🪄"
+                    ]
                 },
                 {
                     "nombre": "Queen Amaya",
@@ -2163,7 +3633,14 @@
                     "especie": "Humano",
                     "poderes": "No",
                     "año": 2023,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "👸🏽",
+                        "👑",
+                        "👗",
+                        "🏰",
+                        "🧶"
+                    ]
                 }
             ]
         },
@@ -2178,7 +3655,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1928,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐭",
+                        "🔴",
+                        "🟡",
+                        "🧤",
+                        "🏰"
+                    ]
                 },
                 {
                     "nombre": "Minnie Mouse",
@@ -2187,7 +3671,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1928,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐭",
+                        "🎀",
+                        "🔴",
+                        "👠",
+                        "🌼"
+                    ]
                 },
                 {
                     "nombre": "Donald Duck",
@@ -2196,7 +3687,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1934,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦆",
+                        "⚓",
+                        "🔵",
+                        "😠",
+                        "⛵"
+                    ]
                 },
                 {
                     "nombre": "Daisy Duck",
@@ -2205,7 +3703,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1940,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🦆",
+                        "🎀",
+                        "🟣",
+                        "👠",
+                        "🌼"
+                    ]
                 },
                 {
                     "nombre": "Goofy",
@@ -2214,7 +3719,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1932,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐶",
+                        "🧢",
+                        "🟢",
+                        "🎣",
+                        "🤪"
+                    ]
                 },
                 {
                     "nombre": "Pluto",
@@ -2223,7 +3735,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1930,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐶",
+                        "🦴",
+                        "🟡",
+                        "🐾",
+                        "🏠"
+                    ]
                 },
                 {
                     "nombre": "Pete",
@@ -2232,7 +3751,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1925,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐱",
+                        "⚓",
+                        "🚬",
+                        "😠",
+                        "🚢"
+                    ]
                 },
                 {
                     "nombre": "Clarabelle Cow",
@@ -2241,7 +3767,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1928,
-                    "género": "Femenino"
+                    "género": "Femenino",
+                    "emojis": [
+                        "🐮",
+                        "🔔",
+                        "🎀",
+                        "👠",
+                        "🌼"
+                    ]
                 },
                 {
                     "nombre": "Horace Horsecollar",
@@ -2250,7 +3783,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1929,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🐴",
+                        "🏇",
+                        "👔",
+                        "🎩",
+                        "👞"
+                    ]
                 },
                 {
                     "nombre": "Yen Sid",
@@ -2259,7 +3799,14 @@
                     "especie": "Humano",
                     "poderes": "Sí",
                     "año": 1940,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🧙‍♂️",
+                        "🎩",
+                        "✨",
+                        "🧹",
+                        "🌊"
+                    ]
                 },
                 {
                     "nombre": "Scrooge McDuck",
@@ -2268,7 +3815,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1947,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦆",
+                        "💰",
+                        "🎩",
+                        "🦯",
+                        "🪙"
+                    ]
                 },
                 {
                     "nombre": "Huey",
@@ -2277,7 +3831,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1938,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦆",
+                        "🔴",
+                        "🧢",
+                        "📖",
+                        "🪙"
+                    ]
                 },
                 {
                     "nombre": "Dewey",
@@ -2286,7 +3847,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1938,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦆",
+                        "🔵",
+                        "🧢",
+                        "📖",
+                        "🪙"
+                    ]
                 },
                 {
                     "nombre": "Louie",
@@ -2295,7 +3863,14 @@
                     "especie": "Animal",
                     "poderes": "No",
                     "año": 1938,
-                    "género": "Masculino"
+                    "género": "Masculino",
+                    "emojis": [
+                        "🦆",
+                        "🟢",
+                        "🧢",
+                        "📖",
+                        "🪙"
+                    ]
                 }
             ]
         }

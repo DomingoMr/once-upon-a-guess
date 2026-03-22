@@ -77,6 +77,7 @@ export function normalizeCharacters(dataset: RawDataset): DisneyCharacter[] {
       year: character.año,
       gender: genderMap[character['género']] ?? 'Neutral',
       imageFile: `${toFileName(character.pelicula)}/${toFileName(character.nombre)}.png`,
+      emojis: character.emojis ?? [],
     })),
   );
 }
