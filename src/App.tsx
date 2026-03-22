@@ -123,46 +123,7 @@ export default function App() {
                 <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="game-logo" />
               </div>
             </div>
-            <div className="game-hint-wrap">
-              <AnimatePresence>
-                {guesses.length >= 4 && !hasWon && (
-                  <motion.div
-                    className="hint-container"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                  >
-                    <motion.button
-                      className="hint-sphere-btn"
-                      onClick={() => setHintRevealed(true)}
-                      animate={{
-                        y: [0, -8, 0],
-                      }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    >
-                      <div className="hint-sphere" />
-                      <span className="hint-label">Hint!</span>
-                    </motion.button>
 
-                    <AnimatePresence>
-                      {hintRevealed && (
-                        <motion.div
-                          className="hint-reveal"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                        >
-                          Movie: <strong>{secret.movie}</strong>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
           </header>
 
           <section className="game-panel">
@@ -170,6 +131,57 @@ export default function App() {
             {status ? <div className="win-banner">{status}</div> : null}
             <GuessBoard guesses={guesses} secret={secret} />
           </section>
+
+          <AnimatePresence>
+            {guesses.length >= 4 && !hasWon && !hintRevealed && (
+              <motion.div
+                className="hint-fab-container"
+                initial={{ opacity: 0, scale: 0, rotate: -90 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                exit={{ opacity: 0, scale: 0 }}
+                transition={{ type: 'spring', duration: 0.6 }}
+              >
+                <motion.button
+                  className="hint-fab-btn"
+                  onClick={() => setHintRevealed(true)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  aria-label="Unlock magical hint"
+                >
+                  <div className="hint-sphere" />
+                  <span className="hint-fab-badge">!</span>
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence>
+            {hintRevealed && !hasWon && (
+              <motion.div
+                className="hint-modal-overlay"
+                onClick={() => setHintRevealed(false)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <motion.div
+                  className="hint-modal-content"
+                  onClick={(e) => e.stopPropagation()}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                  transition={{ type: 'spring', bounce: 0.4 }}
+                >
+                  <button className="hint-modal-close" onClick={() => setHintRevealed(false)} aria-label="Close hint">&times;</button>
+                  <h3 className="hint-modal-title">✨ Magical Hint ✨</h3>
+                  <p className="hint-modal-subtitle">The character appears in:</p>
+                  <div className="hint-modal-movie">{secret.movie}</div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </main>
       )}
     </div>
