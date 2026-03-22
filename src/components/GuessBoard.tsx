@@ -37,12 +37,13 @@ export function GuessBoard({ guesses, secret }: GuessBoardProps) {
                 <motion.article
                   key={`${guess.id}-${tile.key}`}
                   className={`guess-tile is-${tile.state} ${tile.key === 'character' ? 'guess-tile--character' : ''}`}
-                  initial={{ opacity: 0, y: 14 }}
+                  initial={{ opacity: 0, y: 60 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 1.2,
-                    ease: [0.16, 6, 1, 0.8],
-                    delay: tileIndex * 0.5 + guessIndex * 0.1,
+                    type: "spring",
+                    duration: 1.4,
+                    bounce: 0.55,
+                    delay: tileIndex * 0.35 + guessIndex * 0.1,
                   }}
                 >
                   {tile.key === 'character' && tile.character ? (
