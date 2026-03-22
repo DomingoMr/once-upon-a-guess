@@ -28,7 +28,7 @@ export function CharacterAvatar({ character, size = 'md' }: CharacterAvatarProps
     <img
       className={`character-avatar character-avatar--${size}`}
       src={src}
-      alt={`Disney character ${character.name} in Disnedle`}
+      alt={`Character ${character.name} in Mousdle`}
       loading="lazy"
       onError={() => setMissing(true)}
     />

@@ -36,7 +36,7 @@ export function Home({ onSelectMode }: HomeProps) {
   return (
     <main className="home-stage">
       <header className="home-header">
-        <img src="/logo.png" alt="Disnedle - Guess the daily Disney character" className="home-logo" />
+        <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="home-logo" />
         <h1 className="home-subtitle">Guess the daily Disney character</h1>
       </header>
       
