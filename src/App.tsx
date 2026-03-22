@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import rawDataset from './data/disney-characters.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
+import { Home } from './components/Home';
 import { getDailyCharacter } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, RawDataset } from './types';
@@ -39,6 +40,8 @@ function loadStoredGuesses(characters: DisneyCharacter[]): DisneyCharacter[] {
 }
 
 export default function App() {
+  const [view, setView] = useState<'home' | 'classic'>('home');
+
   const dataset = rawDataset as RawDataset;
   const characters = useMemo(() => normalizeCharacters(dataset), [dataset]);
 
@@ -81,24 +84,21 @@ export default function App() {
     }
   }
 
-  function handleResetTest() {
-    // Clear daily state and sequence for testing
-    localStorage.removeItem(STORAGE_KEY);
-    localStorage.removeItem('ouag-daily-sequence');
-    window.location.reload();
-  }
-
   return (
     <div className="page-shell">
       <div className="page-overlay" aria-hidden="true" />
-      <main className="game-stage">
-        <header className="game-topbar">
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <button className="new-game-button" type="button" onClick={handleResetTest}>
-              Reset
-            </button>
-          </div>
-          <div className="game-title-wrap">
+
+      {view === 'home' ? (
+        <Home onSelectMode={(mode) => setView(mode)} />
+      ) : (
+        <main className="game-stage">
+          <header className="game-topbar">
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <button className="new-game-button" type="button" onClick={() => setView('home')}>
+                &larr; Home
+              </button>
+            </div>
+            <div className="game-title-wrap">
             <span className="game-mode">Classic · {formatDate()}</span>
             <div className="game-title">
               <img src="/logo.png" alt="Once Upon a Guess" className="game-logo" />
@@ -151,7 +151,8 @@ export default function App() {
           {status ? <div className="win-banner">{status}</div> : null}
           <GuessBoard guesses={guesses} secret={secret} />
         </section>
-      </main>
+        </main>
+      )}
     </div>
   );
 }

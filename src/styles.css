@@ -676,3 +676,148 @@ img.character-avatar {
     font-size: 1.2rem;
   }
 }
+
+/* Home Page */
+.home-stage {
+  position: relative;
+  z-index: 1;
+  width: min(720px, calc(100% - 32px));
+  padding: 60px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-logo {
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+  margin: -20% -120px;
+  margin-bottom: -28%;
+  background-color: transparent;
+  filter: drop-shadow(0 0 15px rgba(179, 222, 255, 0.45)) drop-shadow(0 6px 24px rgba(2, 8, 19, 0.65));
+}
+
+.home-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.home-modes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+/* Mode Button LoLdle Style */
+.mode-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  transform: scale(1);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s;
+}
+
+.mode-btn.is-active:hover {
+  transform: scale(1.02);
+  filter: brightness(1.15);
+}
+
+.mode-btn.is-locked {
+  cursor: not-allowed;
+  opacity: 0.6;
+  filter: grayscale(0.8) sepia(0.2);
+}
+
+.mode-icon-wrap {
+  position: relative;
+  z-index: 2;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fceabb, #f8b500); 
+  padding: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  flex-shrink: 0;
+}
+
+.mode-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #233a5e, #0e1b33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.mode-content {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  height: 64px;
+  background: linear-gradient(90deg, rgba(14, 28, 51, 0.95), rgba(7, 14, 28, 0.95));
+  border: 2px solid #00d2ff;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  margin-left: -20px;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 0 8px rgba(0, 210, 255, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.mode-btn.is-locked .mode-icon-wrap {
+  background: linear-gradient(135deg, #9ca3af, #4b5563);
+}
+
+.mode-btn.is-locked .mode-icon {
+  color: #d1d5db;
+}
+
+.mode-btn.is-locked .mode-content {
+  border-color: #4b5563;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.mode-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.mode-subtitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(220, 240, 255, 0.75);
+  margin-top: 2px;
+}
