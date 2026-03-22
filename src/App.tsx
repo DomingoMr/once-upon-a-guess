@@ -112,7 +112,7 @@ export default function App() {
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
-            <div className="game-back-wrap" style={{ display: 'flex', gap: '8px' }}>
+            <div className="game-back-wrap">
               <button className="new-game-button" type="button" onClick={() => navigateTo('home')}>
                 &larr; Home
               </button>

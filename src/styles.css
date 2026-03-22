@@ -478,9 +478,9 @@ img.character-avatar {
 .board-columns,
 .guess-row {
   width: 100%;
-  min-width: 960px;
+  min-width: 720px;
   display: grid;
-  grid-template-columns: minmax(220px, 1.45fr) repeat(6, minmax(92px, 1fr));
+  grid-template-columns: minmax(140px, 1.45fr) repeat(6, minmax(82px, 1fr));
   gap: 8px;
 }
 
@@ -500,8 +500,6 @@ img.character-avatar {
 .guess-row {
   margin-bottom: 10px;
   position: relative;
-  /* Minimum width identical to headers */
-  min-width: 680px;
 }
 
 /* Magical Winner Row */
@@ -891,6 +889,11 @@ img.character-avatar {
   font-weight: 500;
   color: rgba(220, 240, 255, 0.75);
   margin-top: 2px;
+}
+
+.game-back-wrap {
+  display: flex;
+  gap: 8px;
 }
 
 /* =========================================
