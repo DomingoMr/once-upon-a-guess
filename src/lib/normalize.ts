@@ -67,17 +67,23 @@ function toFileName(value: string) {
 
 export function normalizeCharacters(dataset: RawDataset): DisneyCharacter[] {
   return dataset.movies.flatMap((movie) =>
-    movie.characters.map((character) => ({
-      id: `${slugify(character.nombre)}-${character.año}-${slugify(character.pelicula)}`,
-      name: character.nombre,
-      movie: character.pelicula,
-      role: roleMap[character.rol] ?? 'Ally',
-      species: speciesMap[character.especie] ?? character.especie,
-      powers: character.poderes === 'Sí',
-      year: character.año,
-      gender: genderMap[character['género']] ?? 'Neutral',
-      imageFile: `${toFileName(character.pelicula)}/${toFileName(character.nombre)}.png`,
-      emojis: character.emojis ?? [],
-    })),
+    movie.characters.map((character) => {
+      const imgPath = `${toFileName(character.pelicula)}/${toFileName(character.nombre)}.png`;
+
+      
+      return {
+        id: `${slugify(character.nombre)}-${character.año}-${slugify(character.pelicula)}`,
+        name: character.nombre,
+        movie: character.pelicula,
+        role: roleMap[character.rol] ?? 'Ally',
+        species: speciesMap[character.especie] ?? character.especie,
+        powers: character.poderes === 'Sí',
+        year: character.año,
+        gender: genderMap[character['género']] ?? 'Neutral',
+        imageFile: imgPath,
+        emojis: character.emojis ?? [],
+        silhouettePath: imgPath,
+      };
+    }),
   );
 }

@@ -37,6 +37,21 @@ export function getDailyEmojiCharacter(characters: DisneyCharacter[]): DisneyCha
   return validCharacters[seed];
 }
 
+export function getDailySilhouetteCharacter(characters: DisneyCharacter[]): DisneyCharacter {
+  const dayIndex = getLocalDayIndex();
+  
+  // All characters are now eligible for silhouette mode, 
+  // as we generate paths dynamically like in classic mode.
+  const validCharacters = characters;
+
+  // Use another unique prime/offset
+  const primeStep = 1000037; 
+  let seed = ((dayIndex + 730) * primeStep) % validCharacters.length;
+  if (seed < 0) seed += validCharacters.length;
+  
+  return validCharacters[seed];
+}
+
 function stateForMatch(isExact: boolean): TileState {
   return isExact ? 'exact' : 'miss';
 }

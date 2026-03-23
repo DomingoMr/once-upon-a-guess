@@ -35,6 +35,7 @@ export type DisneyCharacter = {
   gender: Gender;
   imageFile: string;
   emojis: string[];
+  silhouettePath?: string;
 };
 
 export type ComparisonTile = {
