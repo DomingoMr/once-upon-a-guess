@@ -29,7 +29,7 @@ function ModeButton({ name, subtitle, icon, active, onClick }: ModeButtonProps) 
 }
 
 type HomeProps = {
-  onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette' | 'check-silhouettes') => void;
+  onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette') => void;
 };
 
 export function Home({ onSelectMode }: HomeProps) {
@@ -81,14 +81,6 @@ export function Home({ onSelectMode }: HomeProps) {
         />
       </section>
 
-      <footer className="home-testing-area">
-        <button 
-          className="verify-btn" 
-          onClick={() => onSelectMode('check-silhouettes')}
-        >
-          Check Silhouettes
-        </button>
-      </footer>
     </main>
   );
 }

@@ -6,7 +6,6 @@ import { SearchCombobox } from './components/SearchCombobox';
 import { Home } from './components/Home';
 import { EmojiDisplay } from './components/EmojiDisplay';
 import { SilhouetteDisplay } from './components/SilhouetteDisplay';
-import { SilhouetteCheck } from './components/SilhouetteCheck';
 import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, RawDataset } from './types';
@@ -45,17 +44,17 @@ function loadStoredGuesses(characters: DisneyCharacter[], storageKey: string): D
 }
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'classic' | 'emoji' | 'silhouette' | 'check-silhouettes'>(() => {
+  const [view, setView] = useState<'home' | 'classic' | 'emoji' | 'silhouette'>(() => {
     if (typeof window === 'undefined') return 'home';
     const hash = window.location.hash.replace('#', '');
-    if (['classic', 'emoji', 'silhouette', 'check-silhouettes'].includes(hash)) return hash as any;
+    if (['classic', 'emoji', 'silhouette'].includes(hash)) return hash as any;
     return 'home';
   });
 
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['classic', 'emoji', 'silhouette', 'check-silhouettes'].includes(hash)) {
+      if (['classic', 'emoji', 'silhouette'].includes(hash)) {
         setView(hash as any);
       } else {
         setView('home');
@@ -65,7 +64,7 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  const navigateTo = (newView: 'home' | 'classic' | 'emoji' | 'silhouette' | 'check-silhouettes') => {
+  const navigateTo = (newView: 'home' | 'classic' | 'emoji' | 'silhouette') => {
     if (newView === 'home') {
       window.history.pushState(null, '', window.location.pathname);
     } else {
@@ -150,8 +149,6 @@ export default function App() {
 
       {view === 'home' ? (
         <Home onSelectMode={(mode) => navigateTo(mode)} />
-      ) : view === 'check-silhouettes' ? (
-        <SilhouetteCheck characters={characters} onBack={() => navigateTo('home')} />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
@@ -174,7 +171,11 @@ export default function App() {
               <EmojiDisplay secret={secret} guesses={guesses} hasWon={hasWon} />
             )}
             {isSilhouetteMode && (
-              <SilhouetteDisplay secret={secret} guesses={guesses} hasWon={hasWon} />
+              <SilhouetteDisplay 
+                secret={secret} 
+                guesses={guesses} 
+                hasWon={hasWon} 
+              />
             )}
             <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
             {status ? <div className="win-banner">{status}</div> : null}
@@ -182,7 +183,7 @@ export default function App() {
           </section>
 
           <AnimatePresence>
-            {guesses.length >= (isEmojiMode ? 5 : 4) && !hasWon && !hintRevealed && (
+            {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && !hintRevealed && (
               <motion.div
                 className="hint-fab-container"
                 initial={{ opacity: 0, scale: 0, rotate: -90 }}
