@@ -199,7 +199,9 @@ img.game-logo {
   display: grid;
   gap: 18px;
   justify-items: center;
+  isolation: isolate;
 }
+
 
 .search-box {
   position: relative;
@@ -458,10 +460,13 @@ img.character-avatar {
 .board-wrap {
   width: 100%;
   overflow-x: auto;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
   padding-bottom: 16px;
+  position: relative;
+  z-index: 0;
 }
 
 .board-wrap::-webkit-scrollbar {
@@ -640,60 +645,78 @@ img.character-avatar {
 
 /* Hint System */
 /* =========================================
-   ✨ FLOATING HINT SYSTEM & MODAL
+   ✨ INTEGRATED HINT SYSTEM & MODAL
    ========================================= */
 
-.hint-fab-container {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1000;
+.hint-trigger-wrap {
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.hint-fab-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+  margin: 12px 0 6px;
   position: relative;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 10px 20px rgba(1, 7, 24, 0.6));
+  z-index: 20;
 }
 
-.hint-sphere {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #93cfff, #2d8cff 50%, #1e5fb4 90%);
-  box-shadow:
-    inset -4px -4px 10px rgba(0, 0, 0, 0.4),
-    inset 4px 4px 10px rgba(255, 255, 255, 0.5),
-    0 0 25px rgba(45, 140, 255, 0.6);
-  border: 2px solid rgba(255, 255, 255, 0.35);
-}
-
-.hint-fab-badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  background: #ff3b30;
-  color: white;
-  font-weight: 800;
-  font-size: 1rem;
-  width: 24px;
-  height: 24px;
+.hint-trigger-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #0a1426;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  gap: 12px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, rgba(30, 95, 180, 0.4), rgba(10, 27, 52, 0.9));
+  border: 2.5px solid #fceabb;
+  border-radius: 50px;
+  color: #fceabb;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 25px rgba(248, 181, 0, 0.2), 
+    inset 0 0 15px rgba(252, 234, 187, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-shadow: 0 0 8px rgba(248, 181, 0, 0.4);
+}
+
+.hint-trigger-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, rgba(40, 110, 200, 0.5), rgba(15, 35, 65, 0.95));
+  box-shadow: 
+    0 12px 35px rgba(248, 181, 0, 0.35), 
+    inset 0 0 20px rgba(252, 234, 187, 0.2);
+  border-color: #fff;
+  color: #fff;
+}
+
+.hint-trigger-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.hint-trigger-btn--revealed,
+.hint-trigger-btn--revealed:hover {
+  border-color: rgba(252, 234, 187, 0.35);
+  color: rgba(252, 234, 187, 0.5);
+  box-shadow: none;
+  cursor: default;
+  transform: none;
+  text-shadow: none;
+  background: linear-gradient(135deg, rgba(30, 95, 180, 0.15), rgba(10, 27, 52, 0.5));
+}
+
+.hint-trigger-btn--revealed .hint-trigger-sparkle {
+  animation: none;
+  opacity: 0.4;
+}
+
+
+.hint-trigger-sparkle {
+  font-size: 1.3rem;
+  animation: sparkle-pulse 2s infinite ease-in-out;
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; filter: brightness(1); }
+  50% { transform: scale(1.2) rotate(15deg); opacity: 1; filter: brightness(1.5) drop-shadow(0 0 8px rgba(255, 215, 0, 0.8)); }
 }
 
 .hint-modal-overlay {
@@ -775,14 +798,10 @@ img.character-avatar {
     align-items: start;
   }
 
-  .hint-fab-container {
-    bottom: 20px;
-    right: 20px;
-  }
-  
-  .hint-sphere {
-    width: 60px;
-    height: 60px;
+  .hint-trigger-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    gap: 8px;
   }
 
   .hint-modal-content {

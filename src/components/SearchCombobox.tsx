@@ -68,6 +68,7 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
           autoComplete="off"
           disabled={disabled}
           onFocus={() => setOpen(true)}
+          onBlur={() => setTimeout(() => setOpen(false), 150)}
           onChange={(event) => {
             setQuery(event.target.value);
             setOpen(true);

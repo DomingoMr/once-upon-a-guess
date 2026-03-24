@@ -86,7 +86,7 @@ export default function App() {
 
   const isEmojiMode = view === 'emoji';
   const isSilhouetteMode = view === 'silhouette';
-  
+
   const secret = isEmojiMode ? emojiSecret : (isSilhouetteMode ? silhouetteSecret : classicSecret);
   const guesses = isEmojiMode ? emojiGuesses : (isSilhouetteMode ? silhouetteGuesses : classicGuesses);
   const setGuesses = isEmojiMode ? setEmojiGuesses : (isSilhouetteMode ? setSilhouetteGuesses : setClassicGuesses);
@@ -171,44 +171,36 @@ export default function App() {
               <EmojiDisplay secret={secret} guesses={guesses} hasWon={hasWon} />
             )}
             {isSilhouetteMode && (
-              <SilhouetteDisplay 
-                secret={secret} 
-                guesses={guesses} 
-                hasWon={hasWon} 
+              <SilhouetteDisplay
+                secret={secret}
+                guesses={guesses}
+                hasWon={hasWon}
               />
             )}
             <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
+
+            {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && (
+              <div className="hint-trigger-wrap">
+                <button
+                  className={`hint-trigger-btn${hintRevealed ? ' hint-trigger-btn--revealed' : ''}`}
+                  onClick={() => setHintRevealed(true)}
+                  type="button"
+                  disabled={hintRevealed}
+                >
+                  <span className="hint-trigger-sparkle">✨</span>
+                  <span>{hintRevealed ? 'Hint revealed!' : 'Magical Hint'}</span>
+                  <span className="hint-trigger-sparkle">✨</span>
+                </button>
+              </div>
+            )}
+
             {status ? <div className="win-banner">{status}</div> : null}
             <GuessBoard guesses={guesses} secret={secret} />
           </section>
 
           <AnimatePresence>
-            {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && !hintRevealed && (
-              <motion.div
-                className="hint-fab-container"
-                initial={{ opacity: 0, scale: 0, rotate: -90 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                exit={{ opacity: 0, scale: 0 }}
-                transition={{ type: 'spring', duration: 0.6 }}
-              >
-                <motion.button
-                  className="hint-fab-btn"
-                  onClick={() => setHintRevealed(true)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  aria-label="Unlock magical hint"
-                >
-                  <div className="hint-sphere" />
-                  <span className="hint-fab-badge">!</span>
-                </motion.button>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          <AnimatePresence>
             {hintRevealed && !hasWon && (
+
               <motion.div
                 className="hint-modal-overlay"
                 onClick={() => setHintRevealed(false)}
