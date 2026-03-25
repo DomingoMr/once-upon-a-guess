@@ -4517,58 +4517,6 @@
     }
   },
   {
-    "id": "melody_088",
-    "day_number": 88,
-    "metadata": {
-      "titles": {
-        "es_ES": "Little Wonders",
-        "es_LA": "Little Wonders",
-        "en_US": "Little Wonders"
-      },
-      "movies": {
-        "es_ES": "Meet the Robinsons",
-        "es_LA": "Meet the Robinsons",
-        "en_US": "Meet the Robinsons"
-      },
-      "release_year": 2007,
-      "spotify_url": ""
-    },
-    "search_aliases": [
-      "Little Wonders",
-      "Meet the Robinsons",
-      "Let it go let it roll right off your sho",
-      "Meet the Robinsons song"
-    ],
-    "gameplay": {
-      "text_clues": [
-        "___ ___ ___ let it roll right off your shoulder...",
-        "____ it go let it ____ right off your shoulder...",
-        "Let it go let it roll right off your shoulder..."
-      ],
-      "audio_source": {
-        "url": "/public/audio/melody_088.mp3",
-        "is_local": true,
-        "clues": [
-          {
-            "attempt": 4,
-            "start_time": 42.0,
-            "end_time": 45.0
-          },
-          {
-            "attempt": 5,
-            "start_time": 42.0,
-            "end_time": 46.5
-          },
-          {
-            "attempt": 6,
-            "start_time": 42.0,
-            "end_time": 48.0
-          }
-        ]
-      }
-    }
-  },
-  {
     "id": "melody_089",
     "day_number": 89,
     "metadata": {

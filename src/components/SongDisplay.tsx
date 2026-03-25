@@ -45,7 +45,8 @@ export function SongDisplay({
   // Hint unlocks on 4th attempt (index 3)
   const showHintTrigger = attemptCount >= 3 && !hasWon;
 
-  const audioUrl = `/audio/melodies/${secret.id}.mp3`;
+  const audioBase = import.meta.env.VITE_URL_SONGS ?? '/audio/melodies';
+  const audioUrl = `${audioBase}/${secret.id}.mp3`;
 
   // Song suggestions — same style as SearchCombobox
   const suggestions = useMemo(() => {
@@ -180,7 +181,7 @@ export function SongDisplay({
       {/* Win reveal */}
       {hasWon && (
         <div className="song-win-reveal">
-          <div className="song-win-title">🎉 ¡Correcto!</div>
+          <div className="song-win-title">🎉Nice!</div>
           <div className="song-win-song">{secret.metadata.titles.en_US}</div>
           <div className="song-win-movie">
             from <em>{secret.metadata.movies.en_US}</em>
