@@ -60,7 +60,10 @@ export interface DisneyMelody {
   metadata: {
     titles: { en_US: string; es_ES?: string; es_LA?: string };
     movies: { en_US: string; es_ES?: string; es_LA?: string };
+    release_year?: number;
+    spotify_url?: string;
   };
+  search_aliases: string[];
   gameplay: {
     text_clues: string[];
     audio_source: {

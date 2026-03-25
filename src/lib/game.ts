@@ -1,4 +1,4 @@
-import type { ComparisonTile, DisneyCharacter, TileState } from '../types';
+import type { ComparisonTile, DisneyCharacter, DisneyMelody, TileState } from '../types';
 
 const EPOCH_UTC = Date.UTC(2025, 0, 1);
 const MS_PER_DAY = 86_400_000;
@@ -50,6 +50,12 @@ export function getDailySilhouetteCharacter(characters: DisneyCharacter[]): Disn
   if (seed < 0) seed += validCharacters.length;
   
   return validCharacters[seed];
+}
+
+export function getDailySong(melodies: DisneyMelody[]): DisneyMelody {
+  const dayIndex = getLocalDayIndex() + 1; // 1-based to match day_number
+  const found = melodies.find((m) => m.day_number === ((dayIndex - 1) % melodies.length) + 1);
+  return found ?? melodies[0];
 }
 
 function stateForMatch(isExact: boolean): TileState {

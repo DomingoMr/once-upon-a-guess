@@ -29,7 +29,7 @@ function ModeButton({ name, subtitle, icon, active, onClick }: ModeButtonProps) 
 }
 
 type HomeProps = {
-  onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette') => void;
+  onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette' | 'song') => void;
 };
 
 export function Home({ onSelectMode }: HomeProps) {
@@ -77,7 +77,8 @@ export function Home({ onSelectMode }: HomeProps) {
           name="Song" 
           subtitle="Guess the song!" 
           icon="🎵" 
-          active={false} 
+          active={true}
+          onClick={() => onSelectMode('song')}
         />
       </section>
 

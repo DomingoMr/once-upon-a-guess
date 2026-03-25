@@ -1,19 +1,21 @@
 import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import rawDataset from './data/disney-characters.json';
+import rawMelodies from './data/disney-songs.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
 import { Home } from './components/Home';
 import { EmojiDisplay } from './components/EmojiDisplay';
 import { SilhouetteDisplay } from './components/SilhouetteDisplay';
-import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter } from './lib/game';
+import { SongDisplay } from './components/SongDisplay';
+import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter, getDailySong } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
-import type { DisneyCharacter, RawDataset } from './types';
-import { MelodyTester } from './components/MelodyTester';
+import type { DisneyCharacter, DisneyMelody, RawDataset } from './types';
 
 const CLASSIC_STORAGE_KEY = 'ouag-daily-state-v4';
 const EMOJI_STORAGE_KEY = 'ouag-emoji-state-v1';
 const SILHOUETTE_STORAGE_KEY = 'ouag-silhouette-state-v1';
+const SONG_STORAGE_KEY = 'ouag-song-state-v1';
 
 function todayKey(): string {
   const d = new Date();
@@ -27,6 +29,12 @@ function formatDate(): string {
 type DailyStoredState = {
   date: string;
   guessIds: string[];
+};
+
+type SongStoredState = {
+  date: string;
+  guessedSongIds: string[];
+  hasWon: boolean;
 };
 
 function loadStoredGuesses(characters: DisneyCharacter[], storageKey: string): DisneyCharacter[] {
@@ -44,20 +52,35 @@ function loadStoredGuesses(characters: DisneyCharacter[], storageKey: string): D
   }
 }
 
+function loadStoredSongState(): SongStoredState {
+  if (typeof window === 'undefined') return { date: '', guessedSongIds: [], hasWon: false };
+  try {
+    const raw = localStorage.getItem(SONG_STORAGE_KEY);
+    if (!raw) return { date: todayKey(), guessedSongIds: [], hasWon: false };
+    const parsed = JSON.parse(raw) as SongStoredState;
+    if (parsed.date !== todayKey()) return { date: todayKey(), guessedSongIds: [], hasWon: false };
+    return parsed;
+  } catch {
+    return { date: todayKey(), guessedSongIds: [], hasWon: false };
+  }
+}
+
+type ViewType = 'home' | 'classic' | 'emoji' | 'silhouette' | 'song';
+const VALID_VIEWS: ViewType[] = ['classic', 'emoji', 'silhouette', 'song'];
+
 export default function App() {
-  // Añadimos 'melody-test' a los tipos permitidos
-  const [view, setView] = useState<'home' | 'classic' | 'emoji' | 'silhouette' | 'melody-test'>(() => {
+  const [view, setView] = useState<ViewType>(() => {
     if (typeof window === 'undefined') return 'home';
-    const hash = window.location.hash.replace('#', '');
-    if (['classic', 'emoji', 'silhouette', 'melody-test'].includes(hash)) return hash as any;
+    const hash = window.location.hash.replace('#', '') as ViewType;
+    if (VALID_VIEWS.includes(hash)) return hash;
     return 'home';
   });
 
   useEffect(() => {
     const onHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
-      if (['classic', 'emoji', 'silhouette', 'melody-test'].includes(hash)) {
-        setView(hash as any);
+      const hash = window.location.hash.replace('#', '') as ViewType;
+      if (VALID_VIEWS.includes(hash)) {
+        setView(hash);
       } else {
         setView('home');
       }
@@ -66,7 +89,7 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  const navigateTo = (newView: 'home' | 'classic' | 'emoji' | 'silhouette') => {
+  const navigateTo = (newView: ViewType) => {
     if (newView === 'home') {
       window.history.pushState(null, '', window.location.pathname);
     } else {
@@ -77,17 +100,31 @@ export default function App() {
 
   const dataset = rawDataset as RawDataset;
   const characters = useMemo(() => normalizeCharacters(dataset), [dataset]);
+  const melodies = rawMelodies as DisneyMelody[];
 
   const classicSecret = useMemo(() => getDailyCharacter(characters), [characters]);
   const emojiSecret = useMemo(() => getDailyEmojiCharacter(characters), [characters]);
   const silhouetteSecret = useMemo(() => getDailySilhouetteCharacter(characters), [characters]);
+  const songSecret = useMemo(() => getDailySong(melodies), [melodies]);
 
   const [classicGuesses, setClassicGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, CLASSIC_STORAGE_KEY));
   const [emojiGuesses, setEmojiGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, EMOJI_STORAGE_KEY));
   const [silhouetteGuesses, setSilhouetteGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, SILHOUETTE_STORAGE_KEY));
 
+  const initSongState = loadStoredSongState();
+  const [songGuessedIds, setSongGuessedIds] = useState<string[]>(initSongState.guessedSongIds);
+  const [songHasWon, setSongHasWon] = useState<boolean>(initSongState.hasWon);
+  const [songHintRevealed, setSongHintRevealed] = useState(false);
+
+  // Derive full song objects from IDs
+  const songGuessedSongs = useMemo(
+    () => songGuessedIds.map((id) => melodies.find((m) => m.id === id)).filter(Boolean) as DisneyMelody[],
+    [songGuessedIds, melodies],
+  );
+
   const isEmojiMode = view === 'emoji';
   const isSilhouetteMode = view === 'silhouette';
+  const isSongMode = view === 'song';
 
   const secret = isEmojiMode ? emojiSecret : (isSilhouetteMode ? silhouetteSecret : classicSecret);
   const guesses = isEmojiMode ? emojiGuesses : (isSilhouetteMode ? silhouetteGuesses : classicGuesses);
@@ -123,6 +160,15 @@ export default function App() {
     }));
   }, [silhouetteGuesses]);
 
+  // Sync Song state to Storage
+  useEffect(() => {
+    localStorage.setItem(SONG_STORAGE_KEY, JSON.stringify({
+      date: todayKey(),
+      guessedSongIds: songGuessedIds,
+      hasWon: songHasWon,
+    }));
+  }, [songGuessedIds, songHasWon]);
+
   // Restore win status on load or mode switch
   useEffect(() => {
     if (hasWon) {
@@ -134,14 +180,21 @@ export default function App() {
 
   function handleGuess(character: DisneyCharacter) {
     if (hasWon || guessedIds.has(character.id)) return;
-
     const nextGuesses = [...guesses, character];
     setGuesses(nextGuesses);
+  }
+
+  function handleSongGuess(song: DisneyMelody) {
+    if (songHasWon || songGuessedIds.includes(song.id)) return;
+    const nextIds = [...songGuessedIds, song.id];
+    setSongGuessedIds(nextIds);
+    if (song.id === songSecret.id) setSongHasWon(true);
   }
 
   const getModeLabel = () => {
     if (isEmojiMode) return 'Emoji';
     if (isSilhouetteMode) return 'Silhouette';
+    if (isSongMode) return 'Song';
     return 'Classic';
   };
 
@@ -151,8 +204,6 @@ export default function App() {
 
       {view === 'home' ? (
         <Home onSelectMode={(mode) => navigateTo(mode)} />
-      ) : view === 'melody-test' ? (
-        <MelodyTester />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
@@ -167,44 +218,57 @@ export default function App() {
                 <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="game-logo" />
               </div>
             </div>
-
           </header>
 
-          <section className="game-panel">
-            {isEmojiMode && (
-              <EmojiDisplay secret={secret} guesses={guesses} hasWon={hasWon} />
-            )}
-            {isSilhouetteMode && (
-              <SilhouetteDisplay
-                secret={secret}
-                guesses={guesses}
-                hasWon={hasWon}
+          {isSongMode ? (
+            <section className="game-panel">
+              <SongDisplay
+                secret={songSecret}
+                guessedSongIds={songGuessedIds}
+                guessedSongs={songGuessedSongs}
+                onGuess={handleSongGuess}
+                hasWon={songHasWon}
+                hintRevealed={songHintRevealed}
+                onHintReveal={() => setSongHintRevealed(true)}
               />
-            )}
-            <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
+            </section>
 
-            {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && (
-              <div className="hint-trigger-wrap">
-                <button
-                  className={`hint-trigger-btn${hintRevealed ? ' hint-trigger-btn--revealed' : ''}`}
-                  onClick={() => setHintRevealed(true)}
-                  type="button"
-                  disabled={hintRevealed}
-                >
-                  <span className="hint-trigger-sparkle">✨</span>
-                  <span>{hintRevealed ? 'Hint revealed!' : 'Magical Hint'}</span>
-                  <span className="hint-trigger-sparkle">✨</span>
-                </button>
-              </div>
-            )}
+          ) : (
+            <section className="game-panel">
+              {isEmojiMode && (
+                <EmojiDisplay secret={secret} guesses={guesses} hasWon={hasWon} />
+              )}
+              {isSilhouetteMode && (
+                <SilhouetteDisplay
+                  secret={secret}
+                  guesses={guesses}
+                  hasWon={hasWon}
+                />
+              )}
+              <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
 
-            {status ? <div className="win-banner">{status}</div> : null}
-            <GuessBoard guesses={guesses} secret={secret} />
-          </section>
+              {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && (
+                <div className="hint-trigger-wrap">
+                  <button
+                    className={`hint-trigger-btn${hintRevealed ? ' hint-trigger-btn--revealed' : ''}`}
+                    onClick={() => setHintRevealed(true)}
+                    type="button"
+                    disabled={hintRevealed}
+                  >
+                    <span className="hint-trigger-sparkle">✨</span>
+                    <span>{hintRevealed ? 'Hint revealed!' : 'Magical Hint'}</span>
+                    <span className="hint-trigger-sparkle">✨</span>
+                  </button>
+                </div>
+              )}
+
+              {status ? <div className="win-banner">{status}</div> : null}
+              <GuessBoard guesses={guesses} secret={secret} />
+            </section>
+          )}
 
           <AnimatePresence>
-            {hintRevealed && !hasWon && (
-
+            {hintRevealed && !hasWon && !isSongMode && (
               <motion.div
                 className="hint-modal-overlay"
                 onClick={() => setHintRevealed(false)}
@@ -224,6 +288,29 @@ export default function App() {
                   <h3 className="hint-modal-title">✨ Magical Hint ✨</h3>
                   <p className="hint-modal-subtitle">The character appears in:</p>
                   <div className="hint-modal-movie">{secret.movie}</div>
+                </motion.div>
+              </motion.div>
+            )}
+            {songHintRevealed && !songHasWon && isSongMode && (
+              <motion.div
+                className="hint-modal-overlay"
+                onClick={() => setSongHintRevealed(false)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <motion.div
+                  className="hint-modal-content"
+                  onClick={(e) => e.stopPropagation()}
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                  transition={{ type: 'spring', bounce: 0.4 }}
+                >
+                  <button className="hint-modal-close" onClick={() => setSongHintRevealed(false)} aria-label="Close hint">&times;</button>
+                  <h3 className="hint-modal-title">✨ Magical Hint ✨</h3>
+                  <p className="hint-modal-subtitle">This song belongs to:</p>
+                  <div className="hint-modal-movie">{songSecret.metadata.movies.en_US}</div>
                 </motion.div>
               </motion.div>
             )}
