@@ -31,7 +31,6 @@ export function SongDisplay({
   const audioRef = useRef<HTMLAudioElement>(null);
   const rafRef = useRef<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   // Search state — mirrors SearchCombobox exactly
   const [query, setQuery] = useState('');
@@ -91,7 +90,6 @@ export function SongDisplay({
       audio.currentTime = 0;
     }
     setIsPlaying(false);
-    setProgress(0);
   }
 
   async function handlePlayPause() {
@@ -139,8 +137,6 @@ export function SongDisplay({
         if (!a) return;
 
         const elapsed = a.currentTime; // Simplified since startTime is 0
-        const pct = Math.min((elapsed / snippetDuration) * 100, 100);
-        setProgress(pct);
 
         if (a.paused || a.ended || a.currentTime >= endTime - 0.05) {
           stopAudio();
@@ -152,7 +148,6 @@ export function SongDisplay({
     } catch (err) {
       console.error('Audio error:', err);
       setIsPlaying(false);
-      setProgress(0);
     }
   }
 
@@ -177,7 +172,7 @@ export function SongDisplay({
           {SNIPPET_DURATIONS.map((dur, i) => {
             const label = i === 0 ? '3s' : i === 1 ? '4.5s' : '6s';
             const isUsed = attemptCount > i;
-            const isCurrent = attemptCount === i && !hasWon;
+            const isCurrent = (attemptCount === i || (i === 2 && attemptCount > 2)) && !hasWon;
             return (
               <div
                 key={i}
@@ -200,7 +195,6 @@ export function SongDisplay({
             {isPlaying ? '⏸' : '▶'}
           </button>
           <div className="song-progress-wrap">
-            <div className="song-progress-bar" style={{ width: `${progress}%` }} />
             <div className="song-progress-track" />
           </div>
           <span className="song-duration-label">{snippetDuration}s</span>
