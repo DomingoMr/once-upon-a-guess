@@ -46,3 +46,27 @@ export type ComparisonTile = {
   hint?: string;
   character?: DisneyCharacter;
 };
+
+// En tu archivo types.ts (o al principio de MelodyTester.tsx)
+export interface AudioClue {
+  attempt: number;
+  start_time: number;
+  end_time: number;
+}
+
+export interface DisneyMelody {
+  id: string;
+  day_number: number;
+  metadata: {
+    titles: { en_US: string; es_ES?: string; es_LA?: string };
+    movies: { en_US: string; es_ES?: string; es_LA?: string };
+  };
+  gameplay: {
+    text_clues: string[];
+    audio_source: {
+      url: string;
+      is_local: boolean;
+      clues: AudioClue[];
+    };
+  };
+}

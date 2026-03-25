@@ -9,6 +9,7 @@ import { SilhouetteDisplay } from './components/SilhouetteDisplay';
 import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, RawDataset } from './types';
+import { MelodyTester } from './components/MelodyTester';
 
 const CLASSIC_STORAGE_KEY = 'ouag-daily-state-v4';
 const EMOJI_STORAGE_KEY = 'ouag-emoji-state-v1';
@@ -44,17 +45,18 @@ function loadStoredGuesses(characters: DisneyCharacter[], storageKey: string): D
 }
 
 export default function App() {
-  const [view, setView] = useState<'home' | 'classic' | 'emoji' | 'silhouette'>(() => {
+  // Añadimos 'melody-test' a los tipos permitidos
+  const [view, setView] = useState<'home' | 'classic' | 'emoji' | 'silhouette' | 'melody-test'>(() => {
     if (typeof window === 'undefined') return 'home';
     const hash = window.location.hash.replace('#', '');
-    if (['classic', 'emoji', 'silhouette'].includes(hash)) return hash as any;
+    if (['classic', 'emoji', 'silhouette', 'melody-test'].includes(hash)) return hash as any;
     return 'home';
   });
 
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['classic', 'emoji', 'silhouette'].includes(hash)) {
+      if (['classic', 'emoji', 'silhouette', 'melody-test'].includes(hash)) {
         setView(hash as any);
       } else {
         setView('home');
@@ -149,6 +151,8 @@ export default function App() {
 
       {view === 'home' ? (
         <Home onSelectMode={(mode) => navigateTo(mode)} />
+      ) : view === 'melody-test' ? (
+        <MelodyTester />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
