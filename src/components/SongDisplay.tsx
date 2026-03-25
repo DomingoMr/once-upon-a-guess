@@ -103,11 +103,10 @@ export function SongDisplay({
       return;
     }
 
-    // Always derive endTime from snippetDuration — ignore JSON clue.end_time
-    // to guarantee the correct 3s → 4.5s → 6s progression (bug 3 fix).
-    const clue = secret.gameplay.audio_source.clues[clueIndex];
-    const startTime = clue?.start_time ?? 0;
-    const endTime = startTime + snippetDuration;
+    // Always start from 0 and stop at snippetDuration (3s, 4.5s, 6s)
+    // The JSON start_time/end_time are ignored as the audio files are already clipped to 6s.
+    const startTime = 0;
+    const endTime = snippetDuration;
 
     try {
       // Some browsers (Safari) need the audio to be buffered before seeking.
@@ -139,7 +138,7 @@ export function SongDisplay({
         const a = audioRef.current;
         if (!a) return;
 
-        const elapsed = Math.max(0, a.currentTime - startTime);
+        const elapsed = a.currentTime; // Simplified since startTime is 0
         const pct = Math.min((elapsed / snippetDuration) * 100, 100);
         setProgress(pct);
 
