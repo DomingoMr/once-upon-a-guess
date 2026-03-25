@@ -8,6 +8,7 @@ import { Home, ModeButton } from './components/Home';
 import { EmojiDisplay } from './components/EmojiDisplay';
 import { SilhouetteDisplay } from './components/SilhouetteDisplay';
 import { SongDisplay } from './components/SongDisplay';
+import { ReportModal } from './components/ReportModal';
 import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter, getDailySong } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, DisneyMelody, RawDataset } from './types';
@@ -147,6 +148,7 @@ export default function App() {
   const [status, setStatus] = useState('');
   const [hintRevealed, setHintRevealed] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isReportOpen, setIsReportOpen] = useState(false);
   const nextModeRef = useRef<HTMLDivElement>(null);
 
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
@@ -231,7 +233,7 @@ export default function App() {
       <div className="page-overlay" aria-hidden="true" />
 
       {view === 'home' ? (
-        <Home onSelectMode={(mode) => navigateTo(mode)} />
+        <Home onSelectMode={(mode) => navigateTo(mode)} onOpenReport={() => setIsReportOpen(true)} />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
@@ -245,6 +247,15 @@ export default function App() {
               <div className="game-title">
                 <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="game-logo" />
               </div>
+            </div>
+            <div className="game-report-wrap" style={{ gridColumn: 3, justifySelf: 'end', alignSelf: 'start' }}>
+              <button 
+                className="bug-report-btn" 
+                onClick={() => setIsReportOpen(true)}
+                aria-label="Report Bug"
+              >
+                <span>📩</span>
+              </button>
             </div>
           </header>
 
@@ -393,6 +404,7 @@ export default function App() {
           </AnimatePresence>
         </main>
       )}
+      <ReportModal isOpen={isReportOpen} onClose={() => setIsReportOpen(false)} />
     </div>
   );
 }

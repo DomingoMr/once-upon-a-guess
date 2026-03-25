@@ -30,15 +30,26 @@ export function ModeButton({ name, subtitle, icon, active, onClick }: ModeButton
 
 type HomeProps = {
   onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette' | 'song') => void;
+  onOpenReport: () => void;
 };
 
-export function Home({ onSelectMode }: HomeProps) {
+export function Home({ onSelectMode, onOpenReport }: HomeProps) {
   return (
     <main className="home-stage">
       <header className="home-header">
         <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="home-logo" />
         <h1 className="home-subtitle">Guess the daily Disney character</h1>
       </header>
+
+      <div className="home-report-wrap">
+        <button 
+          className="bug-report-btn" 
+          onClick={onOpenReport}
+          aria-label="Report Bug"
+        >
+          <span>📩</span>
+        </button>
+      </div>
 
       <section className="home-modes">
         <ModeButton
