@@ -73,6 +73,24 @@ function yearHint(guess: number, secret: number) {
   return guess < secret ? 'Later ↑' : 'Earlier ↓';
 }
 
+export function getDailyCard(lorcanaPool: Record<string, any[]>): { characterName: string; card: any } {
+  const dayIndex = getLocalDayIndex();
+  const characterNames = Object.keys(lorcanaPool).sort(); // Sort to ensure consistent indexing
+
+  const charPrimeStep = 1000039;
+  let charSeed = ((dayIndex + 1095) * charPrimeStep) % characterNames.length;
+  if (charSeed < 0) charSeed += characterNames.length;
+  const characterName = characterNames[charSeed];
+
+  const cards = lorcanaPool[characterName];
+  const cardPrimeStep = 1000043;
+  let cardSeed = ((dayIndex + 2190) * cardPrimeStep) % cards.length;
+  if (cardSeed < 0) cardSeed += cards.length;
+  const card = cards[cardSeed];
+
+  return { characterName, card };
+}
+
 export function createTileComparisons(guess: DisneyCharacter, secret: DisneyCharacter): ComparisonTile[] {
   return [
     {

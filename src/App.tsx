@@ -9,7 +9,9 @@ import { EmojiDisplay } from './components/EmojiDisplay';
 import { SilhouetteDisplay } from './components/SilhouetteDisplay';
 import { SongDisplay } from './components/SongDisplay';
 import { ReportModal } from './components/ReportModal';
-import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter, getDailySong } from './lib/game';
+import lorcanaPool from './data/lorcana_pool.json';
+import { CardDisplay } from './components/CardDisplay';
+import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter, getDailySong, getDailyCard } from './lib/game';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, DisneyMelody, RawDataset } from './types';
 
@@ -17,6 +19,7 @@ const CLASSIC_STORAGE_KEY = 'ouag-daily-state-v4';
 const EMOJI_STORAGE_KEY = 'ouag-emoji-state-v1';
 const SILHOUETTE_STORAGE_KEY = 'ouag-silhouette-state-v1';
 const SONG_STORAGE_KEY = 'ouag-song-state-v1';
+const CARD_STORAGE_KEY = 'ouag-card-state-v1';
 
 function todayKey(): string {
   const d = new Date();
@@ -67,7 +70,7 @@ function loadStoredSongState(): SongStoredState {
 }
 
 type ViewType = 'home' | 'classic' | 'emoji' | 'silhouette' | 'song' | 'card';
-const VALID_VIEWS: ViewType[] = ['classic', 'emoji', 'silhouette', 'song'];
+const VALID_VIEWS: ViewType[] = ['classic', 'emoji', 'silhouette', 'song', 'card'];
 
 const MODE_SEQUENCE: { id: ViewType; name: string; icon: string | React.ReactNode; subtitle: string }[] = [
   { id: 'classic', name: 'Classic', icon: '✨', subtitle: 'Get clues with every try' },
@@ -78,7 +81,7 @@ const MODE_SEQUENCE: { id: ViewType; name: string; icon: string | React.ReactNod
     id: 'card',
     name: 'Card',
     icon: <img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />,
-    subtitle: 'Wait and see!',
+    subtitle: 'Whose card is this?',
   },
   { id: 'home', name: 'X', icon: '❓', subtitle: 'Coming soon!' }, // 'home' or a future view
 ];
@@ -121,10 +124,13 @@ export default function App() {
   const emojiSecret = useMemo(() => getDailyEmojiCharacter(characters), [characters]);
   const silhouetteSecret = useMemo(() => getDailySilhouetteCharacter(characters), [characters]);
   const songSecret = useMemo(() => getDailySong(melodies), [melodies]);
+  const cardSecretData = useMemo(() => getDailyCard(lorcanaPool), []);
+  const cardSecret = useMemo(() => characters.find(c => c.name === cardSecretData.characterName) || characters[0], [characters, cardSecretData]);
 
   const [classicGuesses, setClassicGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, CLASSIC_STORAGE_KEY));
   const [emojiGuesses, setEmojiGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, EMOJI_STORAGE_KEY));
   const [silhouetteGuesses, setSilhouetteGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, SILHOUETTE_STORAGE_KEY));
+  const [cardGuesses, setCardGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, CARD_STORAGE_KEY));
 
   const initSongState = loadStoredSongState();
   const [songGuessedIds, setSongGuessedIds] = useState<string[]>(initSongState.guessedSongIds);
@@ -139,11 +145,12 @@ export default function App() {
 
   const isEmojiMode = view === 'emoji';
   const isSilhouetteMode = view === 'silhouette';
+  const isCardMode = view === 'card';
   const isSongMode = view === 'song';
 
-  const secret = isEmojiMode ? emojiSecret : (isSilhouetteMode ? silhouetteSecret : classicSecret);
-  const guesses = isEmojiMode ? emojiGuesses : (isSilhouetteMode ? silhouetteGuesses : classicGuesses);
-  const setGuesses = isEmojiMode ? setEmojiGuesses : (isSilhouetteMode ? setSilhouetteGuesses : setClassicGuesses);
+  const secret = isEmojiMode ? emojiSecret : (isSilhouetteMode ? silhouetteSecret : (isCardMode ? cardSecret : classicSecret));
+  const guesses = isEmojiMode ? emojiGuesses : (isSilhouetteMode ? silhouetteGuesses : (isCardMode ? cardGuesses : classicGuesses));
+  const setGuesses = isEmojiMode ? setEmojiGuesses : (isSilhouetteMode ? setSilhouetteGuesses : (isCardMode ? setCardGuesses : setClassicGuesses));
 
   const [status, setStatus] = useState('');
   const [hintRevealed, setHintRevealed] = useState(false);
@@ -177,6 +184,14 @@ export default function App() {
       guessIds: silhouetteGuesses.map((g) => g.id),
     }));
   }, [silhouetteGuesses]);
+
+  // Sync Card Guesses to Storage
+  useEffect(() => {
+    localStorage.setItem(CARD_STORAGE_KEY, JSON.stringify({
+      date: todayKey(),
+      guessIds: cardGuesses.map((g) => g.id),
+    }));
+  }, [cardGuesses]);
 
   // Sync Song state to Storage
   useEffect(() => {
@@ -224,6 +239,7 @@ export default function App() {
   const getModeLabel = () => {
     if (isEmojiMode) return 'Emoji';
     if (isSilhouetteMode) return 'Silhouette';
+    if (isCardMode) return 'Card';
     if (isSongMode) return 'Song';
     return 'Classic';
   };
@@ -297,7 +313,7 @@ export default function App() {
                           name={nextMode.name}
                           subtitle={nextMode.subtitle}
                           icon={nextMode.icon}
-                          active={!isCard}
+                          active={true}
                           onClick={() => navigateTo(nextMode.id)}
                         />
                       </div>
@@ -319,9 +335,16 @@ export default function App() {
                   hasWon={hasWon}
                 />
               )}
+              {isCardMode && (
+                <CardDisplay
+                  cardUrl={cardSecretData.card.url_imagen}
+                  guesses={guesses.length}
+                  hasWon={hasWon}
+                />
+              )}
               <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} onOpenChange={setIsSearchOpen} disabled={hasWon} />
 
-              {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && (
+              {guesses.length >= (isSilhouetteMode || isEmojiMode || isCardMode ? 5 : 4) && !hasWon && (
                 <div className="hint-trigger-wrap" style={isSearchOpen ? { visibility: 'hidden' } : undefined}>
                   <button
                     className={`hint-trigger-btn${hintRevealed ? ' hint-trigger-btn--revealed' : ''}`}
@@ -354,7 +377,7 @@ export default function App() {
                           name={nextMode.name}
                           subtitle={nextMode.subtitle}
                           icon={nextMode.icon}
-                          active={!isCard} // Song to Card disabled
+                          active={true}
                           onClick={() => navigateTo(nextMode.id)}
                         />
                       </div>

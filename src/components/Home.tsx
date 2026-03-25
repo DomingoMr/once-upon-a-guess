@@ -29,7 +29,7 @@ export function ModeButton({ name, subtitle, icon, active, onClick }: ModeButton
 }
 
 type HomeProps = {
-  onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette' | 'song') => void;
+  onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette' | 'song' | 'card') => void;
   onOpenReport: () => void;
 };
 
@@ -98,9 +98,10 @@ export function Home({ onSelectMode, onOpenReport }: HomeProps) {
         <ModeButton
           id="card"
           name="Card"
-          subtitle="Wait and see!"
+          subtitle="Whose card is this?"
           icon={<img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />}
-          active={false}
+          active={true}
+          onClick={() => onSelectMode('card')}
         />
       </section>
 
