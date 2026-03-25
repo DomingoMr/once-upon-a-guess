@@ -7,13 +7,18 @@ type SearchComboboxProps = {
   characters: DisneyCharacter[];
   guessedIds: Set<string>;
   onGuess: (character: DisneyCharacter) => void;
+  onOpenChange?: (open: boolean) => void;
   disabled?: boolean;
 };
 
-export function SearchCombobox({ characters, guessedIds, onGuess, disabled = false }: SearchComboboxProps) {
+export function SearchCombobox({ characters, guessedIds, onGuess, onOpenChange, disabled = false }: SearchComboboxProps) {
   const [query, setQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
   const [open, setOpen] = useState(false);
+
+  const setOpenWithCallback = (value: boolean) => {
+    setOpen(value);
+  };
   const [searchBy, setSearchBy] = useState<'character' | 'movie'>('character');
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,6 +55,12 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
     setActiveIndex(0);
   }, [query]);
 
+  // Notify parent only when dropdown is actually showing results
+  useEffect(() => {
+    onOpenChange?.(open && suggestions.length > 0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, suggestions.length]);
+
   const submit = (character: DisneyCharacter | undefined) => {
     if (!character) return;
     onGuess(character);
@@ -67,16 +78,16 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
           value={query}
           autoComplete="off"
           disabled={disabled}
-          onFocus={() => setOpen(true)}
-          onBlur={() => setTimeout(() => setOpen(false), 150)}
+          onFocus={() => setOpenWithCallback(true)}
+          onBlur={() => setTimeout(() => setOpenWithCallback(false), 150)}
           onChange={(event) => {
             setQuery(event.target.value);
-            setOpen(true);
+            setOpenWithCallback(true);
           }}
           onKeyDown={(event) => {
             if (event.key === 'ArrowDown') {
               event.preventDefault();
-              setOpen(true);
+              setOpenWithCallback(true);
               setActiveIndex((current) => Math.min(current + 1, suggestions.length - 1));
             }
 
@@ -91,7 +102,7 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
             }
 
             if (event.key === 'Escape') {
-              setOpen(false);
+              setOpenWithCallback(false);
             }
           }}
         />
@@ -117,7 +128,7 @@ export function SearchCombobox({ characters, guessedIds, onGuess, disabled = fal
               onChange={(e) => {
                 setSearchBy(e.target.checked ? 'movie' : 'character');
                 setQuery('');
-                setOpen(false);
+                setOpenWithCallback(false);
               }} 
             />
             <span className="slider round"></span>

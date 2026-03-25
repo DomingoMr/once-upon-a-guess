@@ -285,7 +285,7 @@ export function SongDisplay({
 
       {/* Magical Hint trigger — between search and board */}
       {showHintTrigger && (
-        <div className="hint-trigger-wrap">
+        <div className="hint-trigger-wrap" style={open && suggestions.length > 0 ? { visibility: 'hidden' } : undefined}>
           <button
             className={`hint-trigger-btn${hintRevealed ? ' hint-trigger-btn--revealed' : ''}`}
             onClick={onHintReveal}

@@ -132,6 +132,7 @@ export default function App() {
 
   const [status, setStatus] = useState('');
   const [hintRevealed, setHintRevealed] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
   const hasWon = guesses.some((g) => g.id === secret.id);
@@ -245,10 +246,10 @@ export default function App() {
                   hasWon={hasWon}
                 />
               )}
-              <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} disabled={hasWon} />
+              <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} onOpenChange={setIsSearchOpen} disabled={hasWon} />
 
               {guesses.length >= (isSilhouetteMode || isEmojiMode ? 5 : 4) && !hasWon && (
-                <div className="hint-trigger-wrap">
+                <div className="hint-trigger-wrap" style={isSearchOpen ? { visibility: 'hidden' } : undefined}>
                   <button
                     className={`hint-trigger-btn${hintRevealed ? ' hint-trigger-btn--revealed' : ''}`}
                     onClick={() => setHintRevealed(true)}
