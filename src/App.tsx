@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import rawDataset from './data/disney-characters.json';
 import rawMelodies from './data/disney-songs.json';
 import { GuessBoard } from './components/GuessBoard';
 import { SearchCombobox } from './components/SearchCombobox';
-import { Home } from './components/Home';
+import { Home, ModeButton } from './components/Home';
 import { EmojiDisplay } from './components/EmojiDisplay';
 import { SilhouetteDisplay } from './components/SilhouetteDisplay';
 import { SongDisplay } from './components/SongDisplay';
@@ -65,8 +65,22 @@ function loadStoredSongState(): SongStoredState {
   }
 }
 
-type ViewType = 'home' | 'classic' | 'emoji' | 'silhouette' | 'song';
+type ViewType = 'home' | 'classic' | 'emoji' | 'silhouette' | 'song' | 'card';
 const VALID_VIEWS: ViewType[] = ['classic', 'emoji', 'silhouette', 'song'];
+
+const MODE_SEQUENCE: { id: ViewType; name: string; icon: string | React.ReactNode; subtitle: string }[] = [
+  { id: 'classic', name: 'Classic', icon: '✨', subtitle: 'Get clues with every try' },
+  { id: 'emoji', name: 'Emoji', icon: '😃', subtitle: 'Guess with a set of emojis' },
+  { id: 'silhouette', name: 'Silhouette', icon: '👤', subtitle: 'Whose silhouette is this?' },
+  { id: 'song', name: 'Song', icon: '🎵', subtitle: 'Guess the song!' },
+  {
+    id: 'card',
+    name: 'Card',
+    icon: <img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />,
+    subtitle: 'Wait and see!',
+  },
+  { id: 'home', name: 'X', icon: '❓', subtitle: 'Coming soon!' }, // 'home' or a future view
+];
 
 export default function App() {
   const [view, setView] = useState<ViewType>(() => {
@@ -133,6 +147,7 @@ export default function App() {
   const [status, setStatus] = useState('');
   const [hintRevealed, setHintRevealed] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const nextModeRef = useRef<HTMLDivElement>(null);
 
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.id)), [guesses]);
   const hasWon = guesses.some((g) => g.id === secret.id);
@@ -170,14 +185,26 @@ export default function App() {
     }));
   }, [songGuessedIds, songHasWon]);
 
-  // Restore win status on load or mode switch
   useEffect(() => {
     if (hasWon) {
       setStatus(`You found ${secret.name} in ${guesses.length} guess${guesses.length === 1 ? '' : 'es'}!`);
+      // Auto-scroll to next mode button with more delay for smoothness
+      setTimeout(() => {
+        nextModeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 3000);
     } else {
       setStatus('');
     }
   }, [hasWon, secret.name, guesses.length, view]);
+
+  useEffect(() => {
+    if (songHasWon) {
+      // Auto-scroll to next mode button for song mode with more delay
+      setTimeout(() => {
+        nextModeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 3000);
+    }
+  }, [songHasWon]);
 
   function handleGuess(character: DisneyCharacter) {
     if (hasWon || guessedIds.has(character.id)) return;
@@ -232,6 +259,30 @@ export default function App() {
                 hintRevealed={songHintRevealed}
                 onHintReveal={() => setSongHintRevealed(true)}
               />
+
+              {songHasWon && (
+                <div className="next-mode-section" ref={nextModeRef} style={{ width: '100%', marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center', paddingBottom: '40px' }}>
+                  <h3 style={{ color: 'var(--blue-200)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Challenge</h3>
+                  {(() => {
+                    const currentIndex = MODE_SEQUENCE.findIndex((m) => m.id === view);
+                    const nextMode = MODE_SEQUENCE[currentIndex + 1];
+                    if (!nextMode) return null;
+                    const isCard = nextMode.id === 'card';
+                    return (
+                      <div style={{ width: 'min(400px, 100%)' }}>
+                        <ModeButton
+                          id={nextMode.id}
+                          name={nextMode.name}
+                          subtitle={nextMode.subtitle}
+                          icon={nextMode.icon}
+                          active={!isCard}
+                          onClick={() => navigateTo(nextMode.id)}
+                        />
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
             </section>
 
           ) : (
@@ -265,6 +316,30 @@ export default function App() {
 
               {status ? <div className="win-banner">{status}</div> : null}
               <GuessBoard guesses={guesses} secret={secret} />
+
+              {hasWon && (
+                <div className="next-mode-section" ref={nextModeRef} style={{ width: '100%', marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
+                  <h3 style={{ color: 'var(--blue-200)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Challenge</h3>
+                  {(() => {
+                    const currentIndex = MODE_SEQUENCE.findIndex((m) => m.id === view);
+                    const nextMode = MODE_SEQUENCE[currentIndex + 1];
+                    if (!nextMode) return null;
+                    const isCard = nextMode.id === 'card';
+                    return (
+                      <div style={{ width: 'min(400px, 100%)' }}>
+                        <ModeButton
+                          id={nextMode.id}
+                          name={nextMode.name}
+                          subtitle={nextMode.subtitle}
+                          icon={nextMode.icon}
+                          active={!isCard} // Song to Card disabled
+                          onClick={() => navigateTo(nextMode.id)}
+                        />
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
             </section>
           )}
 

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-type ModeButtonProps = {
+export type ModeButtonProps = {
   id: string;
   name: string;
   subtitle: string;
@@ -9,7 +9,7 @@ type ModeButtonProps = {
   onClick?: () => void;
 };
 
-function ModeButton({ name, subtitle, icon, active, onClick }: ModeButtonProps) {
+export function ModeButton({ name, subtitle, icon, active, onClick }: ModeButtonProps) {
   return (
     <button
       type="button"
