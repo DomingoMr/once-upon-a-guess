@@ -64,7 +64,8 @@ export function SongDisplay({
         } else {
           return s.metadata.movies.en_US.toLowerCase().includes(normalized);
         }
-      });
+      })
+      .slice(0, 8);
   }, [query, guessedSongIds, searchBy]);
 
   // Stop audio on unmount or secret change

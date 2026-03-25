@@ -86,7 +86,7 @@ img.home-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .page-overlay {
