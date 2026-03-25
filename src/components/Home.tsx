@@ -11,10 +11,10 @@ type ModeButtonProps = {
 
 function ModeButton({ name, subtitle, icon, active, onClick }: ModeButtonProps) {
   return (
-    <button 
-      type="button" 
-      className={`mode-btn ${active ? 'is-active' : 'is-locked'}`} 
-      onClick={onClick} 
+    <button
+      type="button"
+      className={`mode-btn ${active ? 'is-active' : 'is-locked'}`}
+      onClick={onClick}
       disabled={!active}
     >
       <div className="mode-icon-wrap">
@@ -39,46 +39,46 @@ export function Home({ onSelectMode }: HomeProps) {
         <img src="/logo.png" alt="Mousdle - The daily character guessing challenge" className="home-logo" />
         <h1 className="home-subtitle">Guess the daily Disney character</h1>
       </header>
-      
+
       <section className="home-modes">
-        <ModeButton 
-          id="classic" 
-          name="Classic" 
-          subtitle="Get clues with every try" 
-          icon="✨" 
-          active={true} 
-          onClick={() => onSelectMode('classic')} 
+        <ModeButton
+          id="classic"
+          name="Classic"
+          subtitle="Get clues with every try"
+          icon="✨"
+          active={true}
+          onClick={() => onSelectMode('classic')}
         />
-        <ModeButton 
-          id="emoji" 
-          name="Emoji" 
-          subtitle="Guess with a set of emojis" 
-          icon="😃" 
-          active={true} 
+        <ModeButton
+          id="emoji"
+          name="Emoji"
+          subtitle="Guess with a set of emojis"
+          icon="😃"
+          active={true}
           onClick={() => onSelectMode('emoji')}
         />
-        <ModeButton 
-          id="silhouette" 
-          name="Silhouette" 
-          subtitle="Whose silhouette is this?" 
-          icon="👤" 
-          active={true} 
+        <ModeButton
+          id="silhouette"
+          name="Silhouette"
+          subtitle="Whose silhouette is this?"
+          icon="👤"
+          active={true}
           onClick={() => onSelectMode('silhouette')}
         />
-        <ModeButton 
-          id="card" 
-          name="Card" 
-          subtitle="Wait and see!" 
-          icon={<img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />} 
-          active={false} 
-        />
-        <ModeButton 
-          id="song" 
-          name="Song" 
-          subtitle="Guess the song!" 
-          icon="🎵" 
+        <ModeButton
+          id="song"
+          name="Song"
+          subtitle="Guess the song!"
+          icon="🎵"
           active={true}
           onClick={() => onSelectMode('song')}
+        />
+        <ModeButton
+          id="card"
+          name="Card"
+          subtitle="Wait and see!"
+          icon={<img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />}
+          active={false}
         />
       </section>
 
