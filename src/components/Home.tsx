@@ -43,12 +43,23 @@ export function Home({ onSelectMode, onOpenReport }: HomeProps) {
 
       <div className="home-report-wrap">
         <button 
-          className="bug-report-btn" 
+          className="glow-icon-btn" 
           onClick={onOpenReport}
           aria-label="Report Bug"
+          data-tooltip="Report Bug"
         >
           <span>📩</span>
         </button>
+        <a 
+          href="https://ko-fi.com/yensid" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="glow-icon-btn"
+          aria-label="Support us"
+          data-tooltip="Support us"
+        >
+          <span>☕</span>
+        </a>
       </div>
 
       <section className="home-modes">

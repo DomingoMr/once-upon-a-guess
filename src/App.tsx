@@ -250,12 +250,23 @@ export default function App() {
             </div>
             <div className="game-report-wrap" style={{ gridColumn: 3, justifySelf: 'end', alignSelf: 'start' }}>
               <button 
-                className="bug-report-btn" 
+                className="glow-icon-btn" 
                 onClick={() => setIsReportOpen(true)}
                 aria-label="Report Bug"
+                data-tooltip="Report Bug"
               >
                 <span>📩</span>
               </button>
+              <a 
+                href="https://ko-fi.com/yensid" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="glow-icon-btn"
+                aria-label="Support us"
+                data-tooltip="Support us"
+              >
+                <span>☕</span>
+              </a>
             </div>
           </header>
 

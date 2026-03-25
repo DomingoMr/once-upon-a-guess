@@ -1935,8 +1935,8 @@ img.character-avatar {
   color: rgba(223, 241, 255, 0.8);
 }
 
-/* Iconic Report Button - Mode Icon Style */
-.bug-report-btn {
+/* Iconic Action Button - Mode Icon Style */
+.glow-icon-btn {
   position: relative;
   width: 52px;
   height: 52px;
@@ -1951,9 +1951,10 @@ img.character-avatar {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   z-index: 100;
   border: none;
+  text-decoration: none;
 }
 
-.bug-report-btn::before {
+.glow-icon-btn::before {
   content: '';
   position: absolute;
   inset: 3px;
@@ -1962,21 +1963,21 @@ img.character-avatar {
   z-index: 1;
 }
 
-.bug-report-btn span {
+.glow-icon-btn span {
   position: relative;
   z-index: 2;
   font-size: 1.4rem;
 }
 
-.bug-report-btn:hover {
+.glow-icon-btn:hover {
   transform: scale(1.1);
   filter: brightness(1.1);
   box-shadow: 0 0 20px rgba(248, 181, 0, 0.4);
 }
 
 /* Magical Tooltip */
-.bug-report-btn::after {
-  content: 'Report Bug';
+.glow-icon-btn::after {
+  content: attr(data-tooltip);
   position: absolute;
   top: 100%;
   left: 50%;
@@ -1999,9 +2000,15 @@ img.character-avatar {
   z-index: 101;
 }
 
-.bug-report-btn:hover::after {
+.glow-icon-btn:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+.home-report-wrap,
+.game-report-wrap {
+  display: flex;
+  gap: 12px;
 }
 
 .home-report-wrap {
