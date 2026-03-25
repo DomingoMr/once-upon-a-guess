@@ -74,15 +74,24 @@ export function SongDisplay({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secret.id]);
 
+  // Cancel any in-flight RAF and fully stop audio
   function stopAudio() {
-    const audio = audioRef.current;
-    if (audio) audio.pause();
-    setIsPlaying(false);
-    setProgress(0);
+    // Cancel RAF first — must happen before pause() to avoid the tick
+    // calling stopAudio() again from the a.paused check
     if (rafRef.current !== null) {
       cancelAnimationFrame(rafRef.current);
       rafRef.current = null;
     }
+    const audio = audioRef.current;
+    if (audio) {
+      audio.pause();
+      // Reset to beginning so browser doesn't stay in "ended" state.
+      // Safari refuses to re-seek from an ended position without this,
+      // causing the "need two clicks" bug.
+      audio.currentTime = 0;
+    }
+    setIsPlaying(false);
+    setProgress(0);
   }
 
   async function handlePlayPause() {
@@ -94,26 +103,47 @@ export function SongDisplay({
       return;
     }
 
+    // Always derive endTime from snippetDuration — ignore JSON clue.end_time
+    // to guarantee the correct 3s → 4.5s → 6s progression (bug 3 fix).
+    const clue = secret.gameplay.audio_source.clues[clueIndex];
+    const startTime = clue?.start_time ?? 0;
+    const endTime = startTime + snippetDuration;
+
     try {
-      // Pick clue timing from the JSON
-      const clue = secret.gameplay.audio_source.clues[clueIndex];
-      const startTime = clue ? clue.start_time : 0;
-      const endTime = clue ? clue.end_time : startTime + snippetDuration;
-      const duration = endTime - startTime;
+      // Some browsers (Safari) need the audio to be buffered before seeking.
+      // If readyState is too low, wait for canplay before proceeding.
+      if (audio.readyState < 3 /* HAVE_FUTURE_DATA */) {
+        await new Promise<void>((resolve, reject) => {
+          const onCanPlay = () => {
+            audio.removeEventListener('canplay', onCanPlay);
+            audio.removeEventListener('error', onError);
+            resolve();
+          };
+          const onError = () => {
+            audio.removeEventListener('canplay', onCanPlay);
+            audio.removeEventListener('error', onError);
+            reject(new Error('Audio load error'));
+          };
+          audio.addEventListener('canplay', onCanPlay, { once: true });
+          audio.addEventListener('error', onError, { once: true });
+          audio.load();
+        });
+      }
 
       audio.currentTime = startTime;
       await audio.play();
       setIsPlaying(true);
 
-      // Use audio.currentTime for accurate progress (avoids wall-clock drift)
+      // RAF loop — uses audio.currentTime for drift-free progress
       const tick = () => {
         const a = audioRef.current;
         if (!a) return;
+
         const elapsed = Math.max(0, a.currentTime - startTime);
-        const pct = Math.min((elapsed / duration) * 100, 100);
+        const pct = Math.min((elapsed / snippetDuration) * 100, 100);
         setProgress(pct);
 
-        if (a.currentTime >= endTime - 0.05 || a.paused || a.ended) {
+        if (a.paused || a.ended || a.currentTime >= endTime - 0.05) {
           stopAudio();
           return;
         }
@@ -123,6 +153,7 @@ export function SongDisplay({
     } catch (err) {
       console.error('Audio error:', err);
       setIsPlaying(false);
+      setProgress(0);
     }
   }
 
