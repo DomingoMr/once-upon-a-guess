@@ -185,16 +185,6 @@
       "id": "crd_36e404bad05f458dad8ab8a894d0118f",
       "nombre_carta": "Flower, Shy Skunk",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_36e404bad05f458dad8ab8a894d0118f.avif?1747508854"
-    },
-    {
-      "id": "crd_84584c67578c4843a7aa845642566259",
-      "nombre_carta": "Fragile as a Flower",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_84584c67578c4843a7aa845642566259.avif?1761752266"
-    },
-    {
-      "id": "crd_33a1cfa2557e48ba8b7aac42a10592f6",
-      "nombre_carta": "Magic Golden Flower",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_33a1cfa2557e48ba8b7aac42a10592f6.avif?1709690747"
     }
   ],
   "Faline": [
@@ -266,11 +256,6 @@
       "id": "crd_c35b1525a65d4eb28169ad5d88a0bc27",
       "nombre_carta": "Fairy Godmother, Pure Heart",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_c35b1525a65d4eb28169ad5d88a0bc27.avif?1709690747"
-    },
-    {
-      "id": "crd_ddf2f3b6243d46b693fa4c08113e8930",
-      "nombre_carta": "Fairy Godmother's Wand",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ddf2f3b6243d46b693fa4c08113e8930.avif?1761764685"
     }
   ],
   "Lady Tremaine": [
@@ -347,16 +332,6 @@
       "id": "crd_4328715a70224a1fae6ee75034f305fa",
       "nombre_carta": "Alice, Well-Read Whisper",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_4328715a70224a1fae6ee75034f305fa.avif?1770259362"
-    },
-    {
-      "id": "crd_9df06512bc4c4b928c62b8d263e2bf51",
-      "nombre_carta": "Potion of Malice",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9df06512bc4c4b928c62b8d263e2bf51.avif?1761752401"
-    },
-    {
-      "id": "crd_688f773c54e34dbf8f96096b19c1c2b9",
-      "nombre_carta": "Wake Up, Alice!",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_688f773c54e34dbf8f96096b19c1c2b9.avif?1740589565"
     }
   ],
   "Mad Hatter": [
@@ -374,11 +349,6 @@
       "id": "crd_1d6a93033e0b4304b27bfcfc052aa129",
       "nombre_carta": "Mad Hatter, Unruly Eccentric",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1d6a93033e0b4304b27bfcfc052aa129.avif?1740589473"
-    },
-    {
-      "id": "crd_075482312a124f6585f77be3a693f63f",
-      "nombre_carta": "Mad Hatter's Teapot",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_075482312a124f6585f77be3a693f63f.avif?1730901319"
     }
   ],
   "White Rabbit": [
@@ -391,11 +361,6 @@
       "id": "crd_3cc55696a89340ceb63f0ad739644c17",
       "nombre_carta": "White Rabbit, Royal Herald",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_3cc55696a89340ceb63f0ad739644c17.avif?1723917209"
-    },
-    {
-      "id": "crd_d483668415d54d07861f290ceebc0c38",
-      "nombre_carta": "White Rabbit's Pocket Watch",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d483668415d54d07861f290ceebc0c38.avif?1755540521"
     }
   ],
   "Cheshire Cat": [
@@ -517,11 +482,6 @@
       "id": "crd_2d0021113d084cee92cd6b33f104c1b4",
       "nombre_carta": "Peter Pan, Shadow Finder",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2d0021113d084cee92cd6b33f104c1b4.avif?1716052430"
-    },
-    {
-      "id": "crd_d6f21fdca571497883e46666abc022bc",
-      "nombre_carta": "Peter Pan's Dagger",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d6f21fdca571497883e46666abc022bc.avif?1709690747"
     },
     {
       "id": "crd_929d3fa7c5324a1dbc9ebc1d93bbee6d",
@@ -653,11 +613,6 @@
       "id": "crd_44fceab89d3a4b40bd343c2c84a5cca3",
       "nombre_carta": "Captain Hook, Underhanded",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_44fceab89d3a4b40bd343c2c84a5cca3.avif?1730901319"
-    },
-    {
-      "id": "crd_3c6f007d30714e5183dc6d9da8b200ae",
-      "nombre_carta": "Captain Hook's Rapier",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_3c6f007d30714e5183dc6d9da8b200ae.avif?1709690747"
     }
   ],
   "Lady": [
@@ -680,44 +635,9 @@
       "id": "crd_50725381dc53418bbb9acdb5df2d16c2",
       "nombre_carta": "Lady, Miss Park Avenue",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_50725381dc53418bbb9acdb5df2d16c2.avif?1740589211"
-    },
-    {
-      "id": "crd_e8dd905ba7294b62a44a49ab52a3860a",
-      "nombre_carta": "Lady Kluck, Protective Confidant",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_e8dd905ba7294b62a44a49ab52a3860a.avif?1740589787"
-    },
-    {
-      "id": "crd_9cb99a5eecf64cd9a96cbc780861205c",
-      "nombre_carta": "Lady Tremaine, Bitterly Jealous",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9cb99a5eecf64cd9a96cbc780861205c.avif?1740589561"
-    },
-    {
-      "id": "crd_31618f4403c2423683f1b82f04a2959e",
-      "nombre_carta": "Lady Tremaine, Imperious Queen",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_31618f4403c2423683f1b82f04a2959e.avif?1709690747"
-    },
-    {
-      "id": "crd_5c953b299f3b4de08ff77ddd3b041270",
-      "nombre_carta": "Lady Tremaine, Overbearing Matriarch",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5c953b299f3b4de08ff77ddd3b041270.avif?1709690747"
-    },
-    {
-      "id": "crd_5e356ee21c484c87bcd2f4197dc637ac",
-      "nombre_carta": "Lady Tremaine, Sinister Socialite",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5e356ee21c484c87bcd2f4197dc637ac.avif?1761763668"
-    },
-    {
-      "id": "crd_1acda7d08eb443e9bd36798a1fd7741a",
-      "nombre_carta": "Lady Tremaine, Wicked Stepmother",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1acda7d08eb443e9bd36798a1fd7741a.avif?1709690747"
     }
   ],
   "Tramp": [
-    {
-      "id": "crd_81b8d1f9be6542e0902b77e4ab51fae0",
-      "nombre_carta": "He's A Tramp",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_81b8d1f9be6542e0902b77e4ab51fae0.avif?1740589569"
-    },
     {
       "id": "crd_85f71d1d81a54038b066e3efe226a8f9",
       "nombre_carta": "Tramp, Dapper Rascal",
@@ -845,11 +765,6 @@
       "id": "crd_ec332a15608840ad942e800aa7b17294",
       "nombre_carta": "Maleficent, Vexed Partygoer",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ec332a15608840ad942e800aa7b17294.avif?1723917209"
-    },
-    {
-      "id": "crd_2a6593b0affd4fbb8860ab6b3b131a50",
-      "nombre_carta": "Maleficent's Staff",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2a6593b0affd4fbb8860ab6b3b131a50.avif?1730901319"
     }
   ],
   "Prince Phillip": [
@@ -978,11 +893,6 @@
   ],
   "Roger": [
     {
-      "id": "crd_f74acb5e986f496092a1c5ef8bfa741a",
-      "nombre_carta": "Jolly Roger, Hook's Ship",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_f74acb5e986f496092a1c5ef8bfa741a.avif?1709690747"
-    },
-    {
       "id": "crd_fb3fdf1042f04416b070bdd8566a53e6",
       "nombre_carta": "Roger Radcliffe, Dog Lover",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_fb3fdf1042f04416b070bdd8566a53e6.avif?1740589117"
@@ -1005,11 +915,6 @@
       "id": "crd_3732899cb17442438f292dbb093958eb",
       "nombre_carta": "Arthur, King Victorious",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_3732899cb17442438f292dbb093958eb.avif?1723917209"
-    },
-    {
-      "id": "crd_51db72cea0fc47c7a261bea9f511d4eb",
-      "nombre_carta": "Arthur, Novice Sparrow",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_51db72cea0fc47c7a261bea9f511d4eb.avif?1723917209"
     },
     {
       "id": "crd_fd6fc618265f462787b1a9bc6c988b54",
@@ -1082,16 +987,6 @@
       "id": "crd_830fee590a4e49c1a54622779b4380c3",
       "nombre_carta": "Merlin, Turtle",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_830fee590a4e49c1a54622779b4380c3.avif?1723917209"
-    },
-    {
-      "id": "crd_b17b7e285ce043a2bc97e5953a39c574",
-      "nombre_carta": "Merlin's Carpetbag",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_b17b7e285ce043a2bc97e5953a39c574.avif?1723917209"
-    },
-    {
-      "id": "crd_cc13be0e046742f4ae3e0aaffb5d3f9e",
-      "nombre_carta": "Merlin's Cottage, The Wizard's Home",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_cc13be0e046742f4ae3e0aaffb5d3f9e.avif?1723917209"
     }
   ],
   "Madam Mim": [
@@ -1426,11 +1321,6 @@
       "id": "crd_1af5228c0d75411ebc9eccf5cae1c086",
       "nombre_carta": "Prince John, Phony King",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1af5228c0d75411ebc9eccf5cae1c086.avif?1709690747"
-    },
-    {
-      "id": "crd_e37301dbd08d47fcbd95accf72aa2a3c",
-      "nombre_carta": "Prince John's Mirror",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_e37301dbd08d47fcbd95accf72aa2a3c.avif?1723917209"
     }
   ],
   "Sheriff of Nottingham": [
@@ -1530,11 +1420,6 @@
   ],
   "Rabbit": [
     {
-      "id": "crd_2a71e5ea621f41ce9028d6551c153764",
-      "nombre_carta": "Falling Down the Rabbit Hole",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2a71e5ea621f41ce9028d6551c153764.avif?1709690747"
-    },
-    {
       "id": "crd_260df0802696480898a5d7f6634c5a43",
       "nombre_carta": "Rabbit, Fed Up",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_260df0802696480898a5d7f6634c5a43.avif?1770259384"
@@ -1558,11 +1443,6 @@
       "id": "crd_3cc55696a89340ceb63f0ad739644c17",
       "nombre_carta": "White Rabbit, Royal Herald",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_3cc55696a89340ceb63f0ad739644c17.avif?1723917209"
-    },
-    {
-      "id": "crd_d483668415d54d07861f290ceebc0c38",
-      "nombre_carta": "White Rabbit's Pocket Watch",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d483668415d54d07861f290ceebc0c38.avif?1755540521"
     }
   ],
   "Christopher Robin": [
@@ -1669,46 +1549,6 @@
       "id": "crd_a26bf7d81173483589a2df5446ab1ec0",
       "nombre_carta": "Chief, Seasoned Tracker",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_a26bf7d81173483589a2df5446ab1ec0.avif?1770260005"
-    },
-    {
-      "id": "crd_49b1333917404a9fa4e855f4c2da3487",
-      "nombre_carta": "Chief Bogo, Calling the Shots",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_49b1333917404a9fa4e855f4c2da3487.avif?1761764860"
-    },
-    {
-      "id": "crd_cafa13413b754a96b2ac5df738bd0b89",
-      "nombre_carta": "Chief Bogo, Commanding Officer",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_cafa13413b754a96b2ac5df738bd0b89.avif?1747506729"
-    },
-    {
-      "id": "crd_5976c98ec3d145c686c0c1d5042a8ca2",
-      "nombre_carta": "Chief Bogo, Gazelle Fan",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5976c98ec3d145c686c0c1d5042a8ca2.avif?1730901319"
-    },
-    {
-      "id": "crd_2f24650e05da4e108e8988b03fb64a01",
-      "nombre_carta": "Chief Bogo, Respected Officer",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2f24650e05da4e108e8988b03fb64a01.avif?1709690747"
-    },
-    {
-      "id": "crd_4b12af84da2444928667b6d356a70766",
-      "nombre_carta": "Chief Powhatan, Protective Leader",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_4b12af84da2444928667b6d356a70766.avif?1770259248"
-    },
-    {
-      "id": "crd_5646a42f0a98475ba7c07e55f7cb47df",
-      "nombre_carta": "Chief Tui, Proud of Motunui",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5646a42f0a98475ba7c07e55f7cb47df.avif?1709690747"
-    },
-    {
-      "id": "crd_2bd7564121d5445ab350345c91a45ef4",
-      "nombre_carta": "Chief Tui, Respected Leader",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2bd7564121d5445ab350345c91a45ef4.avif?1709690747"
-    },
-    {
-      "id": "crd_1bd99dad44d341dda6d1f73ffb2bc529",
-      "nombre_carta": "Chief Tui, Weaving a Tale",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1bd99dad44d341dda6d1f73ffb2bc529.avif?1770259927"
     }
   ],
   "Ariel": [
@@ -1761,11 +1601,6 @@
       "id": "crd_a23c99ed9f3243969466fb000bd139dc",
       "nombre_carta": "Ariel, Whoseit Collector",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_a23c99ed9f3243969466fb000bd139dc.avif?1709690747"
-    },
-    {
-      "id": "crd_e993888b82a845c698effa4248c9a980",
-      "nombre_carta": "Ariel’s Grotto, A Secret Place",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_e993888b82a845c698effa4248c9a980.avif?1716052430"
     }
   ],
   "Prince Eric": [
@@ -1845,36 +1680,6 @@
       "id": "crd_340e919c6c0647b89636411cc834debc",
       "nombre_carta": "Ursula, Whisper of Vanessa",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_340e919c6c0647b89636411cc834debc.avif?1761752203"
-    },
-    {
-      "id": "crd_9548bea5e69544d5b3e488e97d33065c",
-      "nombre_carta": "Ursula's Cauldron",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9548bea5e69544d5b3e488e97d33065c.avif?1709690747"
-    },
-    {
-      "id": "crd_cfa8f36f7729492fa74fa256816c7f55",
-      "nombre_carta": "Ursula's Shell Necklace",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_cfa8f36f7729492fa74fa256816c7f55.avif?1755540290"
-    },
-    {
-      "id": "crd_5b7970f5f54d4311882227c856ac28ac",
-      "nombre_carta": "Ursula’s Garden, Full of the Unfortunate",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5b7970f5f54d4311882227c856ac28ac.avif?1716052430"
-    },
-    {
-      "id": "crd_70a2a01e064142b0a132d9ce3a86a293",
-      "nombre_carta": "Ursula’s Lair, Eye of the Storm",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_70a2a01e064142b0a132d9ce3a86a293.avif?1716052430"
-    },
-    {
-      "id": "crd_d06befe89918438384a8d38e7acea2bd",
-      "nombre_carta": "Ursula’s Plan",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d06befe89918438384a8d38e7acea2bd.avif?1716052430"
-    },
-    {
-      "id": "crd_ab7661f7212743ee9509dc6f2546baa6",
-      "nombre_carta": "Ursula’s Trickery",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ab7661f7212743ee9509dc6f2546baa6.avif?1716052430"
     }
   ],
   "Flounder": [
@@ -1958,16 +1763,6 @@
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_53d3d0830c344ef08b076c3aada0afa6.avif?1755540333"
     },
     {
-      "id": "crd_af0770252d004096b01a2056b3fe10e1",
-      "nombre_carta": "Belle's Favorite Book",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_af0770252d004096b01a2056b3fe10e1.avif?1747509442"
-    },
-    {
-      "id": "crd_9f0ca76ac1444a1290ac0003ef15d292",
-      "nombre_carta": "Belle's House, Maurice's Workshop",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9f0ca76ac1444a1290ac0003ef15d292.avif?1709690747"
-    },
-    {
       "id": "crd_ecb9566eb3fb4a9f9765dac205bf1b2d",
       "nombre_carta": "Clarabelle, Clumsy Guest",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ecb9566eb3fb4a9f9765dac205bf1b2d.avif?1723917209"
@@ -2048,21 +1843,6 @@
       "id": "crd_c3acd1c879e645779501109c65580c93",
       "nombre_carta": "Beast, Wounded",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_c3acd1c879e645779501109c65580c93.avif?1716052430"
-    },
-    {
-      "id": "crd_5f6b06befa5143649062b5ac4414d7ba",
-      "nombre_carta": "Beast's Castle, Winter Gardens",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5f6b06befa5143649062b5ac4414d7ba.avif?1770259812"
-    },
-    {
-      "id": "crd_d23121463b6b482ab4af10faa55ba4ba",
-      "nombre_carta": "Beast's Mirror",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d23121463b6b482ab4af10faa55ba4ba.avif?1755541443"
-    },
-    {
-      "id": "crd_7c0b98be9394466198db3610a9b64953",
-      "nombre_carta": "The Beast is Mine!",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_7c0b98be9394466198db3610a9b64953.avif?1709690747"
     }
   ],
   "Gaston": [
@@ -2586,11 +2366,6 @@
   ],
   "Scar": [
     {
-      "id": "crd_7039c6bce8754b01894d3d1e7868b6b2",
-      "nombre_carta": "Malicious, Mean, and Scary",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_7039c6bce8754b01894d3d1e7868b6b2.avif?1761752397"
-    },
-    {
       "id": "crd_0e2b19d48e8447f19582feef97a52725",
       "nombre_carta": "Scar, Betrayer",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0e2b19d48e8447f19582feef97a52725.avif?1723917209"
@@ -2639,16 +2414,6 @@
       "id": "crd_02f5f28e11b84721906692f042d0baee",
       "nombre_carta": "Scar, Vicious Cheater",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_02f5f28e11b84721906692f042d0baee.avif?1709690747"
-    },
-    {
-      "id": "crd_ae421dc6240c4060ae788fa48c5aa487",
-      "nombre_carta": "Scarab",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ae421dc6240c4060ae788fa48c5aa487.avif?1747508898"
-    },
-    {
-      "id": "crd_0df623db97dc4fb8be3a67db8c593564",
-      "nombre_carta": "Sudden Scare",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0df623db97dc4fb8be3a67db8c593564.avif?1761764585"
     }
   ],
   "Timon": [
@@ -2705,11 +2470,6 @@
       "id": "crd_2f12cdedeefb448eb412128fb4a80fc7",
       "nombre_carta": "Rafiki, Shaman of the Savanna",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2f12cdedeefb448eb412128fb4a80fc7.avif?1730901319"
-    },
-    {
-      "id": "crd_b33671b3938940708ac2a4f7d00d942b",
-      "nombre_carta": "Rafiki's Bakora Staff",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_b33671b3938940708ac2a4f7d00d942b.avif?1770259645"
     }
   ],
   "Pocahontas": [
@@ -2744,11 +2504,6 @@
       "id": "crd_26b1e9d58acf429aa2d77f89f6534c16",
       "nombre_carta": "John Smith, Undaunted Protector",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_26b1e9d58acf429aa2d77f89f6534c16.avif?1770260064"
-    },
-    {
-      "id": "crd_09f9741601234011a2ea8ad45c845099",
-      "nombre_carta": "John Smith's Compass",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_09f9741601234011a2ea8ad45c845099.avif?1770259348"
     }
   ],
   "Meeko": [
@@ -2822,16 +2577,6 @@
       "id": "crd_1c5e7d4a006c4736baf5e602734fec5b",
       "nombre_carta": "Hercules, Unwavering Demigod",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1c5e7d4a006c4736baf5e602734fec5b.avif?1730901319"
-    },
-    {
-      "id": "crd_f6df91ec4b8144ec99568e5979a90225",
-      "nombre_carta": "The Return of Hercules",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_f6df91ec4b8144ec99568e5979a90225.avif?1740589573"
-    },
-    {
-      "id": "crd_ba8f9757d4864c8fbc0de96be4579ef3",
-      "nombre_carta": "The Sword of Hercules",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ba8f9757d4864c8fbc0de96be4579ef3.avif?1761765021"
     }
   ],
   "Megara": [
@@ -3126,11 +2871,6 @@
       "id": "crd_72aee0ede57046b1ad53a67b8f39d6f0",
       "nombre_carta": "Mushu, Your Worst Nightmare",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_72aee0ede57046b1ad53a67b8f39d6f0.avif?1747509250"
-    },
-    {
-      "id": "crd_26b89746756b40979ee1a9885c8e3f5b",
-      "nombre_carta": "Mushu's Rocket",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_26b89746756b40979ee1a9885c8e3f5b.avif?1761763899"
     }
   ],
   "Kuzco": [
@@ -3168,11 +2908,6 @@
       "id": "crd_0da7128b38524119b441c3df9091184d",
       "nombre_carta": "Kuzco, Wanted Llama",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0da7128b38524119b441c3df9091184d.avif?1755540397"
-    },
-    {
-      "id": "crd_872d8dd267f44d1ca4410036e7eed315",
-      "nombre_carta": "Kuzco's Palace, Home of the Emperor",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_872d8dd267f44d1ca4410036e7eed315.avif?1709690747"
     }
   ],
   "Pacha": [
@@ -3481,11 +3216,6 @@
       "id": "crd_20232422b3314d02b054a923d610d81d",
       "nombre_carta": "Nani, Stage Manager",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_20232422b3314d02b054a923d610d81d.avif?1770259288"
-    },
-    {
-      "id": "crd_ade83b5dd75144a4b901097e22b7b8b1",
-      "nombre_carta": "Nani's Payback",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ade83b5dd75144a4b901097e22b7b8b1.avif?1770259771"
     }
   ],
   "Jumba Jookiba": [
@@ -3593,28 +3323,6 @@
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9ada4799889b49d69ae388f141a0c52c.avif?1709690747"
     }
   ],
-  "BEN": [
-    {
-      "id": "crd_5406218b8d7a41a68bdf0be3029acf05",
-      "nombre_carta": "Bend to My Will",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5406218b8d7a41a68bdf0be3029acf05.avif?1730901319"
-    },
-    {
-      "id": "crd_35af1bfc231746a3914e8e02bb3b8afa",
-      "nombre_carta": "Benja, Bold Uniter",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_35af1bfc231746a3914e8e02bb3b8afa.avif?1716052430"
-    },
-    {
-      "id": "crd_66a2a59da61b4b54a92f25b54c375d93",
-      "nombre_carta": "Benja, Guardian of the Dragon Gem",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_66a2a59da61b4b54a92f25b54c375d93.avif?1755541295"
-    },
-    {
-      "id": "crd_47d6da02d19a4b82a6d7aaf593ca151e",
-      "nombre_carta": "Reuben, Sandwich Expert",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_47d6da02d19a4b82a6d7aaf593ca151e.avif?1770259292"
-    }
-  ],
   "Bolt": [
     {
       "id": "crd_9b70e9c76a6643c69167b3f081530ae9",
@@ -3635,16 +3343,6 @@
       "id": "crd_fa85ca0440e441a19d44e1621e40f1d1",
       "nombre_carta": "Bolt, Superdog",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_fa85ca0440e441a19d44e1621e40f1d1.avif?1740589113"
-    },
-    {
-      "id": "crd_d1d7087095df46dbaeafac4d6512d2ae",
-      "nombre_carta": "He Hurled His Thunderbolt",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d1d7087095df46dbaeafac4d6512d2ae.avif?1761764970"
-    },
-    {
-      "id": "crd_5a0a0d8b44824cf3b19fd61fc940df4a",
-      "nombre_carta": "Thunderbolt, Wonder Dog",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5a0a0d8b44824cf3b19fd61fc940df4a.avif?1740589191"
     }
   ],
   "Mittens": [
@@ -3701,11 +3399,6 @@
       "id": "crd_0c1fa4bfab94474da9e4a8396bbed19f",
       "nombre_carta": "Tiana, Warm and Happy",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0c1fa4bfab94474da9e4a8396bbed19f.avif?1770259220"
-    },
-    {
-      "id": "crd_ed1ca708595f44a49f40680e20635ff5",
-      "nombre_carta": "Tiana's Palace, Jazz Restaurant",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ed1ca708595f44a49f40680e20635ff5.avif?1709690747"
     }
   ],
   "Prince Naveen": [
@@ -3737,11 +3430,6 @@
   ],
   "Louis": [
     {
-      "id": "crd_9e590e6d47e9422fa521110e41e48cd1",
-      "nombre_carta": "Chef Louis, In Over His Head",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9e590e6d47e9422fa521110e41e48cd1.avif?1761764363"
-    },
-    {
       "id": "crd_fbddbf17f5824cb38bc0b35502f0d9a9",
       "nombre_carta": "Louis, Endearing Alligator",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_fbddbf17f5824cb38bc0b35502f0d9a9.avif?1747508978"
@@ -3752,61 +3440,6 @@
       "id": "crd_b7cb9265f8b84f77afabe12e61219153",
       "nombre_carta": "Ray, Easygoing Firefly",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_b7cb9265f8b84f77afabe12e61219153.avif?1709690747"
-    },
-    {
-      "id": "crd_e79d0ba09f4342b5a7a3ffe96ebef508",
-      "nombre_carta": "Raya, Fierce Protector",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_e79d0ba09f4342b5a7a3ffe96ebef508.avif?1716052430"
-    },
-    {
-      "id": "crd_37a7ae2b078b415aab3dff267ca8c86d",
-      "nombre_carta": "Raya, Guardian of the Dragon Gem",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_37a7ae2b078b415aab3dff267ca8c86d.avif?1716052430"
-    },
-    {
-      "id": "crd_0ab7da34efae4501b26ae156eb69755c",
-      "nombre_carta": "Raya, Guidance Seeker",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0ab7da34efae4501b26ae156eb69755c.avif?1740589842"
-    },
-    {
-      "id": "crd_f658a42763fe4f4bbd7e0605d2fb1e2f",
-      "nombre_carta": "Raya, Headstrong",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_f658a42763fe4f4bbd7e0605d2fb1e2f.avif?1755540945"
-    },
-    {
-      "id": "crd_2aef4896a5194dd69fccf9581d20e735",
-      "nombre_carta": "Raya, Headstrong",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2aef4896a5194dd69fccf9581d20e735.avif?1709690747"
-    },
-    {
-      "id": "crd_0a97dde4f01045ccb29a9f61ac3c36d8",
-      "nombre_carta": "Raya, Infiltration Expert",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0a97dde4f01045ccb29a9f61ac3c36d8.avif?1747509024"
-    },
-    {
-      "id": "crd_8ca524116c8e486f99597ca9a67b803b",
-      "nombre_carta": "Raya, Kumandran Rider",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_8ca524116c8e486f99597ca9a67b803b.avif?1730901319"
-    },
-    {
-      "id": "crd_5b613c1368aa4c94a43c012f9a73394e",
-      "nombre_carta": "Raya, Leader of Heart",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5b613c1368aa4c94a43c012f9a73394e.avif?1709690747"
-    },
-    {
-      "id": "crd_498044d6e5da4eb3868df6a6d0c058d4",
-      "nombre_carta": "Raya, Unstoppable Force",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_498044d6e5da4eb3868df6a6d0c058d4.avif?1716052430"
-    },
-    {
-      "id": "crd_13f1e523e8454e648cda03bba3603643",
-      "nombre_carta": "Raya, Warrior of Kumandra",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_13f1e523e8454e648cda03bba3603643.avif?1709690747"
-    },
-    {
-      "id": "crd_85e0edbb8cbd458fa3957029a8bb5697",
-      "nombre_carta": "Vicious Betrayal",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_85e0edbb8cbd458fa3957029a8bb5697.avif?1709690747"
     }
   ],
   "Rapunzel": [
@@ -3854,11 +3487,6 @@
       "id": "crd_ecef763660c74bd49ddb8930fb0ff10b",
       "nombre_carta": "Rapunzel, Sunshine",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ecef763660c74bd49ddb8930fb0ff10b.avif?1755540114"
-    },
-    {
-      "id": "crd_f27b7d5ae80b49c4a1a6019138a14ace",
-      "nombre_carta": "Rapunzel's Tower, Secluded Prison",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_f27b7d5ae80b49c4a1a6019138a14ace.avif?1723917209"
     }
   ],
   "Flynn Rider": [
@@ -4115,16 +3743,6 @@
       "id": "crd_37bea5da923b495eaeecaf71420a2beb",
       "nombre_carta": "Anna, Trusting Sister",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_37bea5da923b495eaeecaf71420a2beb.avif?1747509351"
-    },
-    {
-      "id": "crd_1168e8040a86449695383ef10c9daa2e",
-      "nombre_carta": "Arianna, Queen of Corona",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1168e8040a86449695383ef10c9daa2e.avif?1747509490"
-    },
-    {
-      "id": "crd_0af4496693f64685885b27455c69e385",
-      "nombre_carta": "Snowanna Rainbeau, Cool Competitor",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_0af4496693f64685885b27455c69e385.avif?1723917209"
     }
   ],
   "Elsa": [
@@ -4192,11 +3810,6 @@
       "id": "crd_6e04382533a045eda3c48e76e9dda411",
       "nombre_carta": "Elsa, Trusted Sister",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_6e04382533a045eda3c48e76e9dda411.avif?1740589318"
-    },
-    {
-      "id": "crd_aaae8eab8f604635883282a61d3376ff",
-      "nombre_carta": "Elsa's Ice Palace, Place of Solitude",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_aaae8eab8f604635883282a61d3376ff.avif?1723917209"
     }
   ],
   "Kristoff": [
@@ -4219,11 +3832,6 @@
       "id": "crd_1ebd5b431d3c46b882e3c95712a9502a",
       "nombre_carta": "Kristoff, Reindeer Keeper",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_1ebd5b431d3c46b882e3c95712a9502a.avif?1723917209"
-    },
-    {
-      "id": "crd_ec94f5c4a31b40c99f5b421ac7dd3acf",
-      "nombre_carta": "Kristoff's Lute",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ec94f5c4a31b40c99f5b421ac7dd3acf.avif?1770259798"
     }
   ],
   "Olaf": [
@@ -4492,16 +4100,6 @@
       "id": "crd_eca6a044a1a24319948f3c2698344fad",
       "nombre_carta": "Maui, Whale",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_eca6a044a1a24319948f3c2698344fad.avif?1755540798"
-    },
-    {
-      "id": "crd_2ad6131751ce45c681919a185cbe640a",
-      "nombre_carta": "Maui's Fish Hook",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2ad6131751ce45c681919a185cbe640a.avif?1709690747"
-    },
-    {
-      "id": "crd_f2169b618849493a969102f760825622",
-      "nombre_carta": "Maui's Place of Exile, Hidden Island",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_f2169b618849493a969102f760825622.avif?1755541451"
     }
   ],
   "Te Ka": [
@@ -4662,11 +4260,6 @@
       "id": "crd_13f1e523e8454e648cda03bba3603643",
       "nombre_carta": "Raya, Warrior of Kumandra",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_13f1e523e8454e648cda03bba3603643.avif?1709690747"
-    },
-    {
-      "id": "crd_85e0edbb8cbd458fa3957029a8bb5697",
-      "nombre_carta": "Vicious Betrayal",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_85e0edbb8cbd458fa3957029a8bb5697.avif?1709690747"
     }
   ],
   "Sisu": [
@@ -4828,28 +4421,6 @@
       "id": "crd_dd7610ea1502422199f68ea86fce5b19",
       "nombre_carta": "Splatter Phoenix, Rejected Artist",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_dd7610ea1502422199f68ea86fce5b19.avif?1770259890"
-    }
-  ],
-  "Star": [
-    {
-      "id": "crd_07d43fd911d2476caa9c4aa982d29405",
-      "nombre_carta": "Second Star to the Right",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_07d43fd911d2476caa9c4aa982d29405.avif?1755540491"
-    },
-    {
-      "id": "crd_92c7a997ed6f441a807e91c8bd5aa470",
-      "nombre_carta": "Starkey, Devious Pirate",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_92c7a997ed6f441a807e91c8bd5aa470.avif?1709690747"
-    },
-    {
-      "id": "crd_fdbf31b467214b229b4e4f149c487a47",
-      "nombre_carta": "Starkey, Hook's Henchman",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_fdbf31b467214b229b4e4f149c487a47.avif?1709690747"
-    },
-    {
-      "id": "crd_c6b673289f9a4d2680a50dc6be9605dc",
-      "nombre_carta": "Starlight Vial",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_c6b673289f9a4d2680a50dc6be9605dc.avif?1709690747"
     }
   ],
   "Mickey Mouse": [
@@ -5391,11 +4962,6 @@
   ],
   "Pete": [
     {
-      "id": "crd_6ce1cd22f2bb44b18d3c31ffb9c8251c",
-      "nombre_carta": "P.J. Pete, Caught Up in the Music",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_6ce1cd22f2bb44b18d3c31ffb9c8251c.avif?1755695707"
-    },
-    {
       "id": "crd_6a9fdf228b704ed9babf570ea82fcdcb",
       "nombre_carta": "Pete, Bad Guy",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_6a9fdf228b704ed9babf570ea82fcdcb.avif?1709690747"
@@ -5449,61 +5015,6 @@
       "id": "crd_77a41111eb054ad3acd73de5f7f800e7",
       "nombre_carta": "Pete, Wrestling Champ",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_77a41111eb054ad3acd73de5f7f800e7.avif?1723917209"
-    },
-    {
-      "id": "crd_7f4cc9a32a834ebabaeaea3407d06dbc",
-      "nombre_carta": "Peter Pan, Fearless Fighter",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_7f4cc9a32a834ebabaeaea3407d06dbc.avif?1709690747"
-    },
-    {
-      "id": "crd_9868e624b438444a9cdf1f4ef0878547",
-      "nombre_carta": "Peter Pan, High Flyer",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_9868e624b438444a9cdf1f4ef0878547.avif?1761763590"
-    },
-    {
-      "id": "crd_d4d29339b89f4a0aaeeb42f533e6fbbc",
-      "nombre_carta": "Peter Pan, Lost Boy Leader",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d4d29339b89f4a0aaeeb42f533e6fbbc.avif?1709690747"
-    },
-    {
-      "id": "crd_ffccea571e7e4efb9b5258ecc03e847b",
-      "nombre_carta": "Peter Pan, Never Land Hero",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ffccea571e7e4efb9b5258ecc03e847b.avif?1709690747"
-    },
-    {
-      "id": "crd_582e975ec5b64cb7be3e406585a05a6d",
-      "nombre_carta": "Peter Pan, Never Land Prankster",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_582e975ec5b64cb7be3e406585a05a6d.avif?1730901319"
-    },
-    {
-      "id": "crd_91d042c887b54b7098c9044a36816008",
-      "nombre_carta": "Peter Pan, Never Landing",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_91d042c887b54b7098c9044a36816008.avif?1709690747"
-    },
-    {
-      "id": "crd_74965b03fa644306af97644d8ad19c1d",
-      "nombre_carta": "Peter Pan, Pirate's Bane",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_74965b03fa644306af97644d8ad19c1d.avif?1709690747"
-    },
-    {
-      "id": "crd_421a2dfb847b406fb91556a8ee090423",
-      "nombre_carta": "Peter Pan, Shadow Catcher",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_421a2dfb847b406fb91556a8ee090423.avif?1730901319"
-    },
-    {
-      "id": "crd_2d0021113d084cee92cd6b33f104c1b4",
-      "nombre_carta": "Peter Pan, Shadow Finder",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_2d0021113d084cee92cd6b33f104c1b4.avif?1716052430"
-    },
-    {
-      "id": "crd_d6f21fdca571497883e46666abc022bc",
-      "nombre_carta": "Peter Pan's Dagger",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_d6f21fdca571497883e46666abc022bc.avif?1709690747"
-    },
-    {
-      "id": "crd_929d3fa7c5324a1dbc9ebc1d93bbee6d",
-      "nombre_carta": "Peter Pan's Shadow, Not Sewn On",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_929d3fa7c5324a1dbc9ebc1d93bbee6d.avif?1755741239"
     }
   ],
   "Yen Sid": [
@@ -5596,16 +5107,6 @@
   ],
   "Louie": [
     {
-      "id": "crd_fc70bb26c18544679b91bca3a7ad025c",
-      "nombre_carta": "King Louie, Bandleader",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_fc70bb26c18544679b91bca3a7ad025c.avif?1709690747"
-    },
-    {
-      "id": "crd_5a9c44f3e0884493b853e0a1c8b1fca6",
-      "nombre_carta": "King Louie, Jungle VIP",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_5a9c44f3e0884493b853e0a1c8b1fca6.avif?1709690747"
-    },
-    {
       "id": "crd_f81fa2c1489a44eab54bd8e0528cc202",
       "nombre_carta": "Louie, Chill Nephew",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_f81fa2c1489a44eab54bd8e0528cc202.avif?1755650616"
@@ -5676,11 +5177,6 @@
       "id": "crd_ab6a9775bfbb446bb03724f1f7ba0f3a",
       "nombre_carta": "The Queen, Wicked and Vain",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ab6a9775bfbb446bb03724f1f7ba0f3a.avif?1755540298"
-    },
-    {
-      "id": "crd_a4f0a9a928674b2a93d17f7c81eb09d7",
-      "nombre_carta": "The Queen's Castle, Mirror Chamber",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_a4f0a9a928674b2a93d17f7c81eb09d7.avif?1709690747"
     }
   ],
   "Timothy Q Mouse": [
@@ -5737,16 +5233,6 @@
       "id": "crd_ba5d06b298f545f8a2df2df6accd3294",
       "nombre_carta": "Triton, Young Prince",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_ba5d06b298f545f8a2df2df6accd3294.avif?1716052430"
-    },
-    {
-      "id": "crd_b54632a900e042c39771ae748820bf43",
-      "nombre_carta": "Triton's Decree",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_b54632a900e042c39771ae748820bf43.avif?1716052430"
-    },
-    {
-      "id": "crd_57067560f7f0499da43dd94731e85552",
-      "nombre_carta": "Triton's Trident",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_57067560f7f0499da43dd94731e85552.avif?1716052430"
     }
   ],
   "Mrs Potts": [
@@ -5820,11 +5306,6 @@
       "id": "crd_bb645060d48e4242b0003701c6b27400",
       "nombre_carta": "Dr. Facilier, Savvy Opportunist",
       "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_bb645060d48e4242b0003701c6b27400.avif?1709690747"
-    },
-    {
-      "id": "crd_b30843c0d5e845ee88fc040b5c5e727b",
-      "nombre_carta": "Dr. Facilier's Cards",
-      "url_imagen": "https://cards.lorcast.io/card/digital/normal/crd_b30843c0d5e845ee88fc040b5c5e727b.avif?1709690747"
     }
   ],
   "Fix-It Felix Jr": [

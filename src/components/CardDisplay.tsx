@@ -12,7 +12,7 @@ export function CardDisplay({ cardUrl, guesses, hasWon }: CardDisplayProps) {
 
   return (
     <div className="silhouette-header">
-      <h2 className="silhouette-title">Whose card is this?</h2>
+      <h2 className="silhouette-title">Who is hiding in this Lorcana card?</h2>
 
       <motion.div
         className="card-display-card"
