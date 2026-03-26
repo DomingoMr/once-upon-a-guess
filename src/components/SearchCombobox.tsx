@@ -38,7 +38,7 @@ export function SearchCombobox({ characters, guessedIds, onGuess, onOpenChange, 
           return character.movie.toLowerCase().includes(normalized);
         }
       })
-      .slice(0, 8);
+      .slice(0, 24);
   }, [characters, guessedIds, query, searchBy]);
 
   useEffect(() => {
