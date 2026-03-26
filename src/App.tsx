@@ -124,7 +124,7 @@ export default function App() {
   const emojiSecret = useMemo(() => getDailyEmojiCharacter(characters), [characters]);
   const silhouetteSecret = useMemo(() => getDailySilhouetteCharacter(characters), [characters]);
   const songSecret = useMemo(() => getDailySong(melodies), [melodies]);
-  const cardSecretData = useMemo(() => getDailyCard(lorcanaPool), []);
+  const cardSecretData = useMemo(() => getDailyCard(lorcanaPool), [lorcanaPool]);
   const cardSecret = useMemo(() => characters.find(c => c.name === cardSecretData.characterName) || characters[0], [characters, cardSecretData]);
 
   const [classicGuesses, setClassicGuesses] = useState<DisneyCharacter[]>(() => loadStoredGuesses(characters, CLASSIC_STORAGE_KEY));
