@@ -12,6 +12,9 @@ import { ReportModal } from './components/ReportModal';
 import lorcanaPool from './data/lorcana_pool.json';
 import { CardDisplay } from './components/CardDisplay';
 import { getDailyCharacter, getDailyEmojiCharacter, getDailySilhouetteCharacter, getDailySong, getDailyCard } from './lib/game';
+import { calculateScore, GameMode } from './lib/ranking';
+import { RankingSection } from './components/RankingSection';
+import { RankingModal } from './components/RankingModal';
 import { normalizeCharacters } from './lib/normalize';
 import type { DisneyCharacter, DisneyMelody, RawDataset } from './types';
 
@@ -20,6 +23,8 @@ const EMOJI_STORAGE_KEY = 'ouag-emoji-state-v1';
 const SILHOUETTE_STORAGE_KEY = 'ouag-silhouette-state-v1';
 const SONG_STORAGE_KEY = 'ouag-song-state-v1';
 const CARD_STORAGE_KEY = 'ouag-card-state-v1';
+const USERNAME_STORAGE_KEY = 'ouag-username-v1';
+const SCORES_STORAGE_KEY = 'ouag-scores-v1';
 
 function todayKey(): string {
   const d = new Date();
@@ -143,6 +148,18 @@ export default function App() {
     [songGuessedIds, melodies],
   );
 
+  const [userName, setUserName] = useState<string | null>(() => localStorage.getItem(USERNAME_STORAGE_KEY));
+  const [dailyScores, setDailyScores] = useState<Record<string, number>>(() => {
+    const raw = localStorage.getItem(SCORES_STORAGE_KEY);
+    if (!raw) return {};
+    try {
+      const parsed = JSON.parse(raw);
+      if (parsed.date !== todayKey()) return {};
+      return parsed.scores || {};
+    } catch { return {}; }
+  });
+  const [isRankingOpen, setIsRankingOpen] = useState(false);
+
   const isEmojiMode = view === 'emoji';
   const isSilhouetteMode = view === 'silhouette';
   const isCardMode = view === 'card';
@@ -202,6 +219,19 @@ export default function App() {
     }));
   }, [songGuessedIds, songHasWon]);
 
+  // Sync Scores to Storage
+  useEffect(() => {
+    localStorage.setItem(SCORES_STORAGE_KEY, JSON.stringify({
+      date: todayKey(),
+      scores: dailyScores,
+    }));
+  }, [dailyScores]);
+
+  // Sync Username
+  useEffect(() => {
+    if (userName) localStorage.setItem(USERNAME_STORAGE_KEY, userName);
+  }, [userName]);
+
   useEffect(() => {
     if (hasWon) {
       setStatus(`You found ${secret.name} in ${guesses.length} guess${guesses.length === 1 ? '' : 'es'}!`);
@@ -223,17 +253,28 @@ export default function App() {
     }
   }, [songHasWon]);
 
-  function handleGuess(character: DisneyCharacter) {
-    if (hasWon || guessedIds.has(character.id)) return;
-    const nextGuesses = [...guesses, character];
-    setGuesses(nextGuesses);
-  }
-
   function handleSongGuess(song: DisneyMelody) {
     if (songHasWon || songGuessedIds.includes(song.id)) return;
     const nextIds = [...songGuessedIds, song.id];
     setSongGuessedIds(nextIds);
-    if (song.id === songSecret.id) setSongHasWon(true);
+    if (song.id === songSecret.id) {
+      setSongHasWon(true);
+      if (!dailyScores['song']) {
+        setDailyScores(prev => ({ ...prev, song: calculateScore(nextIds.length) }));
+      }
+    }
+  }
+
+  function handleGuess(character: DisneyCharacter) {
+    if (hasWon || guessedIds.has(character.id)) return;
+    const nextGuesses = [...guesses, character];
+    setGuesses(nextGuesses);
+    if (character.id === secret.id) {
+       const modeKey = isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'));
+       if (!dailyScores[modeKey]) {
+         setDailyScores(prev => ({ ...prev, [modeKey]: calculateScore(nextGuesses.length) }));
+       }
+    }
   }
 
   const getModeLabel = () => {
@@ -249,7 +290,11 @@ export default function App() {
       <div className="page-overlay" aria-hidden="true" />
 
       {view === 'home' ? (
-        <Home onSelectMode={(mode) => navigateTo(mode)} onOpenReport={() => setIsReportOpen(true)} />
+        <Home 
+          onSelectMode={(mode) => navigateTo(mode)} 
+          onOpenReport={() => setIsReportOpen(true)} 
+          onOpenRanking={() => setIsRankingOpen(true)} 
+        />
       ) : (
         <main className="game-stage">
           <header className="game-topbar">
@@ -272,6 +317,14 @@ export default function App() {
                 data-tooltip="Report Bug"
               >
                 <span>📩</span>
+              </button>
+              <button 
+                className="glow-icon-btn" 
+                onClick={() => setIsRankingOpen(true)}
+                aria-label="Ranking"
+                data-tooltip="Ranking"
+              >
+                <span>🏆</span>
               </button>
               <a 
                 href="https://ko-fi.com/yensid" 
@@ -298,8 +351,17 @@ export default function App() {
                 onHintReveal={() => setSongHintRevealed(true)}
               />
 
+
               {songHasWon && (
                 <div className="next-mode-section" ref={nextModeRef} style={{ width: '100%', marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center', paddingBottom: '40px' }}>
+                  {songHasWon && (
+                    <RankingSection 
+                      mode="song" 
+                      score={dailyScores['song'] || 0} 
+                      savedName={userName} 
+                      onSaveName={setUserName} 
+                    />
+                  )}
                   <h3 style={{ color: 'var(--blue-200)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Challenge</h3>
                   {(() => {
                     const currentIndex = MODE_SEQUENCE.findIndex((m) => m.id === view);
@@ -344,6 +406,7 @@ export default function App() {
               )}
               <SearchCombobox characters={characters} guessedIds={guessedIds} onGuess={handleGuess} onOpenChange={setIsSearchOpen} disabled={hasWon} />
 
+
               {guesses.length >= (isSilhouetteMode || isEmojiMode || isCardMode ? 5 : 4) && !hasWon && (
                 <div className="hint-trigger-wrap" style={isSearchOpen ? { visibility: 'hidden' } : undefined}>
                   <button
@@ -364,6 +427,14 @@ export default function App() {
 
               {hasWon && (
                 <div className="next-mode-section" ref={nextModeRef} style={{ width: '100%', marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
+                  {hasWon && (
+                    <RankingSection 
+                      mode={isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))} 
+                      score={dailyScores[isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))] || 0} 
+                      savedName={userName} 
+                      onSaveName={setUserName} 
+                    />
+                  )}
                   <h3 style={{ color: 'var(--blue-200)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Challenge</h3>
                   {(() => {
                     const currentIndex = MODE_SEQUENCE.findIndex((m) => m.id === view);
@@ -439,6 +510,12 @@ export default function App() {
         </main>
       )}
       <ReportModal isOpen={isReportOpen} onClose={() => setIsReportOpen(false)} />
+      <RankingModal 
+        isOpen={isRankingOpen} 
+        onClose={() => setIsRankingOpen(false)} 
+        userName={userName}
+        allScores={dailyScores}
+      />
     </div>
   );
 }

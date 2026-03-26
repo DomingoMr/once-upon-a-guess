@@ -31,9 +31,10 @@ export function ModeButton({ name, subtitle, icon, active, onClick }: ModeButton
 type HomeProps = {
   onSelectMode: (mode: 'classic' | 'emoji' | 'silhouette' | 'song' | 'card') => void;
   onOpenReport: () => void;
+  onOpenRanking: () => void;
 };
 
-export function Home({ onSelectMode, onOpenReport }: HomeProps) {
+export function Home({ onSelectMode, onOpenReport, onOpenRanking }: HomeProps) {
   return (
     <main className="home-stage">
       <header className="home-header">
@@ -49,6 +50,14 @@ export function Home({ onSelectMode, onOpenReport }: HomeProps) {
           data-tooltip="Report Bug"
         >
           <span>📩</span>
+        </button>
+        <button 
+          className="glow-icon-btn" 
+          onClick={onOpenRanking}
+          aria-label="Ranking"
+          data-tooltip="Ranking"
+        >
+          <span>🏆</span>
         </button>
         <a 
           href="https://ko-fi.com/yensid" 
