@@ -53,9 +53,14 @@ export function getDailySilhouetteCharacter(characters: DisneyCharacter[]): Disn
 }
 
 export function getDailySong(melodies: DisneyMelody[]): DisneyMelody {
-  const dayIndex = getLocalDayIndex() + 1; // 1-based to match day_number
-  const found = melodies.find((m) => m.day_number === ((dayIndex - 1) % melodies.length) + 1);
-  return found ?? melodies[0];
+  const dayIndex = getLocalDayIndex();
+  
+  // Use a unique prime and offset for song randomization
+  const primeStep = 1000049; 
+  let seed = ((dayIndex + 1460) * primeStep) % melodies.length;
+  if (seed < 0) seed += melodies.length;
+  
+  return melodies[seed];
 }
 
 function stateForMatch(isExact: boolean): TileState {
