@@ -10,46 +10,39 @@ function getLocalDayIndex(): number {
   return Math.floor((localMidnightUtc - EPOCH_UTC) / MS_PER_DAY);
 }
 
+/**
+ * Shared logic for character-based modes to guarantee no collisions on the same day.
+ * We use a large prime jump for randomization and fixed offsets to space them out.
+ */
+function getPartitionedIndex(modulus: number, slot: 0 | 1 | 2, dayIndex: number): number {
+  if (modulus < 3) return dayIndex % modulus; // Fallback for tiny pools
+  const primeStep = 1000003;
+  const baseSeed = (dayIndex * primeStep) % modulus;
+  const offset = Math.floor(modulus / 3);
+  let finalIndex = (baseSeed + slot * offset) % modulus;
+  if (finalIndex < 0) finalIndex += modulus;
+  return finalIndex;
+}
+
 export function getDailyCharacter(characters: DisneyCharacter[]): DisneyCharacter {
   const dayIndex = getLocalDayIndex();
-  
-  // Use a pseudo-random deterministic selection based on the day.
-  // This large prime ensures we jump around the array randomly but consistently.
-  const primeStep = 1000003; 
-  let seed = (dayIndex * primeStep) % characters.length;
-  if (seed < 0) seed += characters.length;
-  
-  return characters[seed];
+  const index = getPartitionedIndex(characters.length, 0, dayIndex);
+  return characters[index];
 }
 
 export function getDailyEmojiCharacter(characters: DisneyCharacter[]): DisneyCharacter {
   const dayIndex = getLocalDayIndex();
   
-  // Filter only characters that have enough emojis to play the game
-  const validCharacters = characters.filter(c => c.emojis && c.emojis.length >= 5);
-  if (validCharacters.length === 0) return characters[0]; // Fallback if none exist
-
-  // Use a different prime and a different day offset so it's guaranteed different from classic
-  const primeStep = 1000033; 
-  let seed = ((dayIndex + 365) * primeStep) % validCharacters.length;
-  if (seed < 0) seed += validCharacters.length;
-  
-  return validCharacters[seed];
+  // All characters currently have 5+ emojis, so we pick from the full list
+  // but use a different slot to avoid collisions with Classic/Silhouette.
+  const index = getPartitionedIndex(characters.length, 1, dayIndex);
+  return characters[index];
 }
 
 export function getDailySilhouetteCharacter(characters: DisneyCharacter[]): DisneyCharacter {
   const dayIndex = getLocalDayIndex();
-  
-  // All characters are now eligible for silhouette mode, 
-  // as we generate paths dynamically like in classic mode.
-  const validCharacters = characters;
-
-  // Use another unique prime/offset
-  const primeStep = 1000037; 
-  let seed = ((dayIndex + 730) * primeStep) % validCharacters.length;
-  if (seed < 0) seed += validCharacters.length;
-  
-  return validCharacters[seed];
+  const index = getPartitionedIndex(characters.length, 2, dayIndex);
+  return characters[index];
 }
 
 export function getDailySong(melodies: DisneyMelody[]): DisneyMelody {
