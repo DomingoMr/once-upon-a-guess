@@ -1,7 +1,7 @@
 export type RankingEntry = {
   name: string;
   score: number;
-  isUser?: boolean;
+  playerId: string;
 };
 
 export type GameMode = 'classic' | 'emoji' | 'silhouette' | 'song' | 'card';
@@ -16,25 +16,40 @@ export function calculateScore(attempts: number): number {
   return 100;
 }
 
-export const MockRankingService = {
-  getDailyRanking(mode: GameMode, userScore: number, userName: string | null): RankingEntry[] {
-    const entries: RankingEntry[] = [];
-    
-    if (userName && userScore > 0) {
-      entries.push({ name: userName, score: userScore, isUser: true });
+export const ApiRankingService = {
+  async getRanking(mode: string): Promise<RankingEntry[]> {
+    try {
+      const date = new Date().toISOString().split('T')[0];
+      const res = await fetch(`/api/rankings?mode=${mode}&date=${date}`);
+      if (!res.ok) return [];
+      const data = await res.json();
+      return data;
+    } catch {
+      return [];
     }
-
-    return entries.sort((a, b) => b.score - a.score);
   },
 
-  getGlobalRanking(allScores: Record<string, number>, userName: string | null): RankingEntry[] {
-    const userTotal = Object.values(allScores).reduce((sum, s) => sum + s, 0);
-    const baseBoard: RankingEntry[] = [];
-
-    if (userName && userTotal > 0) {
-      baseBoard.push({ name: userName, score: userTotal, isUser: true });
+  async saveScore(mode: string, score: number, name: string, playerId: string): Promise<RankingEntry[]> {
+    try {
+      const date = new Date().toISOString().split('T')[0];
+      const res = await fetch('/api/rankings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          mode,
+          score,
+          date,
+          playerId
+        })
+      });
+      if (!res.ok) throw new Error('Failed to save score');
+      const data = await res.json();
+      return data;
+    } catch {
+      return [];
     }
-
-    return baseBoard;
   }
 };

@@ -25,6 +25,7 @@ const SONG_STORAGE_KEY = 'ouag-song-state-v1';
 const CARD_STORAGE_KEY = 'ouag-card-state-v1';
 const USERNAME_STORAGE_KEY = 'ouag-username-v1';
 const SCORES_STORAGE_KEY = 'ouag-scores-v1';
+const PLAYERID_STORAGE_KEY = 'ouag-player-id-v1';
 
 function todayKey(): string {
   const d = new Date();
@@ -149,6 +150,15 @@ export default function App() {
   );
 
   const [userName, setUserName] = useState<string | null>(() => localStorage.getItem(USERNAME_STORAGE_KEY));
+  const [playerId] = useState<string>(() => {
+    if (typeof window === 'undefined') return 'mock-id';
+    let id = localStorage.getItem(PLAYERID_STORAGE_KEY);
+    if (!id) {
+      id = typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2, 15);
+      localStorage.setItem(PLAYERID_STORAGE_KEY, id);
+    }
+    return id;
+  });
   const [dailyScores, setDailyScores] = useState<Record<string, number>>(() => {
     const raw = localStorage.getItem(SCORES_STORAGE_KEY);
     if (!raw) return {};
@@ -359,7 +369,9 @@ export default function App() {
                       mode="song" 
                       score={dailyScores['song'] || 0} 
                       savedName={userName} 
-                      onSaveName={setUserName} 
+                      onSaveName={setUserName}
+                      playerId={playerId}
+                      allScores={dailyScores}
                     />
                   )}
                   <h3 style={{ color: 'var(--blue-200)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Challenge</h3>
@@ -432,7 +444,9 @@ export default function App() {
                       mode={isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))} 
                       score={dailyScores[isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))] || 0} 
                       savedName={userName} 
-                      onSaveName={setUserName} 
+                      onSaveName={setUserName}
+                      playerId={playerId}
+                      allScores={dailyScores}
                     />
                   )}
                   <h3 style={{ color: 'var(--blue-200)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Next Challenge</h3>
@@ -514,7 +528,7 @@ export default function App() {
         isOpen={isRankingOpen} 
         onClose={() => setIsRankingOpen(false)} 
         userName={userName}
-        allScores={dailyScores}
+        playerId={playerId}
       />
     </div>
   );

@@ -1,17 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MockRankingService, GameMode } from '../lib/ranking';
+import { ApiRankingService, GameMode, RankingEntry } from '../lib/ranking';
 
 interface RankingSectionProps {
   mode: GameMode;
   score: number;
   onSaveName: (name: string) => void;
   savedName: string | null;
+  playerId: string;
+  allScores: Record<string, number>;
 }
 
-export function RankingSection({ mode, score, onSaveName, savedName }: RankingSectionProps) {
+export function RankingSection({ mode, score, onSaveName, savedName, playerId, allScores }: RankingSectionProps) {
   const [nameInput, setNameInput] = useState('');
   const [showRanking, setShowRanking] = useState(!!savedName);
+  const [dailyRanking, setDailyRanking] = useState<RankingEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (showRanking && savedName) {
+      setIsLoading(true);
+      
+      // Calculate global score to make sure it's up to date
+      const totalScore = Object.values(allScores).reduce((sum, s) => sum + s, 0);
+      
+      Promise.all([
+        ApiRankingService.saveScore(mode, score, savedName, playerId),
+        ApiRankingService.saveScore('global', totalScore, savedName, playerId)
+      ]).then(([modeRankings]) => {
+        setDailyRanking(modeRankings);
+        setIsLoading(false);
+      });
+    }
+  }, [showRanking, savedName, mode, score, playerId, allScores]);
 
   const handleSave = () => {
     if (!nameInput.trim()) return;
@@ -19,8 +40,7 @@ export function RankingSection({ mode, score, onSaveName, savedName }: RankingSe
     setShowRanking(true);
   };
 
-  const dailyRanking = MockRankingService.getDailyRanking(mode, score, savedName || nameInput);
-  const userRank = dailyRanking.findIndex(r => r.isUser) + 1;
+  const userRank = dailyRanking.findIndex(r => r.playerId === playerId) + 1;
   const isTop3 = userRank > 0 && userRank <= 3;
 
   return (
@@ -65,15 +85,18 @@ export function RankingSection({ mode, score, onSaveName, savedName }: RankingSe
             )}
 
             <div className="ranking-list">
-              {dailyRanking.slice(0, 3).map((entry, index) => (
-                <div key={index} className={`ranking-item rank-${index + 1} ${entry.isUser ? 'is-user' : ''}`}>
+              {isLoading ? (
+                <div style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>Loading online rankings...</div>
+              ) : (
+                dailyRanking.slice(0, 3).map((entry, index) => (
+                  <div key={index} className={`ranking-item rank-${index + 1} ${entry.playerId === playerId ? 'is-user' : ''}`}>
                   <div className="rank-badge">
                     {index === 0 ? '🥇' : index === 1 ? '🥈' : '🥉'}
                   </div>
                   <div className="rank-name">{entry.name}</div>
                   <div className="rank-score">{entry.score} pts</div>
                 </div>
-              ))}
+              )))}
             </div>
           </motion.div>
         )}
