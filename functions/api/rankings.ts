@@ -77,7 +77,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     await context.env.RANKINGS.put(key, JSON.stringify(rankings));
 
     return Response.json(rankings);
-  } catch (err) {
-    return Response.json({ error: 'Internal Server Error' }, { status: 500 });
+  } catch (err: any) {
+    return Response.json({ error: 'Internal Server Error', message: err.message, stack: err.stack }, { status: 500 });
   }
 };
