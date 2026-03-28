@@ -2,7 +2,3 @@ name = "once-upon-a-guess"
 compatibility_date = "2023-11-20"
 pages_build_output_dir = "dist"
 
-[[kv_namespaces]]
-binding = "RANKINGS"
-id = "mock-id-replace-later"
-preview_id = "mock-preview-id-replace-later"

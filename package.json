@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:pages": "wrangler pages dev -- npm run dev",
+    "dev:pages": "wrangler pages dev --kv RANKINGS -- npm run dev",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
