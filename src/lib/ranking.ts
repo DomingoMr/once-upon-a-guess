@@ -20,11 +20,17 @@ export const ApiRankingService = {
   async getRanking(mode: string): Promise<RankingEntry[]> {
     try {
       const date = new Date().toISOString().split('T')[0];
+      console.log(`[Frontend] Fetching ranking for mode: ${mode}, date: ${date}`);
       const res = await fetch(`/api/rankings?mode=${mode}&date=${date}`);
-      if (!res.ok) return [];
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error(`[Frontend] GET /api/rankings failed with status ${res.status}:`, errorText);
+        return [];
+      }
       const data = await res.json();
       return data;
-    } catch {
+    } catch (err) {
+      console.error("[Frontend] Network or Parse error in getRanking:", err);
       return [];
     }
   },
@@ -32,6 +38,7 @@ export const ApiRankingService = {
   async saveScore(mode: string, score: number, name: string, playerId: string): Promise<RankingEntry[]> {
     try {
       const date = new Date().toISOString().split('T')[0];
+      console.log(`[Frontend] Saving score for mode: ${mode}, score: ${score}`);
       const res = await fetch('/api/rankings', {
         method: 'POST',
         headers: {
@@ -45,10 +52,15 @@ export const ApiRankingService = {
           playerId
         })
       });
-      if (!res.ok) throw new Error('Failed to save score');
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error(`[Frontend] POST /api/rankings failed with status ${res.status}:`, errorText);
+        throw new Error('Failed to save score');
+      }
       const data = await res.json();
       return data;
-    } catch {
+    } catch (err) {
+      console.error("[Frontend] Error in saveScore:", err);
       return [];
     }
   }
