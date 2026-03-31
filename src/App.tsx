@@ -78,7 +78,7 @@ function loadStoredSongState(): SongStoredState {
 type ViewType = 'home' | 'classic' | 'emoji' | 'silhouette' | 'song' | 'card';
 const VALID_VIEWS: ViewType[] = ['classic', 'emoji', 'silhouette', 'song', 'card'];
 
-const MODE_SEQUENCE: { id: ViewType; name: string; icon: string | React.ReactNode; subtitle: string }[] = [
+const MODE_SEQUENCE: { id: ViewType; name: React.ReactNode; icon: string | React.ReactNode; subtitle: React.ReactNode; url?: string }[] = [
   { id: 'classic', name: 'Classic', icon: '✨', subtitle: 'Get clues with every try' },
   { id: 'emoji', name: 'Emoji', icon: '😃', subtitle: 'Guess with a set of emojis' },
   { id: 'silhouette', name: 'Silhouette', icon: '👤', subtitle: 'Whose silhouette is this?' },
@@ -89,7 +89,13 @@ const MODE_SEQUENCE: { id: ViewType; name: string; icon: string | React.ReactNod
     icon: <img src="/lorcana.png" alt="Lorcana" style={{ width: '65%', height: '65%', objectFit: 'contain', backgroundColor: 'transparent', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }} />,
     subtitle: 'Whose card is this?',
   },
-  { id: 'home', name: 'X', icon: '❓', subtitle: 'Coming soon!' }, // 'home' or a future view
+  {
+    id: 'home',
+    name: 'Pixadle',
+    icon: <img src="/pixadle_icon.png" alt="Pixadle" className="pixadle-icon-img" />,
+    subtitle: 'Try our Pixar guessing game!',
+    url: 'https://www.pixadle.com'
+  },
 ];
 
 export default function App() {
@@ -280,10 +286,10 @@ export default function App() {
     const nextGuesses = [...guesses, character];
     setGuesses(nextGuesses);
     if (character.id === secret.id) {
-       const modeKey = isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'));
-       if (!dailyScores[modeKey]) {
-         setDailyScores(prev => ({ ...prev, [modeKey]: calculateScore(nextGuesses.length) }));
-       }
+      const modeKey = isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'));
+      if (!dailyScores[modeKey]) {
+        setDailyScores(prev => ({ ...prev, [modeKey]: calculateScore(nextGuesses.length) }));
+      }
     }
   }
 
@@ -300,10 +306,10 @@ export default function App() {
       <div className="page-overlay" aria-hidden="true" />
 
       {view === 'home' ? (
-        <Home 
-          onSelectMode={(mode) => navigateTo(mode)} 
-          onOpenReport={() => setIsReportOpen(true)} 
-          onOpenRanking={() => setIsRankingOpen(true)} 
+        <Home
+          onSelectMode={(mode) => navigateTo(mode)}
+          onOpenReport={() => setIsReportOpen(true)}
+          onOpenRanking={() => setIsRankingOpen(true)}
         />
       ) : (
         <main className="game-stage">
@@ -320,26 +326,26 @@ export default function App() {
               </div>
             </div>
             <div className="game-report-wrap" style={{ gridColumn: 3, justifySelf: 'end', alignSelf: 'start' }}>
-              <button 
-                className="glow-icon-btn" 
+              <button
+                className="glow-icon-btn"
                 onClick={() => setIsReportOpen(true)}
                 aria-label="Report Bug"
                 data-tooltip="Report Bug"
               >
                 <span>📩</span>
               </button>
-              <button 
-                className="glow-icon-btn" 
+              <button
+                className="glow-icon-btn"
                 onClick={() => setIsRankingOpen(true)}
                 aria-label="Ranking"
                 data-tooltip="Ranking"
               >
                 <span>🏆</span>
               </button>
-              <a 
-                href="https://ko-fi.com/yensid" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://ko-fi.com/yensid"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="glow-icon-btn"
                 aria-label="Support us"
                 data-tooltip="Support us"
@@ -365,10 +371,10 @@ export default function App() {
               {songHasWon && (
                 <div className="next-mode-section" ref={nextModeRef} style={{ width: '100%', marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center', paddingBottom: '40px' }}>
                   {songHasWon && (
-                    <RankingSection 
-                      mode="song" 
-                      score={dailyScores['song'] || 0} 
-                      savedName={userName} 
+                    <RankingSection
+                      mode="song"
+                      score={dailyScores['song'] || 0}
+                      savedName={userName}
                       onSaveName={setUserName}
                       playerId={playerId}
                       allScores={dailyScores}
@@ -388,7 +394,13 @@ export default function App() {
                           subtitle={nextMode.subtitle}
                           icon={nextMode.icon}
                           active={true}
-                          onClick={() => navigateTo(nextMode.id)}
+                          onClick={() => {
+                            if (nextMode.url) {
+                              window.open(nextMode.url, '_blank', 'noopener,noreferrer');
+                            } else {
+                              navigateTo(nextMode.id);
+                            }
+                          }}
                         />
                       </div>
                     );
@@ -440,10 +452,10 @@ export default function App() {
               {hasWon && (
                 <div className="next-mode-section" ref={nextModeRef} style={{ width: '100%', marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
                   {hasWon && (
-                    <RankingSection 
-                      mode={isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))} 
-                      score={dailyScores[isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))] || 0} 
-                      savedName={userName} 
+                    <RankingSection
+                      mode={isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))}
+                      score={dailyScores[isEmojiMode ? 'emoji' : (isSilhouetteMode ? 'silhouette' : (isCardMode ? 'card' : 'classic'))] || 0}
+                      savedName={userName}
                       onSaveName={setUserName}
                       playerId={playerId}
                       allScores={dailyScores}
@@ -463,7 +475,13 @@ export default function App() {
                           subtitle={nextMode.subtitle}
                           icon={nextMode.icon}
                           active={true}
-                          onClick={() => navigateTo(nextMode.id)}
+                          onClick={() => {
+                            if (nextMode.url) {
+                              window.open(nextMode.url, '_blank', 'noopener,noreferrer');
+                            } else {
+                              navigateTo(nextMode.id);
+                            }
+                          }}
                         />
                       </div>
                     );
@@ -524,9 +542,9 @@ export default function App() {
         </main>
       )}
       <ReportModal isOpen={isReportOpen} onClose={() => setIsReportOpen(false)} />
-      <RankingModal 
-        isOpen={isRankingOpen} 
-        onClose={() => setIsRankingOpen(false)} 
+      <RankingModal
+        isOpen={isRankingOpen}
+        onClose={() => setIsRankingOpen(false)}
         userName={userName}
         playerId={playerId}
       />

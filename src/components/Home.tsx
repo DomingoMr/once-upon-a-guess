@@ -2,8 +2,8 @@ import type { ReactNode } from 'react';
 
 export type ModeButtonProps = {
   id: string;
-  name: string;
-  subtitle: string;
+  name: ReactNode;
+  subtitle: ReactNode;
   icon: ReactNode;
   active?: boolean;
   onClick?: () => void;
@@ -112,6 +112,17 @@ export function Home({ onSelectMode, onOpenReport, onOpenRanking }: HomeProps) {
           active={true}
           onClick={() => onSelectMode('card')}
         />
+      </section>
+      <section className="home-promo">
+        <span className="promo-text">Guess characters from other Disney franchises</span>
+        <a 
+          href="https://www.pixadle.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="promo-link"
+        >
+          <img src="/logo_pixadle.png" alt="Pixadle" className="promo-logo" />
+        </a>
       </section>
 
     </main>

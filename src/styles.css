@@ -904,6 +904,46 @@ img.character-avatar {
   gap: 16px;
 }
 
+.home-promo {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+}
+
+
+.promo-link {
+  display: block;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s;
+}
+
+.promo-link:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 16px rgba(0, 210, 255, 0.6));
+}
+
+.promo-text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--blue-200);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  opacity: 0.8;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.promo-logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 210, 255, 0.4));
+}
+
+
 /* Mode Button LoLdle Style */
 .mode-btn {
   position: relative;
@@ -1001,6 +1041,13 @@ img.character-avatar {
   font-weight: 500;
   color: rgba(220, 240, 255, 0.75);
   margin-top: 2px;
+}
+
+.pixadle-icon-img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
 .game-back-wrap {
