@@ -920,6 +920,14 @@ img.character-avatar {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s;
 }
 
+.promo-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .promo-link:hover {
   transform: scale(1.08);
   filter: drop-shadow(0 0 16px rgba(0, 210, 255, 0.6));

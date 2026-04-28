@@ -115,14 +115,24 @@ export function Home({ onSelectMode, onOpenReport, onOpenRanking }: HomeProps) {
       </section>
       <section className="home-promo">
         <span className="promo-text">Guess characters from other Disney franchises</span>
-        <a 
-          href="https://www.pixadle.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="promo-link"
-        >
-          <img src="/logo_pixadle.png" alt="Pixadle" className="promo-logo" />
-        </a>
+        <div className="promo-links">
+          <a
+            href="https://www.pixadle.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="promo-link"
+          >
+            <img src="/logo_pixadle.png" alt="Pixadle" className="promo-logo" />
+          </a>
+          <a
+            href="https://www.hsmdle.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="promo-link"
+          >
+            <img src="/logo_hsmdle.png" alt="Hsmdle" className="promo-logo" />
+          </a>
+        </div>
       </section>
 
     </main>
